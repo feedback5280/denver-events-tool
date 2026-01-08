@@ -104,7 +104,7 @@ if (!event) {
     document.getElementById("price-section").innerHTML = `<strong>Price:</strong> $${event.price}`;
 
     // Only log click the first time
-    recordOnce(event.id, event.readableNam, "show_price");
+    recordOnce(event.id, event.readableName, "show_price");
   });
 
 

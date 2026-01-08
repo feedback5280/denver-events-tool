@@ -3,10 +3,130 @@
 <head>
   <meta charset="UTF-8" />
   <title>Event Details</title>
-  <link rel="stylesheet" href="/src/styles.css">
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #1f1f2e, #28283d);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding-top: 50px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 700px;
+      background: #1e1e2a;
+      border-radius: 16px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+      padding: 30px;
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .container:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 25px 50px rgba(0,0,0,0.6);
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-bottom: 20px;
+      color: #1e88e5;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+
+    .back-button:hover {
+      color: #66b2ff;
+    }
+
+    h2 {
+      font-size: 2em;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    p {
+      margin: 8px 0;
+      color: #ccc;
+    }
+
+    #price-section button {
+      padding: 12px 25px;
+      border: none;
+      border-radius: 12px;
+      background: #ff6b6b;
+      color: white;
+      font-weight: 700;
+      cursor: pointer;
+      font-size: 1em;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    #price-section button:hover {
+      transform: scale(1.05);
+      background: #ff5252;
+    }
+
+    #event-link {
+      display: inline-block;
+      margin-top: 15px;
+      text-decoration: none;
+      color: #4ecdc4;
+      font-weight: 600;
+      transition: 0.2s;
+    }
+
+    #event-link:hover {
+      color: #65f5e3;
+      text-decoration: underline;
+    }
+
+    .tags {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      background: #3a3a5c;
+      color: #fff;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 0.85em;
+      font-weight: 600;
+      transition: 0.2s;
+    }
+
+    .tag:hover {
+      background: #50507a;
+      transform: scale(1.05);
+    }
+
+    /* optional responsive */
+    @media(max-width: 480px){
+      .container {
+        padding: 20px;
+        margin: 20px;
+      }
+      h2 { font-size: 1.5em; }
+      #price-section button { width: 100%; }
+    }
+  </style>
 </head>
 <body>
   <div class="container">
+    <a href="events.html" class="back-button">← Back to recommendations</a>
     <div id="event-details"></div>
   </div>
 

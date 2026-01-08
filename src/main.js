@@ -12,7 +12,9 @@ let GLOBAL_EVENTS = [];
 let GLOBAL_ARTISTS = [];
 let GLOBAL_ARTIST_MAP = {};
 
-
+// ------------------------
+// MOCK_ARTIST_GENRES (your existing object)
+// ------------------------
 const MOCK_ARTIST_GENRES = {
   // EDM / Electronic / House / Bass
   "1": ["edm", "bass", "experimental bass"],
@@ -188,7 +190,6 @@ const MOCK_ARTIST_GENRES = {
   "28": ["dj", "open format", "dance"]
 };
 
-
 // ------------------------
 // CSV Parser
 // ------------------------
@@ -205,7 +206,6 @@ function parseCSV(csv) {
     return obj;
   });
 }
-
 
 // ------------------------
 // Click Tracking
@@ -224,7 +224,6 @@ async function recordClick(eventId, action) {
 // ------------------------
 // Helper Functions
 // ------------------------
-
 function getEventGenresFromArtistIDs(artistIDs) {
   if (!artistIDs) return [];
   return artistIDs
@@ -236,18 +235,17 @@ function getEventGenresFromArtistIDs(artistIDs) {
 function buildArtistMap(artists) {
   const map = {};
   artists.forEach(a => {
-    const id = a.artistID?.trim(); // ✅ trim whitespace
+    const id = a.artistID?.trim();
     if (id) map[id] = a;
   });
   return map;
 }
 
 function getArtistNames(artistIDs, artistMap) {
-
   if (!artistIDs) return [];
   return artistIDs
     .split(",")
-    .map(id => id.trim())        
+    .map(id => id.trim())
     .map(id => artistMap[id]?.name || "Unknown");
 }
 
@@ -255,23 +253,14 @@ function getArtistNames(artistIDs, artistMap) {
 // Score Events
 // ------------------------
 function scoreEvents(events) {
-
-  // keep only live music events
   const liveMusicEvents = events.filter(e => {
     const value = (e.liveMusic || "").toString().toLowerCase().trim();
     return value === "yes" || value === "true" || value === "1";
   });
 
-  // shuffle
   const shuffled = [...liveMusicEvents].sort(() => Math.random() - 0.5);
-
-  // pick 3
-  return shuffled.slice(0, 3).map(event => ({
-    event,
-    sim: null
-  }));
+  return shuffled.slice(0, 3).map(event => ({ event, sim: null }));
 }
-
 
 // ------------------------
 // Render Events
@@ -284,7 +273,15 @@ function renderEvents(recommended, artistMap) {
     const artists = getArtistNames(event.artistIDs, artistMap).join(", ");
     const genres = getEventGenresFromArtistIDs(event.artistIDs).join(", ");
 
-    recordClick(event.id, "viewed");
+    // Track viewed events in sessionStorage
+    let viewedEvents = JSON.parse(sessionStorage.getItem("viewed_events") || "[]");
+
+    if (!viewedEvents.includes(event.id)) {
+      recordClick(event.id, "viewed");
+      viewedEvents.push(event.id);
+      sessionStorage.setItem("viewed_events", JSON.stringify(viewedEvents));
+    }
+
 
     const div = document.createElement("div");
     div.className = "event-card";
@@ -292,11 +289,31 @@ function renderEvents(recommended, artistMap) {
       <h3>${event.eventName}</h3>
       <p><strong>Artists:</strong> ${artists}</p>
       <p><strong>Genres:</strong> ${genres}</p>
+      <button class="not-interested-btn">Not Interested</button>
     `;
-    div.addEventListener("click", () => {
-      recordClick(event.id, "open_event_card");
+    // Open event page when clicking card (except button)
+    div.addEventListener("click", (e) => {
+      if(e.target.classList.contains("not-interested-btn")) return; // ignore clicks on button
+      
+      // Save the current recommended events to sessionStorage
+      const currentEventIds = recommended.map(r => r.event.id);
+      sessionStorage.setItem("last_recommended_event_ids", JSON.stringify(currentEventIds));
+      mae
       window.location.href = `event.html?id=${event.id}`;
     });
+
+    // Not Interested button
+    div.querySelector(".not-interested-btn").addEventListener("click", async (e) => {
+      e.stopPropagation(); // prevent opening event page
+      recordClick(event.id, "not_interested");
+
+      // Optionally remove from UI
+      div.remove();
+    });
+
+    // Add hover effect
+    div.addEventListener("mouseenter", () => div.style.transform="translateY(-3px)");
+    div.addEventListener("mouseleave", () => div.style.transform="translateY(0)");
 
     container.appendChild(div);
   });
@@ -309,24 +326,40 @@ Promise.all([
   fetch("/events.csv").then(r => r.text()),
   fetch("/artists.csv").then(r => r.text())
 ]).then(([eventsCSV, artistsCSV]) => {
+  GLOBAL_EVENTS = parseCSV(eventsCSV).map((e, i) => {
+    e.id = (e.id || e.eventID || e.eventName + "_" + i).trim();
+    return e;
+  });
 
-  GLOBAL_EVENTS = parseCSV(eventsCSV);
   GLOBAL_ARTISTS = parseCSV(artistsCSV);
   GLOBAL_ARTIST_MAP = buildArtistMap(GLOBAL_ARTISTS);
 
-  GLOBAL_EVENTS.forEach((e, i) => {
-    e.id = e.id || e.eventID || e.eventName + "_" + i;
-  });
-
-  // initial recommendation
-  const recommended = scoreEvents(GLOBAL_EVENTS);
-  renderEvents(recommended, GLOBAL_ARTIST_MAP);
-
-  // save for event.html
   localStorage.setItem("events_data", JSON.stringify(GLOBAL_EVENTS));
   localStorage.setItem("artists_data", JSON.stringify(GLOBAL_ARTISTS));
+
+  // Check if user came back from event.html
+  const lastEventIds = sessionStorage.getItem("last_recommended_event_ids");
+  let recommended;
+
+  if (lastEventIds) {
+    const ids = JSON.parse(lastEventIds);
+    recommended = ids
+      .map(id => {
+        const event = GLOBAL_EVENTS.find(e => e.id === id);
+        if (!event) return null;
+        return { event, sim: null };
+      })
+      .filter(Boolean);
+  } else {
+    recommended = scoreEvents(GLOBAL_EVENTS);
+  }
+
+  renderEvents(recommended, GLOBAL_ARTIST_MAP);
 });
 
+// ------------------------
+// Shuffle Button
+// ------------------------
 document.addEventListener("DOMContentLoaded", () => {
   const shuffleButton = document.getElementById("shuffle-btn");
   if (!shuffleButton) return;
@@ -340,7 +373,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const recommended = scoreEvents(GLOBAL_EVENTS);
     renderEvents(recommended, GLOBAL_ARTIST_MAP);
+
+    // Save shuffled state
+    const ids = recommended.map(r => r.event.id);
+    sessionStorage.setItem("last_recommended_event_ids", JSON.stringify(ids));
   });
 });
-
-

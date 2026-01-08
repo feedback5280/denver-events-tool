@@ -1,5 +1,8 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: './', // important for GitHub Pages
+  base: '/denver-events-tool/', // important for GitHub Pages
+  build: {
+    outDir: 'dist',
+  },
 });

@@ -2,20 +2,65 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Denver Event Recommender</title>
-  <link rel="stylesheet" href="/src/styles.css">
+  <title>Sign Up for Event Recommendations</title>
+  <link rel="stylesheet" href="/src/style.css">
 </head>
 <body>
   <div class="container">
     <div class="logo-wrap">
-      <img src="logo.png" class="logo">
+      <img src="/logo.png" class="logo">
     </div>
-    <h1>Find your next show</h1>
-    <p>Personalized event recommendations</p>
-    <button id="shuffle-btn">🔀 Shuffle events</button>
-    <div id="events-container"></div>
+
+    <h1>Sign up for event recommendations</h1>
+    <p>Enter your email to get personalized event suggestions!</p>
+
+    <form id="email-form">
+      <input type="email" id="email" placeholder="Your email" required>
+      <button type="submit">Next →</button>
+    </form>
+
+    <p id="status-msg" style="color:green;"></p>
   </div>
 
-  <script type="module" src="/src/main.js"></script>
+  <!-- Supabase -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/supabase.min.js"></script>
+
+  <script type="module">
+    import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm';
+
+    const SUPABASE_URL = "https://chmfytasgjopdwjbgtek.supabase.co"
+    const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNobWZ5dGFzZ2pvcGR3amJndGVrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjczOTM3MTQsImV4cCI6MjA4Mjk2OTcxNH0.jckEX3bD661sVPgiNnZFk9undtgKXvWVTAxJdKRxDMw"
+    const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+    const form = document.getElementById("email-form");
+    const statusMsg = document.getElementById("status-msg");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const email = document.getElementById("email").value.trim();
+      if (!email) return;
+
+      try {
+        const { error } = await supabase
+          .from("emails")
+          .insert([{ email }]);
+
+        if (error) {
+          statusMsg.textContent = "Error saving email!";
+          statusMsg.style.color = "red";
+          console.error(error);
+          return;
+        }
+
+        statusMsg.textContent = "Email saved! Redirecting...";
+        setTimeout(() => window.location.href = "events.html", 1000);
+
+      } catch(err) {
+        console.error("Unexpected error:", err);
+        statusMsg.textContent = "Unexpected error!";
+        statusMsg.style.color = "red";
+      }
+    });
+  </script>
 </body>
 </html>

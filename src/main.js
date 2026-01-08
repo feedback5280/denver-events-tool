@@ -312,13 +312,15 @@ function renderEvents(recommended, artistMap) {
     });
 
     // Not Interested button
-    div.querySelector(".not-interested-btn").addEventListener("click", async (e) => {
-      e.stopPropagation(); // prevent opening event page
-      recordClick(event.readableName, "not_interested");
+    const notInterestedBtn = div.querySelector(".not-interested-btn");
+    if (notInterestedBtn) {
+      notInterestedBtn.addEventListener("click", async (e) => {
+        e.stopPropagation();
+        recordClick(event.readableName, "not_interested");
+        div.remove();
+      });
+    }
 
-      // Optionally remove from UI
-      div.remove();
-    });
 
     // Add hover effect
     div.addEventListener("mouseenter", () => div.style.transform="translateY(-3px)");

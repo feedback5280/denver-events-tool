@@ -15,4 +15,4 @@ import"./style-C2KE1r0U.js";import{c as p}from"./index-BUiByx9r.js";const d="htt
     <div class="tags">
       ${s.split(",").map(e=>`<span class="tag">${e.trim()}</span>`).join("")}
     </div>
-  `,document.getElementById("show-price-btn").addEventListener("click",()=>{document.getElementById("price-section").innerHTML=`<strong>Price:</strong> $${t.price}`,a(t.id,t.readableNam,"show_price")}),document.getElementById("event-link").addEventListener("click",()=>{a(t.id,t.readableName,"external_link_click")})}
+  `,document.getElementById("show-price-btn").addEventListener("click",()=>{document.getElementById("price-section").innerHTML=`<strong>Price:</strong> $${t.price}`,a(t.id,t.readableName,"show_price")}),document.getElementById("event-link").addEventListener("click",()=>{a(t.id,t.readableName,"external_link_click")})}

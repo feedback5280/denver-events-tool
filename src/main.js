@@ -201,7 +201,9 @@ function parseCSV(csv) {
     const values = line.split(/,(?=(?:[^"]*"[^"]*")*[^"]*$)/);
     const obj = {};
     headers.forEach((h, i) => {
-      obj[h] = values[i]?.trim().replace(/^"|"$/g, '');
+      obj[h] = String(values[i] ?? "")
+      .trim()
+      .replace(/^"|"$/g, '');
     });
     return obj;
   });
@@ -210,11 +212,11 @@ function parseCSV(csv) {
 // ------------------------
 // Click Tracking
 // ------------------------
-async function recordClick(eventId, action) {
+async function recordClick(eventName, action) {
   try {
     const { data, error } = await supabase
       .from("clicks")
-      .insert([{ event_id: eventId, action }]);
+      .insert([{ event_id: eventName, action }]);
     if (error) console.error("Supabase click error:", error);
   } catch (e) {
     console.error("Supabase click exception:", e);
@@ -277,7 +279,7 @@ function renderEvents(recommended, artistMap) {
     let viewedEvents = JSON.parse(sessionStorage.getItem("viewed_events") || "[]");
 
     if (!viewedEvents.includes(event.id)) {
-      recordClick(event.id, "viewed");
+      recordClick(event.readableName, "viewed");
       viewedEvents.push(event.id);
       sessionStorage.setItem("viewed_events", JSON.stringify(viewedEvents));
     }
@@ -298,14 +300,17 @@ function renderEvents(recommended, artistMap) {
       // Save the current recommended events to sessionStorage
       const currentEventIds = recommended.map(r => r.event.id);
       sessionStorage.setItem("last_recommended_event_ids", JSON.stringify(currentEventIds));
-      mae
-      window.location.href = `event.html?id=${event.id}`;
+      //window.location.href = `event.html?id=${event.id}`;
+      console.log("Navigating to event ID:", event.id);
+
+      window.location.href = `${import.meta.env.BASE_URL}event.html?id=${event.id}`;
+
     });
 
     // Not Interested button
     div.querySelector(".not-interested-btn").addEventListener("click", async (e) => {
       e.stopPropagation(); // prevent opening event page
-      recordClick(event.id, "not_interested");
+      recordClick(event.readableName, "not_interested");
 
       // Optionally remove from UI
       div.remove();
@@ -323,11 +328,17 @@ function renderEvents(recommended, artistMap) {
 // Load CSVs and run
 // ------------------------
 Promise.all([
-  fetch("/events.csv").then(r => r.text()),
-  fetch("/artists.csv").then(r => r.text())
+  // fetch("/events.csv").then(r => r.text()),
+  // fetch("/artists.csv").then(r => r.text())
+
+  fetch(`${import.meta.env.BASE_URL}events.csv`).then(r => r.text()),
+  fetch(`${import.meta.env.BASE_URL}artists.csv`).then(r => r.text())
+
+
 ]).then(([eventsCSV, artistsCSV]) => {
   GLOBAL_EVENTS = parseCSV(eventsCSV).map((e, i) => {
-    e.id = (e.id || e.eventID || e.eventName + "_" + i).trim();
+    e.id = `event_${i}`
+    e.readableName = e.eventName;
     return e;
   });
 

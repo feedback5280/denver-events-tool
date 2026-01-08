@@ -5,15 +5,16 @@ const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL;
 const SUPABASE_ANON_KEY = import.meta.env.VITE_SUPABASE_ANON_KEY;
 const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
-async function recordClick(eventId, action) {
+
+async function recordClick(eventName, action) {
   try {
-    await supabase.from("clicks").insert([{ event_id: eventId, action }]);
+    await supabase.from("clicks").insert([{ event_id: eventName, action }]);
   } catch(e) {
     console.error("Supabase error:", e);
   }
 }
 
-function recordOnce(eventId, action, callback) {
+function recordOnce(eventId, eventName, action, callback) {
   // Get stored actions map from sessionStorage
   let actionMap = JSON.parse(sessionStorage.getItem("event_actions") || "{}");
 
@@ -21,7 +22,7 @@ function recordOnce(eventId, action, callback) {
   if (actionMap[eventId]?.includes(action)) return;
 
   // Call your normal recordClick function
-  recordClick(eventId, action);
+  recordClick(eventName, action);
 
   // Update sessionStorage
   if (!actionMap[eventId]) actionMap[eventId] = [];
@@ -43,12 +44,23 @@ const eventId = params.get("id")?.trim();
 const event = events.find(e => e.id?.trim() === eventId);
 
 const container = document.getElementById("event-details");
+const backBtn = document.getElementById("back-btn");
+
+console.log("Loaded events from localStorage:", events);
+console.log("Looking for eventId:", eventId);
+
+
+// Always attach back button handler
+backBtn.addEventListener("click", () => {
+  // Go back to the events page
+  window.location.href = `${import.meta.env.BASE_URL}events.html`;
+  });
 
 if (!event) {
   container.innerHTML = "<p>Event not found</p>";
 } else {
 
-  recordOnce(event.id, "open_event_card");
+  recordOnce(event.id, event.readableName, "open_event_card");
   //recordClick(event.id, "open_event_card");
 
   const artistList = (event.artistIDs || "")
@@ -92,7 +104,7 @@ if (!event) {
     document.getElementById("price-section").innerHTML = `<strong>Price:</strong> $${event.price}`;
 
     // Only log click the first time
-    recordOnce(eventId, "show_price");
+    recordOnce(event.id, event.readableNam, "show_price");
   });
 
 
@@ -102,7 +114,7 @@ if (!event) {
   // });
 
   document.getElementById("event-link").addEventListener("click", () => {
-    recordOnce(eventId, "external_link_click");
+    recordOnce(event.id, event.readableName, "external_link_click");
   });
 
 

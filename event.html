@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>Event Details</title>
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/src/style.css" />
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
@@ -39,14 +39,14 @@
     .back-button {
       display: inline-block;
       margin-bottom: 20px;
-      color: #1e88e5;
+      color: #fff;
       font-weight: 600;
       text-decoration: none;
       transition: 0.2s;
     }
 
     .back-button:hover {
-      color: #66b2ff;
+      color: #bfefff;
     }
 
     h2 {
@@ -126,7 +126,7 @@
 </head>
 <body>
   <div class="container">
-    <a href="events.html" class="back-button">← Back to recommendations</a>
+    <button id="back-btn" class="back-button">← Back to recommendations</button>
     <div id="event-details"></div>
   </div>
 

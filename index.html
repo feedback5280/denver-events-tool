@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <title>Sign Up for Event Recommendations</title>
-  <link rel="stylesheet" href="/src/style.css" />
 </head>
 <body>
   <div class="container">
@@ -22,52 +21,7 @@
     <p id="status-msg" style="color:green;"></p>
   </div>
 
-  <!-- Supabase -->
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/supabase.min.js"></script>
-
-  <script type="module">
-    import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm';
-
-    const SUPABASE_URL = "https://chmfytasgjopdwjbgtek.supabase.co"
-    const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNobWZ5dGFzZ2pvcGR3amJndGVrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjczOTM3MTQsImV4cCI6MjA4Mjk2OTcxNH0.jckEX3bD661sVPgiNnZFk9undtgKXvWVTAxJdKRxDMw"
-    const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-
-    const form = document.getElementById("email-form");
-    const statusMsg = document.getElementById("status-msg");
-
-    form.addEventListener("submit", async (e) => {
-      e.preventDefault();
-      const email = document.getElementById("email").value.trim();
-      if (!email) return;
-
-      try {
-        const { error } = await supabase
-          .from("emails")
-          .insert([{ email }]);
-
-        if (error) {
-          statusMsg.textContent = "Error saving email!";
-          statusMsg.style.color = "red";
-          console.error(error);
-          return;
-        }
-
-        statusMsg.textContent = "Email saved! Redirecting...";
-        //setTimeout(() => window.location.href = "events.html", 1000);
-        console.log("BASE_URL:", import.meta.env.BASE_URL);
-
-        setTimeout(() => {
-          window.location.href = `${import.meta.env.BASE_URL}events.html`;
-        }, 1000);
-
-
-
-      } catch(err) {
-        console.error("Unexpected error:", err);
-        statusMsg.textContent = "Unexpected error!";
-        statusMsg.style.color = "red";
-      }
-    });
-  </script>
+  <!-- Vite entry point -->
+  <script type="module" src="/src/main.js"></script>
 </body>
 </html>

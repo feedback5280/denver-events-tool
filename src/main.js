@@ -1,6 +1,7 @@
 import './style.css';
 import { createClient } from '@supabase/supabase-js';
 
+
 // ------------------------
 // Supabase Setup
 // ------------------------
@@ -269,6 +270,9 @@ function scoreEvents(events) {
 // ------------------------
 function renderEvents(recommended, artistMap) {
   const container = document.getElementById("events-container");
+
+  if (!container) return; // ✅ PREVENT CRASH
+
   container.innerHTML = "";
 
   recommended.forEach(({ event, sim }) => {
@@ -324,49 +328,85 @@ function renderEvents(recommended, artistMap) {
   });
 }
 
+
+// Detect which page we're on
+if (document.getElementById("email-form")) {
+  // This is index.html
+  const form = document.getElementById("email-form");
+  const statusMsg = document.getElementById("status-msg");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const email = document.getElementById("email").value.trim();
+    if (!email) return;
+
+    try {
+      const { error } = await supabase.from("emails").insert([{ email }]);
+      if (error) {
+        statusMsg.textContent = "Error saving email!";
+        statusMsg.style.color = "red";
+        return;
+      }
+      statusMsg.textContent = "Email saved! Redirecting...";
+      setTimeout(() => {
+        window.location.href = `${import.meta.env.BASE_URL}events.html`;
+      }, 1000);
+    } catch(err) {
+      console.error(err);
+      statusMsg.textContent = "Unexpected error!";
+      statusMsg.style.color = "red";
+    }
+  });
+}
+
+
 // ------------------------
 // Load CSVs and run
 // ------------------------
-Promise.all([
-  // fetch("/events.csv").then(r => r.text()),
-  // fetch("/artists.csv").then(r => r.text())
+const hasEventsPage = document.getElementById("events-container");
 
-  fetch(`${import.meta.env.BASE_URL}events.csv`).then(r => r.text()),
-  fetch(`${import.meta.env.BASE_URL}artists.csv`).then(r => r.text())
+if (hasEventsPage) {
+  Promise.all([
+    // fetch("/events.csv").then(r => r.text()),
+    // fetch("/artists.csv").then(r => r.text())
+
+    fetch(`${import.meta.env.BASE_URL}events.csv`).then(r => r.text()),
+    fetch(`${import.meta.env.BASE_URL}artists.csv`).then(r => r.text())
 
 
-]).then(([eventsCSV, artistsCSV]) => {
-  GLOBAL_EVENTS = parseCSV(eventsCSV).map((e, i) => {
-    e.id = `event_${i}`
-    e.readableName = e.eventName;
-    return e;
+  ]).then(([eventsCSV, artistsCSV]) => {
+    GLOBAL_EVENTS = parseCSV(eventsCSV).map((e, i) => {
+      e.id = `event_${i}`
+      e.readableName = e.eventName;
+      return e;
+    });
+
+    GLOBAL_ARTISTS = parseCSV(artistsCSV);
+    GLOBAL_ARTIST_MAP = buildArtistMap(GLOBAL_ARTISTS);
+
+    localStorage.setItem("events_data", JSON.stringify(GLOBAL_EVENTS));
+    localStorage.setItem("artists_data", JSON.stringify(GLOBAL_ARTISTS));
+
+    // Check if user came back from event.html
+    const lastEventIds = sessionStorage.getItem("last_recommended_event_ids");
+    let recommended;
+
+    if (lastEventIds) {
+      const ids = JSON.parse(lastEventIds);
+      recommended = ids
+        .map(id => {
+          const event = GLOBAL_EVENTS.find(e => e.id === id);
+          if (!event) return null;
+          return { event, sim: null };
+        })
+        .filter(Boolean);
+    } else {
+      recommended = scoreEvents(GLOBAL_EVENTS);
+    }
+
+    renderEvents(recommended, GLOBAL_ARTIST_MAP);
   });
-
-  GLOBAL_ARTISTS = parseCSV(artistsCSV);
-  GLOBAL_ARTIST_MAP = buildArtistMap(GLOBAL_ARTISTS);
-
-  localStorage.setItem("events_data", JSON.stringify(GLOBAL_EVENTS));
-  localStorage.setItem("artists_data", JSON.stringify(GLOBAL_ARTISTS));
-
-  // Check if user came back from event.html
-  const lastEventIds = sessionStorage.getItem("last_recommended_event_ids");
-  let recommended;
-
-  if (lastEventIds) {
-    const ids = JSON.parse(lastEventIds);
-    recommended = ids
-      .map(id => {
-        const event = GLOBAL_EVENTS.find(e => e.id === id);
-        if (!event) return null;
-        return { event, sim: null };
-      })
-      .filter(Boolean);
-  } else {
-    recommended = scoreEvents(GLOBAL_EVENTS);
-  }
-
-  renderEvents(recommended, GLOBAL_ARTIST_MAP);
-});
+}
 
 // ------------------------
 // Shuffle Button

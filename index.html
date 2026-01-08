@@ -2,23 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Denver Event Recommender</title>
-  <!-- CSS -->
-  <link rel="stylesheet" href="/src/styles.css">
-
-  <script type="module" crossorigin src="./assets/index-DusFxbrp.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-cjIzGNq6.css">
+  <title>Sign Up for Event Recommendations</title>
+  <script type="module" crossorigin src="/denver-events-tool/assets/index-mWnGFs0h.js"></script>
+  <link rel="stylesheet" crossorigin href="/denver-events-tool/assets/index-BD8jAK7E.css">
 </head>
 <body>
   <div class="container">
     <div class="logo-wrap">
-      <img src="logo.png" class="logo">
+      <img src="/denver-events-tool/logo.png" class="logo">
     </div>
-    <h1>Find your next show</h1>
-    <p>Personalized event recommendations</p>
-    <button id="shuffle-btn">🔀 Shuffle events</button>
-    <div id="events-container"></div>
+
+    <h1>Sign up for event recommendations</h1>
+    <p>Enter your email to get personalized event suggestions!</p>
+
+    <form id="email-form">
+      <input type="email" id="email" placeholder="Your email" required>
+      <button type="submit">Next →</button>
+    </form>
+
+    <p id="status-msg" style="color:green;"></p>
   </div>
+
+  <!-- Supabase -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/supabase.min.js"></script>
 
 </body>
 </html>

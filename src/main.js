@@ -71,13 +71,33 @@ function getArtistNames(ids, map) {
   return ids.split(",").map(id => map[id.trim()]?.name || "Unknown");
 }
 
+function makeEventId(event) {
+  return (
+    event.eventName +
+    "|" +
+    event.venue +
+    "|" +
+    event.Date
+  )
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-");
+}
+
+
 function scoreEvents(events) {
+  const allowedVenues = [
+    "cervantes' other side",
+    "cervantes' masterpiece ballroom"
+  ];
+
   return events
     .filter(e => ["yes", "true", "1"].includes(String(e.liveMusic).toLowerCase()))
+    .filter(e => allowedVenues.includes(String(e.venue).trim().toLowerCase()))
     .sort(() => Math.random() - 0.5)
     .slice(0, 3)
     .map(event => ({ event, sim: null }));
 }
+
 
 // ------------------------
 // Render Events
@@ -152,15 +172,19 @@ document.addEventListener("DOMContentLoaded", () => {
       fetch(`${import.meta.env.BASE_URL}events.csv`).then(r => r.text()),
       fetch(`${import.meta.env.BASE_URL}artists.csv`).then(r => r.text())
     ]).then(([eventsCSV, artistsCSV]) => {
-      GLOBAL_EVENTS = parseCSV(eventsCSV).map((e, i) => ({
+      GLOBAL_EVENTS = parseCSV(eventsCSV).map(e => ({
         ...e,
-        id: `event_${i}`,
+        id: makeEventId(e),
         readableName: e.eventName
       }));
+
+      localStorage.setItem("events_data", JSON.stringify(GLOBAL_EVENTS));
+
       GLOBAL_ARTISTS = parseCSV(artistsCSV);
       GLOBAL_ARTIST_MAP = buildArtistMap(GLOBAL_ARTISTS);
 
       renderEvents(scoreEvents(GLOBAL_EVENTS), GLOBAL_ARTIST_MAP);
+
     });
   }
 

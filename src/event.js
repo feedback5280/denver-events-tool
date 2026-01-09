@@ -41,7 +41,9 @@ artists.forEach(a => artistMap[a.artistID] = a);
 
 const params = new URLSearchParams(window.location.search);
 const eventId = params.get("id")?.trim();
-const event = events.find(e => e.id?.trim() === eventId);
+// const event = events.find(e => e.id?.trim() === eventId);
+const event = events.find(e => e.id === eventId);
+
 
 const container = document.getElementById("event-details");
 const backBtn = document.getElementById("back-btn");

@@ -579,6 +579,13 @@ function renderEvents(recommended, artistMap) {
       <button class="not-interested-btn">Not Interested</button>
     `;
 
+     // Record view only if first time
+    if (!viewedEvents.includes(event.id)) {
+      recordClick(event.readableName, "viewed");
+      viewedEvents.push(event.id);
+      sessionStorage.setItem("viewed_events", JSON.stringify(viewedEvents));
+    }
+
     div.addEventListener("click", (e) => {
       if (e.target.classList.contains("not-interested-btn")) return;
       sessionStorage.setItem(

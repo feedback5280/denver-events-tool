@@ -88,7 +88,7 @@ if (!event) {
     </p>
 
     <p>
-      <a id="event-link" href="${event.Link}" target="_blank">Go to event page</a>
+      <a id="event-link" href="${event.Link}" target="_blank">Go to ticketing page</a>
     </p>
 
     <div class="tags">

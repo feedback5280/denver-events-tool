@@ -512,9 +512,17 @@ function parseCSV(csv) {
 // ------------------------
 // Helpers
 // ------------------------
-function recordClick(eventName, action) {
-  supabase.from("clicks").insert([{ event_id: eventName, action }]).catch(console.error);
+async function recordClick(eventId, eventName, action) {
+  const { error } = await supabase
+    .from("clicks")
+    .insert([{ event_id: eventId, event_name: eventName, action }]);
+
+  if (error) {
+    console.error("❌ click insert failed:", error);
+  }
 }
+
+
 
 function getEventGenresFromArtistIDs(ids) {
   if (!ids) return [];
@@ -583,12 +591,12 @@ function renderEvents(recommended, artistMap) {
       <button class="not-interested-btn">Not Interested</button>
     `;
 
-     // Record view only if first time
-    // if (!viewedEvents.includes(event.id)) {
-    //   recordClick(event.readableName, "viewed");
-    //   viewedEvents.push(event.id);
-    //   sessionStorage.setItem("viewed_events", JSON.stringify(viewedEvents));
-    // }
+     //Record view only if first time
+    if (!viewedEvents.includes(event.id)) {
+      recordClick(event.id, event.readableName, "viewed");
+      viewedEvents.push(event.id);
+      sessionStorage.setItem("viewed_events", JSON.stringify(viewedEvents));
+    }
 
     div.addEventListener("click", (e) => {
       if (e.target.classList.contains("not-interested-btn")) return;
@@ -602,7 +610,7 @@ function renderEvents(recommended, artistMap) {
     const btn = div.querySelector(".not-interested-btn");
     btn?.addEventListener("click", (e) => {
       e.stopPropagation();
-      recordClick(event.readableName, "not_interested");
+      recordClick(event.id, event.readableName, "not_interested");
       div.remove();
     });
 

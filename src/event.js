@@ -6,11 +6,13 @@ const SUPABASE_ANON_KEY = import.meta.env.VITE_SUPABASE_ANON_KEY;
 const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 
-async function recordClick(eventName, action) {
-  try {
-    await supabase.from("clicks").insert([{ event_id: eventName, action }]);
-  } catch(e) {
-    console.error("Supabase error:", e);
+async function recordClick(eventId, eventName, action) {
+  const { error } = await supabase
+    .from("clicks")
+    .insert([{ event_id: eventId, event_name: eventName, action }]);
+
+  if (error) {
+    console.error("❌ click insert failed:", error);
   }
 }
 
@@ -22,7 +24,7 @@ function recordOnce(eventId, eventName, action, callback) {
   if (actionMap[eventId]?.includes(action)) return;
 
   // Call your normal recordClick function
-  recordClick(eventName, action);
+  recordClick(eventId, eventName, action);
 
   // Update sessionStorage
   if (!actionMap[eventId]) actionMap[eventId] = [];

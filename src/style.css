@@ -120,4 +120,90 @@ button:hover {
   background: #777;
 }
 
+.hidden {
+  display: none !important;
+}
 
+.giveaway-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* MODAL CARD */
+.giveaway-modal {
+  background: rgba(255, 255, 255, 0.92); /* translucent white */
+  color: #111; /* force readable text */
+  padding: 24px;
+  max-width: 420px;
+  width: 90%;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  backdrop-filter: blur(6px); /* optional, looks nice */
+}
+
+/* Modal headings */
+.giveaway-modal h2 {
+  color: #000;
+  margin-bottom: 16px;
+}
+
+.giveaway-option {
+  cursor: pointer;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.giveaway-option:hover {
+  transform: scale(1.03);
+}
+
+.giveaway-photo {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+
+/* Status text */
+#giveaway-status-msg {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #111;
+}
+
+.giveaway-cta {
+  margin-top: 32px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.giveaway-cta p {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.giveaway-cta input[type="email"] {
+  font-size: 16px;
+  padding: 10px 12px;
+  width: 260px;
+  max-width: 90%;
+}
+
+.giveaway-cta button {
+  font-size: 16px;
+  padding: 10px 16px;
+  margin-top: 10px;
+}

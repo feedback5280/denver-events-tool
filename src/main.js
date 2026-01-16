@@ -141,6 +141,24 @@ const MOCK_ARTIST_GENRES = {
   "330": ["jazz fusion"]
 };
 
+const GIVEAWAY_SHOWS = [
+  {
+    id: "gw-1",
+    name: "Flamingosis W/ Blockhead, Pure Colors, Little MAC",
+    date: "Jan 31, 7pm",
+    photo: "f.png"
+  },
+  {
+    id: "gw-2",
+    name: "The Jauntee & Kendall Street Company W/ Mynd Reader",
+    date: "March 7, 7pm",
+    photo: "j.png"
+  }
+];
+
+let GIVEAWAY_EMAIL = null;
+
+
 // ------------------------
 // CSV Parser
 // ------------------------
@@ -253,10 +271,95 @@ function renderEvents(recommended, artistMap) {
   });
 }
 
+function startGiveawayCountdown() {
+  const countdownText = document.getElementById("countdown-text");
+  const form = document.getElementById("giveaway-email-form");
+
+  if (!countdownText || !form) return;
+
+  let seconds = 10;
+
+  const timer = setInterval(() => {
+    seconds--;
+
+    countdownText.textContent = `(available in ${seconds}s)`;
+
+    if (seconds <= 0) {
+      clearInterval(timer);
+      countdownText.remove();
+      form.classList.remove("hidden");
+    }
+  }, 1000);
+}
+
+
+function renderGiveawayOptions() {
+  const container = document.getElementById("giveaway-options");
+  container.innerHTML = "";
+
+  GIVEAWAY_SHOWS.forEach(show => {
+    const div = document.createElement("div");
+    div.className = "giveaway-option";
+    div.innerHTML = `
+      <img src="${show.photo}" alt="${show.name}" class="giveaway-photo" />
+      <strong>${show.name}</strong><br>
+      ${show.date}
+    `;
+
+    div.addEventListener("click", () => {
+      submitGiveaway(show);
+    });
+
+    container.appendChild(div);
+  });
+}
+
+
+async function submitGiveaway(show) {
+  const statusMsg = document.getElementById("giveaway-status-msg");
+
+  try {
+    statusMsg.textContent = "Saving entry...";
+
+    await supabase
+      .from("emails")
+      .insert([{
+        email: GIVEAWAY_EMAIL,
+        giveaway_show: show.name
+      }]);
+
+    statusMsg.textContent = "You're entered! 🎉";
+    localStorage.setItem("giveaway_entered", "true");
+
+    // Close overlay after short delay
+    setTimeout(() => {
+      document.getElementById("giveaway-overlay")
+        .classList.add("hidden");
+
+      document.getElementById("giveaway-cta")
+        .innerHTML = "<p>You're entered 🎉</p>";
+    }, 1000);
+
+  } catch (error) {
+    console.error("Giveaway insert failed:", error);
+    statusMsg.textContent = "Error saving entry. Please try again.";
+  }
+}
+
+
+
+
 // ------------------------
 // INIT
 // ------------------------
 document.addEventListener("DOMContentLoaded", () => {
+
+  document.getElementById("giveaway-overlay")?.classList.add("hidden");
+  if (localStorage.getItem("giveaway_entered")) {
+    const cta = document.getElementById("giveaway-cta");
+    if (cta) cta.innerHTML = "<p>You're already entered 🎉</p>";
+  }
+
 
   // EMAIL PAGE
   const form = document.getElementById("email-form");
@@ -275,6 +378,22 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+
+  const giveawayForm = document.getElementById("giveaway-email-form");
+
+  giveawayForm?.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const emailInput = document.getElementById("giveaway-email");
+    GIVEAWAY_EMAIL = emailInput.value.trim();
+    if (!GIVEAWAY_EMAIL) return;
+
+    document.getElementById("giveaway-overlay")
+      .classList.remove("hidden");
+
+    renderGiveawayOptions();
+  });
+
 
   // EVENTS PAGE
   const eventsContainer = document.getElementById("events-container");
@@ -308,6 +427,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       renderEvents(recommended, GLOBAL_ARTIST_MAP);
+      startGiveawayCountdown();
     });
   }
 

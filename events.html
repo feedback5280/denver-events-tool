@@ -17,6 +17,33 @@
     <button id="shuffle-btn">🔀 Shuffle events</button>
     <div id="events-container"></div>
   </div>
+  <!-- GIVEAWAY CTA -->
+  <div id="giveaway-cta" class="giveaway-cta">
+    <p id="giveaway-text">
+      Enter your email to be entered to win
+      <span id="countdown-text">(available in 10s)</span>
+    </p>
+
+    <form id="giveaway-email-form" class="hidden">
+      <input
+        type="email"
+        id="giveaway-email"
+        placeholder="Your email"
+        required
+      />
+      <button type="submit">Next →</button>
+    </form>
+  </div>
+
+<!-- GIVEAWAY OVERLAY -->
+<div id="giveaway-overlay" class="giveaway-overlay hidden">
+  <div class="giveaway-modal">
+    <h2>Select giveaway show</h2>
+    <div id="giveaway-options"></div>
+    <p id="giveaway-status-msg"></p>
+  </div>
+</div>
+
 
   <script type="module" src="./src/main.js"></script>
 </body>

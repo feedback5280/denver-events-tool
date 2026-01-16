@@ -312,7 +312,7 @@ document.addEventListener("DOMContentLoaded", () => {
         ...e,
         id: makeEventId(e),
         readableName: e.eventName,
-        eventDateObj: new Date(e.Date)
+        //eventDateObj: new Date(e.Date)
       }));
 
       // Filter cutoff date

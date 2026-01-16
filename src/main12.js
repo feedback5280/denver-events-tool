@@ -12,7 +12,7 @@ let GLOBAL_EVENTS = [];
 let GLOBAL_ARTISTS = [];
 let GLOBAL_ARTIST_MAP = {};
 
-const CUTOFF_DATE = new Date("2026-01-016");
+const CUTOFF_DATE = new Date("2026-01-01"); // fixed typo
 
 // ------------------------
 // MOCK_ARTIST_GENRES
@@ -160,23 +160,33 @@ const GIVEAWAY_SHOWS = [
 
 let GIVEAWAY_EMAIL = null;
 
-
 // ------------------------
-// CSV Parser
+// CSV Parser (Mobile-safe)
 // ------------------------
 function parseCSV(csv) {
-  const lines = csv.trim().split("\n");
-  const headers = lines[0].split(",").map(h => h.trim());
-  return lines.slice(1).map(line => {
-    const values = line.split(/,(?=(?:[^"]*"[^"]*")*[^"]*$)/);
-    const obj = {};
-    headers.forEach((h, i) => obj[h] = String(values[i] ?? "").trim().replace(/^"|"$/g, ''));
-    return obj;
-  });
+  try {
+    const lines = csv.trim().split(/\r?\n/); // handle \n and \r\n
+    if (!lines.length) return [];
+    const headers = lines[0].split(",").map(h => h.trim());
+    return lines.slice(1)
+      .map(line => {
+        if (!line.trim()) return null; // skip empty lines
+        const values = line.split(/,(?=(?:[^"]*"[^"]*")*[^"]*$)/);
+        const obj = {};
+        headers.forEach((h, i) => {
+          obj[h] = String(values[i] ?? "").trim().replace(/^"|"$/g, '');
+        });
+        return obj;
+      })
+      .filter(Boolean); // remove nulls
+  } catch (err) {
+    console.error("CSV parse error:", err);
+    return [];
+  }
 }
 
 // ------------------------
-// Supabase Click Helpers
+// Supabase Click Helpers (unchanged)
 // ------------------------
 async function recordClick(eventId, eventName, action) {
   const { error } = await supabase
@@ -196,7 +206,7 @@ function recordOnce(eventId, eventName, action, callback) {
 }
 
 // ------------------------
-// Helpers
+// Helpers (unchanged)
 // ------------------------
 function getEventGenresFromArtistIDs(ids) {
   if (!ids) return [];
@@ -231,7 +241,7 @@ function scoreEvents(events) {
 }
 
 // ------------------------
-// Render Events
+// Render Events (unchanged)
 // ------------------------
 function renderEvents(recommended, artistMap) {
   const container = document.getElementById("events-container");
@@ -247,7 +257,6 @@ function renderEvents(recommended, artistMap) {
       <h3>${event.eventName}</h3>
       <p><strong>Artists:</strong> ${getArtistNames(event.artistIDs, artistMap).join(", ")}</p>
       <p><strong>Genres:</strong> ${getEventGenresFromArtistIDs(event.artistIDs).join(", ")}</p>
-    
     `;
 
     if (!viewedEvents.includes(event.id)) {
@@ -273,177 +282,65 @@ function renderEvents(recommended, artistMap) {
   });
 }
 
-function startGiveawayCountdown() {
-  const countdownText = document.getElementById("countdown-text");
-  const form = document.getElementById("giveaway-email-form");
-
-  if (!countdownText || !form) return;
-
-  let seconds = 10;
-
-  const timer = setInterval(() => {
-    seconds--;
-
-    countdownText.textContent = `(available in ${seconds}s)`;
-
-    if (seconds <= 0) {
-      clearInterval(timer);
-      countdownText.remove();
-      form.classList.remove("hidden");
-    }
-  }, 1000);
-}
-
-
-function renderGiveawayOptions() {
-  const container = document.getElementById("giveaway-options");
-  container.innerHTML = "";
-
-  GIVEAWAY_SHOWS.forEach(show => {
-    const div = document.createElement("div");
-    div.className = "giveaway-option";
-    div.innerHTML = `
-      <img src="${show.photo}" alt="${show.name}" class="giveaway-photo" />
-      <strong>${show.name}</strong><br>
-      ${show.date}
-    `;
-
-    div.addEventListener("click", () => {
-      submitGiveaway(show);
-    });
-
-    container.appendChild(div);
-  });
-}
-
-
-async function submitGiveaway(show) {
-  const statusMsg = document.getElementById("giveaway-status-msg");
-
-  try {
-    statusMsg.textContent = "Saving entry...";
-
-    await supabase
-      .from("emails")
-      .insert([{
-        email: GIVEAWAY_EMAIL,
-        giveaway_show: show.name
-      }]);
-
-    statusMsg.textContent = "You're entered! 🎉";
-    localStorage.setItem("giveaway_entered", "true");
-
-    // Close overlay after short delay
-    setTimeout(() => {
-      document.getElementById("giveaway-overlay")
-        .classList.add("hidden");
-
-      document.getElementById("giveaway-cta")
-        .innerHTML = "<p>You're entered 🎉</p>";
-    }, 1000);
-
-  } catch (error) {
-    console.error("Giveaway insert failed:", error);
-    statusMsg.textContent = "Error saving entry. Please try again.";
-  }
-}
-
-
-
-
 // ------------------------
 // INIT
 // ------------------------
 document.addEventListener("DOMContentLoaded", () => {
-
+  // Hide giveaway overlay
   document.getElementById("giveaway-overlay")?.classList.add("hidden");
+
   if (localStorage.getItem("giveaway_entered")) {
     const cta = document.getElementById("giveaway-cta");
     if (cta) cta.innerHTML = "<p>You're already entered 🎉</p>";
   }
 
-
-  // EMAIL PAGE
-  const form = document.getElementById("email-form");
-  if (form) {
-    const statusMsg = document.getElementById("status-msg");
-    form.addEventListener("submit", async (e) => {
-      e.preventDefault();
-      const email = document.getElementById("email")?.value.trim();
-      if (!email) return;
-      try {
-        statusMsg.textContent = "Email saved! Redirecting...";
-        await supabase.from("emails").insert([{ email }]);
-        window.location.href = `${import.meta.env.BASE_URL}events.html`;
-      } catch {
-        statusMsg.textContent = "Error saving email.";
-      }
-    });
-  }
-
-  const giveawayForm = document.getElementById("giveaway-email-form");
-
-  giveawayForm?.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    const emailInput = document.getElementById("giveaway-email");
-    GIVEAWAY_EMAIL = emailInput.value.trim();
-    if (!GIVEAWAY_EMAIL) return;
-
-    document.getElementById("giveaway-overlay")
-      .classList.remove("hidden");
-
-    renderGiveawayOptions();
-  });
-
-
+  // ------------------------
   // EVENTS PAGE
+  // ------------------------
   const eventsContainer = document.getElementById("events-container");
   if (eventsContainer) {
-    console.log("Fetching events from:", `${import.meta.env.BASE_URL}events.csv`)
     Promise.all([
       fetch(`${import.meta.env.BASE_URL}events.csv`).then(r => r.text()),
       fetch(`${import.meta.env.BASE_URL}artists.csv`).then(r => r.text())
     ]).then(([eventsCSV, artistsCSV]) => {
 
+      console.log("events CSV length:", eventsCSV.length);
+      console.log("artists CSV length:", artistsCSV.length);
+
+      // Parse CSVs safely
       GLOBAL_EVENTS = parseCSV(eventsCSV).map(e => ({
         ...e,
         id: makeEventId(e),
         readableName: e.eventName,
-        eventDateObj: new Date(e.Date) // store Date object for comparison
+        eventDateObj: new Date(e.Date)
       }));
-      // Filter to only include events after cutoff
-      GLOBAL_EVENTS = GLOBAL_EVENTS.filter(e => e.eventDateObj >= CUTOFF_DATE);
-      console.log("GLOBAL_EVENTS after filtering:", GLOBAL_EVENTS);
-      localStorage.setItem("events_data", JSON.stringify(GLOBAL_EVENTS));
+
+      // Filter cutoff date
+      //GLOBAL_EVENTS = GLOBAL_EVENTS.filter(e => e.eventDateObj >= CUTOFF_DATE);
 
       GLOBAL_ARTISTS = parseCSV(artistsCSV);
       GLOBAL_ARTIST_MAP = buildArtistMap(GLOBAL_ARTISTS);
 
-      // Check for cached recommended events
-      let cachedIds = JSON.parse(sessionStorage.getItem("last_recommended_event_ids") || "null");
-      let recommended;
-      if (cachedIds) {
-        recommended = cachedIds
-          .map(id => GLOBAL_EVENTS.find(e => e.id === id))
-          .filter(Boolean)
-          .map(e => ({ event: e, sim: null }));
-      } else {
-        recommended = scoreEvents(GLOBAL_EVENTS);
-        sessionStorage.setItem("last_recommended_event_ids", JSON.stringify(recommended.map(r => r.event.id)));
-      }
+      // Clear cached recommended to avoid stale mobile sessionStorage
+      sessionStorage.removeItem("last_recommended_event_ids");
+
+      // Score recommended events
+      const recommended = scoreEvents(GLOBAL_EVENTS);
+      sessionStorage.setItem("last_recommended_event_ids", JSON.stringify(recommended.map(r => r.event.id)));
 
       renderEvents(recommended, GLOBAL_ARTIST_MAP);
-      startGiveawayCountdown();
+    }).catch(err => {
+      console.error("Error fetching or parsing CSVs:", err);
     });
   }
 
+  // ------------------------
   // SHUFFLE BUTTON
+  // ------------------------
   const shuffleBtn = document.getElementById("shuffle-btn");
   shuffleBtn?.addEventListener("click", () => {
     const newEvents = scoreEvents(GLOBAL_EVENTS);
     sessionStorage.setItem("last_recommended_event_ids", JSON.stringify(newEvents.map(r => r.event.id)));
     renderEvents(newEvents, GLOBAL_ARTIST_MAP);
   });
-
 });

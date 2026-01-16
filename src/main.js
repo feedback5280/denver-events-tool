@@ -245,7 +245,7 @@ function renderEvents(recommended, artistMap) {
       <h3>${event.eventName}</h3>
       <p><strong>Artists:</strong> ${getArtistNames(event.artistIDs, artistMap).join(", ")}</p>
       <p><strong>Genres:</strong> ${getEventGenresFromArtistIDs(event.artistIDs).join(", ")}</p>
-      <button class="not-interested-btn">Not Interested</button>
+    
     `;
 
     if (!viewedEvents.includes(event.id)) {

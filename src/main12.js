@@ -327,7 +327,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Score recommended events
       const recommended = scoreEvents(GLOBAL_EVENTS);
       sessionStorage.setItem("last_recommended_event_ids", JSON.stringify(recommended.map(r => r.event.id)));
-
+      console.log("Recommended events:", recommendedEvents.length);
       renderEvents(recommended, GLOBAL_ARTIST_MAP);
     }).catch(err => {
       console.error("Error fetching or parsing CSVs:", err);

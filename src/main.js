@@ -12,7 +12,7 @@ let GLOBAL_EVENTS = [];
 let GLOBAL_ARTISTS = [];
 let GLOBAL_ARTIST_MAP = {};
 
-const CUTOFF_DATE = new Date("2026-01-016");
+const CUTOFF_DATE = new Date("2026-01-16");
 
 // ------------------------
 // MOCK_ARTIST_GENRES

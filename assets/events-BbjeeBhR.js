@@ -3,7 +3,7 @@ import{c as y}from"./index-_yq3dKNm.js";const k="https://chmfytasgjopdwjbgtek.su
       <h3>${n.eventName}</h3>
       <p><strong>Artists:</strong> ${L(n.artistIDs,s).join(", ")}</p>
       <p><strong>Genres:</strong> ${_(n.artistIDs).join(", ")}</p>
-      <button class="not-interested-btn">Not Interested</button>
+    
     `,o.includes(n.id)||(h(n.id,n.readableName,"viewed"),o.push(n.id),sessionStorage.setItem("viewed_events",JSON.stringify(o))),a.addEventListener("click",i=>{i.target.classList.contains("not-interested-btn")||(sessionStorage.setItem("last_recommended_event_ids",JSON.stringify(e.map(r=>r.event.id))),window.location.href=`/event.html?id=${n.id}`)}),a.querySelector(".not-interested-btn")?.addEventListener("click",i=>{i.stopPropagation(),h(n.id,n.readableName,"not_interested"),a.remove()}),t.appendChild(a)})}function j(){const e=document.getElementById("countdown-text"),s=document.getElementById("giveaway-email-form");if(!e||!s)return;let t=10;const o=setInterval(()=>{t--,e.textContent=`(available in ${t}s)`,t<=0&&(clearInterval(o),e.remove(),s.classList.remove("hidden"))},1e3)}function A(){const e=document.getElementById("giveaway-options");e.innerHTML="",I.forEach(s=>{const t=document.createElement("div");t.className="giveaway-option",t.innerHTML=`
       <img src="${s.photo}" alt="${s.name}" class="giveaway-photo" />
       <strong>${s.name}</strong><br>

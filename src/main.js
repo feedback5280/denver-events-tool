@@ -12,6 +12,8 @@ let GLOBAL_EVENTS = [];
 let GLOBAL_ARTISTS = [];
 let GLOBAL_ARTIST_MAP = {};
 
+const CUTOFF_DATE = new Date("2026-01-016");
+
 // ------------------------
 // MOCK_ARTIST_GENRES
 // ------------------------
@@ -406,8 +408,11 @@ document.addEventListener("DOMContentLoaded", () => {
       GLOBAL_EVENTS = parseCSV(eventsCSV).map(e => ({
         ...e,
         id: makeEventId(e),
-        readableName: e.eventName
+        readableName: e.eventName,
+        eventDateObj: new Date(e.Date) // store Date object for comparison
       }));
+      // Filter to only include events after cutoff
+      GLOBAL_EVENTS = GLOBAL_EVENTS.filter(e => e.eventDateObj >= CUTOFF_DATE);
       localStorage.setItem("events_data", JSON.stringify(GLOBAL_EVENTS));
 
       GLOBAL_ARTISTS = parseCSV(artistsCSV);

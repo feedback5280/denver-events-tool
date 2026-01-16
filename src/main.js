@@ -422,18 +422,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Check for cached recommended events
       let cachedIds = JSON.parse(sessionStorage.getItem("last_recommended_event_ids") || "null");
-      let recommended;
+      let recommended = [];
+
       if (cachedIds) {
         recommended = cachedIds
           .map(id => GLOBAL_EVENTS.find(e => e.id === id))
           .filter(Boolean)
           .map(e => ({ event: e, sim: null }));
-      } else {
+      }
+
+      // ✅ Fallback if cache is stale/partial
+      if (!recommended || recommended.length < 3) {
         recommended = scoreEvents(GLOBAL_EVENTS);
-        sessionStorage.setItem("last_recommended_event_ids", JSON.stringify(recommended.map(r => r.event.id)));
+        sessionStorage.setItem(
+          "last_recommended_event_ids",
+          JSON.stringify(recommended.map(r => r.event.id))
+        );
       }
 
       renderEvents(recommended, GLOBAL_ARTIST_MAP);
+
       startGiveawayCountdown();
     });
   }

@@ -1,457 +1,424 @@
-import './style.css';
-import { createClient } from '@supabase/supabase-js';
+import "./styles.css";
+import Papa from "papaparse";
+import Chart from "chart.js/auto";
 
-// ------------------------
-// Supabase Setup
-// ------------------------
-const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL;
-const SUPABASE_ANON_KEY = import.meta.env.VITE_SUPABASE_ANON_KEY;
-const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+const CSV_URL = "/clicks_rows.csv";
+const DENVER_TZ = "America/Denver";
 
-let GLOBAL_EVENTS = [];
-let GLOBAL_ARTISTS = [];
-let GLOBAL_ARTIST_MAP = {};
+const els = {
+  fromDate: document.getElementById("fromDate"),
+  toDate: document.getElementById("toDate"),
+  venueFilter: document.getElementById("venueFilter"),
+  resetBtn: document.getElementById("resetBtn"),
 
-const CUTOFF_DATE = new Date("2026-01-16");
+  kpiTotal: document.getElementById("kpiTotal"),
+  kpiEvents: document.getElementById("kpiEvents"),
+  kpiOpenRate: document.getElementById("kpiOpenRate"),
+  kpiTicketRate: document.getElementById("kpiTicketRate"),
+  kpiRange: document.getElementById("kpiRange"),
 
-// ------------------------
-// MOCK_ARTIST_GENRES
-// ------------------------
-const MOCK_ARTIST_GENRES = {
-  "2": ["trap metal"],
-  "3": ["horrorcore"],
-  "4": ["phonk","drift phonk","trap metal"],
-  "5": ["trap metal"],
-  "6": ["trap metal"],
-  "7": ["trap metal","horrorcore"],
-  "12": ["doom metal","stoner metal","sludge metal","stoner rock"],
-  "13": ["death metal","grindcore"],
-  "14": ["stoner metal","stoner rock","sludge metal","doom metal","space rock","drone metal"],
-  "21": ["bass house"],
-  "30": ["shoegaze"],
-  "31": ["shoegaze","post-grunge"],
-  "32": ["shoegaze"],
-  "39": ["symphonic metal"],
-  "43": ["folk punk"],
-  "47": ["surf rock"],
-  "49": ["queercore"],
-  "62": ["melodic bass","future bass","edm"],
-  "63": ["future bass","melodic bass"],
-  "64": ["melodic bass","future bass"],
-  "65": ["melodic bass","future bass"],
-  "69": ["country hip hop"],
-  "72": ["dub techno","minimal techno"],
-  "77": ["garage rock","psychedelic rock"],
-  "88": ["jam band"],
-  "91": ["dubstep","riddim","bass music","deathstep"],
-  "92": ["bass music"],
-  "96": ["honky tonk"],
-  "105": ["alternative metal"],
-  "109": ["afrobeat","jazz funk","funk"],
-  "112": ["jam band","funk rock","funk"],
-  "113": ["jam band","newgrass"],
-  "119": ["future bass"],
-  "120": ["stutter house"],
-  "125": ["drum and bass"],
-  "130": ["tech house"],
-  "131": ["dembow"],
-  "132": ["indie dance"],
-  "133": ["slowcore","post-rock","shoegaze"],
-  "140": ["indie electronic"],
-  "149": ["jazz funk"],
-  "151": ["bass house","bassline","g-house","uk garage"],
-  "152": ["trance","progressive trance","progressive house"],
-  "153": ["rap metal","trap metal","industrial"],
-  "161": ["drum and bass","liquid funk","chillstep"],
-  "162": ["punk"],
-  "163": ["ska punk","ska","celtic punk","punk"],
-  "164": ["queercore"],
-  "165": ["deep house","melodic house","progressive house","house"],
-  "166": ["melodic house"],
-  "167": ["melodic house"],
-  "168": ["doom metal","sludge metal"],
-  "176": ["honky tonk","rockabilly"],
-  "179": ["r&b"],
-  "186": ["queercore","riot grrrl"],
-  "190": ["glitch"],
-  "191": ["blues rock"],
-  "194": ["funkot"],
-  "195": ["funkot"],
-  "198": ["bass music"],
-  "203": ["psychobilly"],
-  "204": ["texas country"],
-  "206": ["folk punk"],
-  "208": ["christian folk"],
-  "209": ["riddim","deathstep","dubstep","dub","bass music"],
-  "210": ["riddim","deathstep","dubstep"],
-  "211": ["riddim"],
-  "217": ["americana","outlaw country","alt country","red dirt","honky tonk"],
-  "218": ["bass music","dubstep","riddim"],
-  "220": ["dubstep","riddim","bass music"],
-  "222": ["southern rock"],
-  "226": ["witch house"],
-  "227": ["phonk","drift phonk"],
-  "228": ["drift phonk","phonk"],
-  "229": ["drift phonk"],
-  "233": ["folk punk"],
-  "236": ["edm"],
-  "238": ["country christian"],
-  "243": ["screamo"],
-  "244": ["mathcore","screamo"],
-  "245": ["screamo"],
-  "246": ["melodic hardcore","metalcore"],
-  "250": ["dubstep","riddim","bass music","deathstep","bass house"],
-  "251": ["bass house","bass music","edm trap"],
-  "252": ["riddim"],
-  "256": ["gangster rap","old school hip hop","g-funk"],
-  "258": ["latin hip hop","mexican hip hop"],
-  "260": ["downtempo"],
-  "262": ["downtempo","glitch","bass music"],
-  "263": ["glitch","downtempo","bass music"],
-  "266": ["downtempo","dub"],
-  "267": ["downtempo"],
-  "269": ["chillstep"],
-  "270": ["bass music","uk garage"],
-  "272": ["newgrass","bluegrass","jam band","americana"],
-  "273": ["newgrass","bluegrass","indie folk"],
-  "274": ["newgrass","bluegrass","indie folk"],
-  "275": ["bluegrass","newgrass"],
-  "277": ["newgrass","bluegrass"],
-  "279": ["jam band","psychedelic rock"],
-  "285": ["bossa nova"],
-  "287": ["jam band"],
-  "288": ["jam band"],
-  "290": ["proto-punk"],
-  "291": ["jam band"],
-  "293": ["newgrass","bluegrass","jam band"],
-  "297": ["bass music"],
-  "298": ["future bass","bass music"],
-  "302": ["bass music","glitch"],
-  "303": ["bass music"],
-  "304": ["glitch"],
-  "305": ["bass music"],
-  "311": ["jam band"],
-  "315": ["bass music","downtempo"],
-  "316": ["glitch","bass music","downtempo"],
-  "317": ["jam band"],
-  "320": ["jam band"],
-  "321": ["vaporwave","lo-fi beats","jazz beats"],
-  "322": ["trip hop","downtempo","plunderphonics","nu jazz"],
-  "324": ["classic blues","boogie-woogie"],
-  "325": ["bass music"],
-  "326": ["bass music"],
-  "330": ["jazz fusion"]
+  fViews: document.getElementById("fViews"),
+  fOpens: document.getElementById("fOpens"),
+  fPrice: document.getElementById("fPrice"),
+  fTickets: document.getElementById("fTickets"),
+  fNope: document.getElementById("fNope"),
+
+  trendCanvas: document.getElementById("trendChart"),
+  funnelCanvas: document.getElementById("funnelChart"),
+  table: document.getElementById("eventsTable"),
+  tbody: document.querySelector("#eventsTable tbody"),
 };
 
-const GIVEAWAY_SHOWS = [
-  {
-    id: "gw-1",
-    name: "Flamingosis W/ Blockhead, Pure Colors, Little MAC",
-    date: "Jan 31, 7pm",
-    photo: "f.png"
-  },
-  {
-    id: "gw-2",
-    name: "The Jauntee & Kendall Street Company W/ Mynd Reader",
-    date: "March 7, 7pm",
-    photo: "j.png"
-  }
-];
+let RAW = [];
+let trendChart = null;
+let funnelChart = null;
 
-let GIVEAWAY_EMAIL = null;
+let sortState = { key: "score", dir: "desc" };
+
+function toDenverDateISO(raw) {
+  if (raw == null) return null;
+  const s = String(raw).trim();
+  if (!s) return null;
+
+  // Accept formats like:
+  // "2026-01-09 02:01:54.884393+00"
+  // "2026-01-09T02:01:54.884Z"
+  let iso = s.includes("T") ? s : s.replace(" ", "T");
+
+  // If timezone is "+00" (not "+00:00"), normalize it
+  iso = iso.replace(/\+00$/, "+00:00");
+
+  const d = new Date(iso);
+  if (isNaN(d.getTime())) return null;
+
+  const parts = new Intl.DateTimeFormat("en-CA", {
+    timeZone: DENVER_TZ,
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).formatToParts(d);
+
+  const y = parts.find(p => p.type === "year")?.value;
+  const m = parts.find(p => p.type === "month")?.value;
+  const day = parts.find(p => p.type === "day")?.value;
+  return (y && m && day) ? `${y}-${m}-${day}` : null;
+}
 
 
-// ------------------------
-// CSV Parser
-// ------------------------
-function parseCSV(csv) {
-  const lines = csv.trim().split("\n");
-  const headers = lines[0].split(",").map(h => h.trim());
-  return lines.slice(1).map(line => {
-    const values = line.split(/,(?=(?:[^"]*"[^"]*")*[^"]*$)/);
-    const obj = {};
-    headers.forEach((h, i) => obj[h] = String(values[i] ?? "").trim().replace(/^"|"$/g, ''));
-    return obj;
+function inferVenue(eventId) {
+  const s = (eventId || "").toLowerCase();
+  if (s.includes("other-side")) return "Other Side";
+  if (s.includes("ballroom")) return "Ballroom";
+  return "Unknown";
+}
+
+function prettyTitle(eventId) {
+  // Make the slug readable and strip trailing date if present
+  if (!eventId) return "—";
+  let s = eventId.replace(/-/g, " ");
+  s = s.replace(/\b(19|20)\d{2}\s\d{2}\s\d{2}\b/g, ""); // rare
+  s = s.replace(/\b(19|20)\d{2}\s\d{2}\s\d{2}\b/g, "");
+  s = s.replace(/\b(19|20)\d{2}\s\d{2}\s\d{2}\b/g, "");
+  s = s.replace(/\b(19|20)\d{2}\b\s*\d{2}\b\s*\d{2}\b/g, "");
+  s = s.replace(/\b(19|20)\d{2}\b-\d{2}-\d{2}\b/g, "");
+  s = s.replace(/\s+/g, " ").trim();
+  // Title-case-ish (light touch)
+  return s.replace(/\b\w/g, c => c.toUpperCase());
+}
+
+function pct(n) {
+  if (!isFinite(n)) return "—";
+  return `${(n * 100).toFixed(1)}%`;
+}
+
+function loadCsv() {
+  return fetch(CSV_URL)
+    .then(r => {
+      if (!r.ok) throw new Error(`Failed to load CSV: ${r.status}`);
+      return r.text();
+    })
+    .then(text => {
+      const parsed = Papa.parse(text, {
+        header: true,
+        skipEmptyLines: true,
+      });
+
+      if (!Array.isArray(parsed.data)) {
+        throw new Error("CSV parse failed: data is not an array");
+      }
+
+      const mapped = parsed.data.map(r => {
+        const created =
+          r.created_at ?? r.createdAt ?? r.timestamp ?? r.time ?? r.date ?? null;
+
+        const eventId =
+          r.event_id ?? r.eventId ?? r.event ?? r.show_id ?? null;
+
+        const action =
+          r.action ?? r.event_action ?? r.type ?? null;
+
+        const denverDate = toDenverDateISO(created);
+
+        return {
+          id: r.id ?? null,
+          event_id: eventId,
+          action,
+          created_at: created,
+          denver_date: denverDate,
+          venue: inferVenue(eventId),
+        };
+      });
+
+      const kept = mapped.filter(
+        r => r.denver_date && r.action && r.event_id
+      );
+
+      // 🔍 DEBUG COUNTER
+      console.log(
+        `CSV rows: ${parsed.data.length}, kept: ${kept.length}, dropped: ${mapped.length - kept.length}`
+      );
+
+      console.log(
+        "Dropped rows sample:",
+        mapped.filter(r => !r.denver_date || !r.action || !r.event_id).slice(0, 5)
+      );
+
+      return kept;
+    });
+}
+
+
+function getFilterRange(rows) {
+  const dates = rows.map(r => r.denver_date).sort();
+  return { min: dates[0], max: dates[dates.length - 1] };
+}
+
+function applyFilters(rows) {
+  const from = els.fromDate.value || null;
+  const to = els.toDate.value || null;
+  const venue = els.venueFilter.value;
+
+  return rows.filter(r => {
+    if (venue !== "ALL" && r.venue !== venue) return false;
+    if (from && r.denver_date < from) return false;
+    if (to && r.denver_date > to) return false;
+    return true;
   });
 }
 
-// ------------------------
-// Supabase Click Helpers
-// ------------------------
-async function recordClick(eventId, eventName, action) {
-  const { error } = await supabase
-    .from("clicks")
-    .insert([{ event_id: eventId, event_name: eventName, action }]);
-  if (error) console.error("click insert failed:", error);
+function computeOverall(rows) {
+  const counts = {
+    viewed: 0,
+    open_event_card: 0,
+    show_price: 0,
+    external_link_click: 0,
+    not_interested: 0,
+  };
+
+  for (const r of rows) {
+    if (counts[r.action] != null) counts[r.action] += 1;
+  }
+
+  const openRate = counts.viewed ? counts.open_event_card / counts.viewed : NaN;
+  const ticketRate = counts.viewed ? counts.external_link_click / counts.viewed : NaN;
+
+  return { counts, openRate, ticketRate };
 }
 
-function recordOnce(eventId, eventName, action, callback) {
-  let actionMap = JSON.parse(sessionStorage.getItem("event_actions") || "{}");
-  if (actionMap[eventId]?.includes(action)) return;
-  recordClick(eventId, eventName, action);
-  if (!actionMap[eventId]) actionMap[eventId] = [];
-  actionMap[eventId].push(action);
-  sessionStorage.setItem("event_actions", JSON.stringify(actionMap));
-  if (callback) callback();
-}
-
-// ------------------------
-// Helpers
-// ------------------------
-function getEventGenresFromArtistIDs(ids) {
-  if (!ids) return [];
-  return ids.split(",").flatMap(id => MOCK_ARTIST_GENRES[id.trim()] || []);
-}
-
-function buildArtistMap(artists) {
-  const map = {};
-  artists.forEach(a => a.artistID && (map[a.artistID.trim()] = a));
-  return map;
-}
-
-function getArtistNames(ids, map) {
-  if (!ids) return [];
-  return ids.split(",").map(id => map[id.trim()]?.name || "Unknown");
-}
-
-function makeEventId(event) {
-  return (event.eventName + "|" + event.venue + "|" + event.Date)
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-");
-}
-
-function scoreEvents(events) {
-  const allowedVenues = ["cervantes' other side","cervantes' masterpiece ballroom"];
-  return events
-    .filter(e => ["yes","true","1"].includes(String(e.liveMusic).toLowerCase()))
-    .filter(e => allowedVenues.includes(String(e.venue).trim().toLowerCase()))
-    .sort(() => Math.random() - 0.5)
-    .slice(0,3)
-    .map(event => ({ event, sim: null }));
-}
-
-// ------------------------
-// Render Events
-// ------------------------
-function renderEvents(recommended, artistMap) {
-  const container = document.getElementById("events-container");
-  if (!container) return;
-  container.innerHTML = "";
-
-  const viewedEvents = JSON.parse(sessionStorage.getItem("viewed_events") || "[]");
-
-  recommended.forEach(({ event }) => {
-    const div = document.createElement("div");
-    div.className = "event-card";
-    div.innerHTML = `
-      <h3>${event.eventName}</h3>
-      <p><strong>Artists:</strong> ${getArtistNames(event.artistIDs, artistMap).join(", ")}</p>
-      <p><strong>Genres:</strong> ${getEventGenresFromArtistIDs(event.artistIDs).join(", ")}</p>
-    
-    `;
-
-    if (!viewedEvents.includes(event.id)) {
-      recordClick(event.id, event.readableName, "viewed");
-      viewedEvents.push(event.id);
-      sessionStorage.setItem("viewed_events", JSON.stringify(viewedEvents));
+function computeDaily(rows) {
+  const map = new Map(); // date -> counts
+  for (const r of rows) {
+    const key = r.denver_date;
+    if (!map.has(key)) {
+      map.set(key, {
+        viewed: 0, open_event_card: 0, show_price: 0, external_link_click: 0, not_interested: 0
+      });
     }
+    const bucket = map.get(key);
+    if (bucket[r.action] != null) bucket[r.action] += 1;
+  }
 
-    div.addEventListener("click", (e) => {
-      if (e.target.classList.contains("not-interested-btn")) return;
-      sessionStorage.setItem("last_recommended_event_ids", JSON.stringify(recommended.map(r => r.event.id)));
-      window.location.href = `${import.meta.env.BASE_URL}event.html?id=${event.id}`;
-    });
+  const dates = [...map.keys()].sort();
+  const series = (k) => dates.map(d => map.get(d)[k] || 0);
 
-    const btn = div.querySelector(".not-interested-btn");
-    btn?.addEventListener("click", (e) => {
-      e.stopPropagation();
-      recordClick(event.id, event.readableName, "not_interested");
-      div.remove();
-    });
-
-    container.appendChild(div);
-  });
+  return {
+    dates,
+    viewed: series("viewed"),
+    open_event_card: series("open_event_card"),
+    show_price: series("show_price"),
+    external_link_click: series("external_link_click"),
+    not_interested: series("not_interested"),
+  };
 }
 
-function startGiveawayCountdown() {
-  const countdownText = document.getElementById("countdown-text");
-  const form = document.getElementById("giveaway-email-form");
+function computeEvents(rows) {
+  const events = new Map();
 
-  if (!countdownText || !form) return;
-
-  let seconds = 10;
-
-  const timer = setInterval(() => {
-    seconds--;
-
-    countdownText.textContent = `(available in ${seconds}s)`;
-
-    if (seconds <= 0) {
-      clearInterval(timer);
-      countdownText.remove();
-      form.classList.remove("hidden");
+  for (const r of rows) {
+    const id = r.event_id;
+    if (!events.has(id)) {
+      events.set(id, {
+        event_id: id,
+        title: prettyTitle(id),
+        venue: r.venue,
+        viewed: 0,
+        open_event_card: 0,
+        show_price: 0,
+        external_link_click: 0,
+        not_interested: 0,
+      });
     }
-  }, 1000);
+    const e = events.get(id);
+    if (e[r.action] != null) e[r.action] += 1;
+  }
+
+  const arr = [...events.values()].map(e => {
+    const open_rate = e.viewed ? e.open_event_card / e.viewed : NaN;
+    const price_rate = e.open_event_card ? e.show_price / e.open_event_card : NaN;
+
+    // Engagement score (demo-friendly): value ticket intent highly
+    // (tune later once you have conversions/headcount)
+    const score =
+      e.external_link_click * 5 +
+      e.show_price * 3 +
+      e.open_event_card * 1 +
+      e.viewed * 0.2 -
+      e.not_interested * 1;
+
+    return {
+      ...e,
+      open_rate,
+      price_rate,
+      score,
+      ticket_intent: e.external_link_click,
+    };
+  });
+
+  return arr;
 }
 
+function renderKPIs(rows) {
+  const { counts, openRate, ticketRate } = computeOverall(rows);
+  const events = new Set(rows.map(r => r.event_id)).size;
 
-function renderGiveawayOptions() {
-  const container = document.getElementById("giveaway-options");
-  container.innerHTML = "";
+  els.kpiTotal.textContent = rows.length.toLocaleString();
+  els.kpiEvents.textContent = events.toLocaleString();
+  els.kpiOpenRate.textContent = pct(openRate);
+  els.kpiTicketRate.textContent = pct(ticketRate);
 
-  GIVEAWAY_SHOWS.forEach(show => {
-    const div = document.createElement("div");
-    div.className = "giveaway-option";
-    div.innerHTML = `
-      <img src="${show.photo}" alt="${show.name}" class="giveaway-photo" />
-      <strong>${show.name}</strong><br>
-      ${show.date}
+  const range = getFilterRange(rows);
+  els.kpiRange.textContent = `${range.min} → ${range.max}`;
+
+  els.fViews.textContent = counts.viewed.toLocaleString();
+  els.fOpens.textContent = counts.open_event_card.toLocaleString();
+  els.fPrice.textContent = counts.show_price.toLocaleString();
+  els.fTickets.textContent = counts.external_link_click.toLocaleString();
+  els.fNope.textContent = counts.not_interested.toLocaleString();
+}
+
+function renderTrend(rows) {
+  const d = computeDaily(rows);
+
+  if (trendChart) trendChart.destroy();
+  trendChart = new Chart(els.trendCanvas.getContext("2d"), {
+    type: "line",
+    data: {
+      labels: d.dates,
+      datasets: [
+        { label: "Viewed", data: d.viewed, tension: 0.35 },
+        { label: "Opened card", data: d.open_event_card, tension: 0.35 },
+        { label: "Show price", data: d.show_price, tension: 0.35 },
+        { label: "Ticket click", data: d.external_link_click, tension: 0.35 },
+        { label: "Not interested", data: d.not_interested, tension: 0.35 },
+      ],
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: { labels: { color: "rgba(255,255,255,.72)" } },
+        tooltip: { mode: "index", intersect: false },
+      },
+      scales: {
+        x: { ticks: { color: "rgba(255,255,255,.55)" }, grid: { color: "rgba(255,255,255,.06)" } },
+        y: { ticks: { color: "rgba(255,255,255,.55)" }, grid: { color: "rgba(255,255,255,.06)" } },
+      },
+    },
+  });
+}
+
+function renderFunnel(rows) {
+  const { counts } = computeOverall(rows);
+
+  if (funnelChart) funnelChart.destroy();
+  funnelChart = new Chart(els.funnelCanvas.getContext("2d"), {
+    type: "bar",
+    data: {
+      labels: ["Views", "Opens", "Price checks", "Ticket clicks"],
+      datasets: [{
+        label: "Count",
+        data: [counts.viewed, counts.open_event_card, counts.show_price, counts.external_link_click],
+      }],
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: { display: false },
+        tooltip: { enabled: true },
+      },
+      scales: {
+        x: { ticks: { color: "rgba(255,255,255,.55)" }, grid: { color: "rgba(255,255,255,.06)" } },
+        y: { ticks: { color: "rgba(255,255,255,.55)" }, grid: { color: "rgba(255,255,255,.06)" } },
+      },
+    },
+  });
+}
+
+function sortRows(rows) {
+  const { key, dir } = sortState;
+  const m = dir === "asc" ? 1 : -1;
+
+  return [...rows].sort((a, b) => {
+    const va = a[key];
+    const vb = b[key];
+
+    if (typeof va === "string") return va.localeCompare(vb) * m;
+    const na = Number.isFinite(va) ? va : -Infinity;
+    const nb = Number.isFinite(vb) ? vb : -Infinity;
+    return (na - nb) * m;
+  });
+}
+
+function renderTable(rows) {
+  const events = computeEvents(rows);
+  const sorted = sortRows(events);
+
+  els.tbody.innerHTML = "";
+  for (const e of sorted.slice(0, 25)) {
+    const tr = document.createElement("tr");
+
+    tr.innerHTML = `
+      <td>
+        <span class="badge"><span class="dot"></span>${e.title}</span>
+      </td>
+      <td>${e.venue}</td>
+      <td class="num">${e.viewed}</td>
+      <td class="num">${pct(e.open_rate)}</td>
+      <td class="num">${pct(e.price_rate)}</td>
+      <td class="num">${e.ticket_intent}</td>
+      <td class="num"><strong>${e.score.toFixed(1)}</strong></td>
     `;
-
-    div.addEventListener("click", () => {
-      submitGiveaway(show);
-    });
-
-    container.appendChild(div);
-  });
-}
-
-
-async function submitGiveaway(show) {
-  const statusMsg = document.getElementById("giveaway-status-msg");
-
-  try {
-    statusMsg.textContent = "Saving entry...";
-
-    await supabase
-      .from("emails")
-      .insert([{
-        email: GIVEAWAY_EMAIL,
-        giveaway_show: show.name
-      }]);
-
-    statusMsg.textContent = "You're entered! 🎉";
-    localStorage.setItem("giveaway_entered", "true");
-
-    // Close overlay after short delay
-    setTimeout(() => {
-      document.getElementById("giveaway-overlay")
-        .classList.add("hidden");
-
-      document.getElementById("giveaway-cta")
-        .innerHTML = "<p>You're entered 🎉</p>";
-    }, 1000);
-
-  } catch (error) {
-    console.error("Giveaway insert failed:", error);
-    statusMsg.textContent = "Error saving entry. Please try again.";
+    els.tbody.appendChild(tr);
   }
 }
 
-
-
-
-// ------------------------
-// INIT
-// ------------------------
-document.addEventListener("DOMContentLoaded", () => {
-
-  document.getElementById("giveaway-overlay")?.classList.add("hidden");
-  if (localStorage.getItem("giveaway_entered")) {
-    const cta = document.getElementById("giveaway-cta");
-    if (cta) cta.innerHTML = "<p>You're already entered 🎉</p>";
-  }
-
-
-  // EMAIL PAGE
-  const form = document.getElementById("email-form");
-  if (form) {
-    const statusMsg = document.getElementById("status-msg");
-    form.addEventListener("submit", async (e) => {
-      e.preventDefault();
-      const email = document.getElementById("email")?.value.trim();
-      if (!email) return;
-      try {
-        statusMsg.textContent = "Email saved! Redirecting...";
-        await supabase.from("emails").insert([{ email }]);
-        window.location.href = `${import.meta.env.BASE_URL}events.html`;
-      } catch {
-        statusMsg.textContent = "Error saving email.";
+function wireSorting() {
+  els.table.querySelectorAll("thead th[data-sort]").forEach(th => {
+    th.addEventListener("click", () => {
+      const key = th.getAttribute("data-sort");
+      if (sortState.key === key) {
+        sortState.dir = sortState.dir === "asc" ? "desc" : "asc";
+      } else {
+        sortState.key = key;
+        sortState.dir = "desc";
       }
+      rerender();
     });
-  }
-
-  const giveawayForm = document.getElementById("giveaway-email-form");
-
-  giveawayForm?.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    const emailInput = document.getElementById("giveaway-email");
-    GIVEAWAY_EMAIL = emailInput.value.trim();
-    if (!GIVEAWAY_EMAIL) return;
-
-    document.getElementById("giveaway-overlay")
-      .classList.remove("hidden");
-
-    renderGiveawayOptions();
   });
+}
 
+function rerender() {
+  const filtered = applyFilters(RAW);
+  renderKPIs(filtered);
+  renderTrend(filtered);
+  renderFunnel(filtered);
+  renderTable(filtered);
+}
 
-  // EVENTS PAGE
-  const eventsContainer = document.getElementById("events-container");
-  if (eventsContainer) {
-    console.log("Fetching events from:", `${import.meta.env.BASE_URL}events.csv`)
-    Promise.all([
-      fetch(`${import.meta.env.BASE_URL}events.csv`).then(r => r.text()),
-      fetch(`${import.meta.env.BASE_URL}artists.csv`).then(r => r.text())
-    ]).then(([eventsCSV, artistsCSV]) => {
+async function init() {
+  RAW = await loadCsv();
 
-      GLOBAL_EVENTS = parseCSV(eventsCSV).map(e => ({
-        ...e,
-        id: makeEventId(e),
-        readableName: e.eventName,
-        eventDateObj: new Date(e.Date) // store Date object for comparison
-      }));
-      // Filter to only include events after cutoff
-      GLOBAL_EVENTS = GLOBAL_EVENTS.filter(e => e.eventDateObj >= CUTOFF_DATE);
-      console.log("GLOBAL_EVENTS after filtering:", GLOBAL_EVENTS);
-      localStorage.setItem("events_data", JSON.stringify(GLOBAL_EVENTS));
+  // Set date inputs to dataset range
+  const range = getFilterRange(RAW);
+  els.fromDate.value = range.min;
+  els.toDate.value = range.max;
 
-      GLOBAL_ARTISTS = parseCSV(artistsCSV);
-      GLOBAL_ARTIST_MAP = buildArtistMap(GLOBAL_ARTISTS);
-
-      // Check for cached recommended events
-      let cachedIds = JSON.parse(sessionStorage.getItem("last_recommended_event_ids") || "null");
-      let recommended = [];
-
-      if (cachedIds) {
-        recommended = cachedIds
-          .map(id => GLOBAL_EVENTS.find(e => e.id === id))
-          .filter(Boolean)
-          .map(e => ({ event: e, sim: null }));
-      }
-
-      // ✅ Fallback if cache is stale/partial
-      if (!recommended || recommended.length < 3) {
-        recommended = scoreEvents(GLOBAL_EVENTS);
-        sessionStorage.setItem(
-          "last_recommended_event_ids",
-          JSON.stringify(recommended.map(r => r.event.id))
-        );
-      }
-
-      renderEvents(recommended, GLOBAL_ARTIST_MAP);
-
-      startGiveawayCountdown();
-    });
-  }
-
-  // SHUFFLE BUTTON
-  const shuffleBtn = document.getElementById("shuffle-btn");
-  shuffleBtn?.addEventListener("click", () => {
-    const newEvents = scoreEvents(GLOBAL_EVENTS);
-    sessionStorage.setItem("last_recommended_event_ids", JSON.stringify(newEvents.map(r => r.event.id)));
-    renderEvents(newEvents, GLOBAL_ARTIST_MAP);
+  // Wire
+  els.fromDate.addEventListener("change", rerender);
+  els.toDate.addEventListener("change", rerender);
+  els.venueFilter.addEventListener("change", rerender);
+  els.resetBtn.addEventListener("click", () => {
+    els.fromDate.value = range.min;
+    els.toDate.value = range.max;
+    els.venueFilter.value = "ALL";
+    sortState = { key: "score", dir: "desc" };
+    rerender();
   });
+  wireSorting();
 
+  rerender();
+}
+
+init().catch(err => {
+  console.error(err);
+  document.body.innerHTML = `<pre style="color:white;padding:24px;">${String(err)}</pre>`;
 });

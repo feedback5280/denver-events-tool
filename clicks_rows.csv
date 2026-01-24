@@ -1,0 +1,701 @@
+id,event_id,action,created_at,event_name
+441,Chick Magnet & Nostaljazz & Slippery When Wet,open_event_card,2026-01-09 02:01:54.884393+00,
+442,Chick Magnet & Nostaljazz & Slippery When Wet,show_price,2026-01-09 02:02:18.030799+00,
+443,Lotus **FRIDAY 1/16**,open_event_card,2026-01-09 02:02:47.47235+00,
+444,Lotus **FRIDAY 1/16**,show_price,2026-01-09 02:02:51.111427+00,
+445,Kitchen Dwellers w/ Jammy Buffet **THURSDAY 1/22**,open_event_card,2026-01-09 02:03:14.629218+00,
+446,Kitchen Dwellers w/ Jammy Buffet **THURSDAY 1/22**,show_price,2026-01-09 02:03:17.184903+00,
+447,Jimkata w/ Barbara,open_event_card,2026-01-09 02:03:21.885461+00,
+448,Jimkata w/ Barbara,show_price,2026-01-09 02:03:23.156118+00,
+449,Jimkata w/ Barbara,external_link_click,2026-01-09 02:03:24.92889+00,
+450,Lotus **FRIDAY 1/16**,open_event_card,2026-01-09 02:05:26.340469+00,
+451,Lotus **FRIDAY 1/16**,show_price,2026-01-09 02:05:27.96292+00,
+452,Kitchen Dwellers w/ Jammy Buffet **THURSDAY 1/22**,open_event_card,2026-01-09 02:05:31.839978+00,
+453,Kitchen Dwellers w/ Jammy Buffet **THURSDAY 1/22**,show_price,2026-01-09 02:05:36.004711+00,
+454,"SHIFT Ft. Blookah w/ Philia, Jawnsin, Gibbs",open_event_card,2026-01-09 03:18:16.104579+00,
+455,Chmura & Duffrey AT OGDEN THEATRE,open_event_card,2026-01-09 03:18:18.888938+00,
+456,"Zach Nugent’s Dead Set w/ Lucas Parker Band, The Buzz",open_event_card,2026-01-09 03:18:20.8888+00,
+484,yonder-mountain-string-band-w-kyle-tuttle-band-ft-kyle-tuttle-dom-leslie-sam-leslie-geoff-saunders-friday-1-9-cervantes-masterpiece-ballroom-2026-01-09,viewed,2026-01-09 05:59:00+00,"Yonder Mountain String Band w/ Kyle Tuttle Band ft. Kyle Tuttle, Dom Leslie, Sam Leslie, Geoff Saunders **FRIDAY 1/9**"
+485,zach-nugent-s-dead-set-w-lucas-parker-band-the-buzz-cervantes-other-side-2026-01-17,viewed,2026-01-09 05:58:36.385646+00,"Zach Nugent’s Dead Set w/ Lucas Parker Band, The Buzz"
+486,shift-ft-blookah-w-philia-jawnsin-gibbs-cervantes-other-side-2026-01-08,viewed,2026-01-09 05:58:36.392206+00,"SHIFT Ft. Blookah w/ Philia, Jawnsin, Gibbs"
+487,shift-ft-blookah-w-philia-jawnsin-gibbs-cervantes-other-side-2026-01-08,not_interested,2026-01-09 05:59:30.437866+00,"SHIFT Ft. Blookah w/ Philia, Jawnsin, Gibbs"
+488,yonder-mountain-string-band-w-kyle-tuttle-band-ft-kyle-tuttle-dom-leslie-sam-leslie-geoff-saunders-friday-1-9-cervantes-masterpiece-ballroom-2026-01-09,open_event_card,2026-01-09 05:59:38.431775+00,"Yonder Mountain String Band w/ Kyle Tuttle Band ft. Kyle Tuttle, Dom Leslie, Sam Leslie, Geoff Saunders **FRIDAY 1/9**"
+489,yonder-mountain-string-band-w-kyle-tuttle-band-ft-kyle-tuttle-dom-leslie-sam-leslie-geoff-saunders-friday-1-9-cervantes-masterpiece-ballroom-2026-01-09,show_price,2026-01-09 05:59:39.859542+00,"Yonder Mountain String Band w/ Kyle Tuttle Band ft. Kyle Tuttle, Dom Leslie, Sam Leslie, Geoff Saunders **FRIDAY 1/9**"
+490,yonder-mountain-string-band-w-kyle-tuttle-band-ft-kyle-tuttle-dom-leslie-sam-leslie-geoff-saunders-friday-1-9-cervantes-masterpiece-ballroom-2026-01-09,external_link_click,2026-01-09 05:59:41.101438+00,"Yonder Mountain String Band w/ Kyle Tuttle Band ft. Kyle Tuttle, Dom Leslie, Sam Leslie, Geoff Saunders **FRIDAY 1/9**"
+491,flamingosis-w-blockhead-pure-colors-little-mac-cervantes-masterpiece-ballroom-2026-01-31,viewed,2026-01-09 05:59:50.394803+00,"Flamingosis w/ Blockhead, Pure Colors, Little Mac"
+492,jimkata-w-barbara-cervantes-other-side-2026-01-22,viewed,2026-01-09 05:59:52.756962+00,Jimkata w/ Barbara
+493,lotus-friday-1-16-cervantes-masterpiece-ballroom-2026-01-16,viewed,2026-01-09 05:59:52.762581+00,Lotus **FRIDAY 1/16**
+494,tripp-st-w-rsun-rendr-vyhara-dizzy-cervantes-masterpiece-ballroom-2026-01-24,viewed,2026-01-09 05:59:53.885242+00,"Tripp St. w/ rSUN, Rendr, Vyhara, Dizzy!"
+495,shift-ft-midicinal-w-catparty-phlo-philia-cervantes-other-side-2026-01-29,viewed,2026-01-09 05:59:53.889541+00,"SHIFT Ft. MIDIcinal w/ CatParty, PhLo, Philia"
+496,pma-ft-clay-parnell-steve-molitz-allen-aucoin-ben-silver-cervantes-other-side-2026-01-24,viewed,2026-01-09 05:59:56.40707+00,"PMA (ft. Clay Parnell, Steve Molitz, Allen Aucoin) & Ben Silver"
+497,wake-up-and-live-a-bob-marley-tribute-w-a-mac-the-height-dj-selekta-razja-cervantes-other-side-2026-02-05,viewed,2026-01-09 05:59:56.413115+00,"Wake Up and Live – A Bob Marley Tribute w/ A-Mac & the Height, DJ Selekta Razja"
+498,great-blue-ft-peter-anspach-of-goose-w-jewel-house-and-special-guest-ruthie-bandit-dj-set-cervantes-other-side-2026-02-01,viewed,2026-01-09 05:59:58.979391+00,Great Blue ft. Peter Anspach of Goose w/ Jewel House and Special Guest Ruthie Bandit (DJ Set)
+499,yonder-mountain-string-band-w-kyle-tuttle-band-ft-kyle-tuttle-dom-leslie-sam-leslie-geoff-saunders-saturday-1-10-cervantes-masterpiece-ballroom-2026-01-10,viewed,2026-01-09 06:00:36.931417+00,"Yonder Mountain String Band w/ Kyle Tuttle Band ft. Kyle Tuttle, Dom Leslie, Sam Leslie, Geoff Saunders **SATURDAY 1/10**"
+500,pma-ft-clay-parnell-steve-molitz-allen-aucoin-ben-silver-cervantes-other-side-2026-01-24,viewed,2026-01-09 06:04:14.326888+00,"PMA (ft. Clay Parnell, Steve Molitz, Allen Aucoin) & Ben Silver"
+501,yonder-mountain-string-band-w-kyle-tuttle-band-ft-kyle-tuttle-dom-leslie-sam-leslie-geoff-saunders-friday-1-9-cervantes-masterpiece-ballroom-2026-01-09,viewed,2026-01-09 06:04:14.464886+00,"Yonder Mountain String Band w/ Kyle Tuttle Band ft. Kyle Tuttle, Dom Leslie, Sam Leslie, Geoff Saunders **FRIDAY 1/9**"
+502,kyle-hollingsworth-band-w-breadbox-ballroom-dave-watts-friends-w-hot-like-mars-other-side-cervantes-other-side-2026-01-30,viewed,2026-01-09 06:04:14.479706+00,Kyle Hollingsworth Band w/ Breadbox (Ballroom) + Dave Watts & Friends w/ Hot Like Mars (Other Side)
+503,yonder-mountain-string-band-w-kyle-tuttle-band-ft-kyle-tuttle-dom-leslie-sam-leslie-geoff-saunders-friday-1-9-cervantes-masterpiece-ballroom-2026-01-09,open_event_card,2026-01-09 06:04:51.063572+00,"Yonder Mountain String Band w/ Kyle Tuttle Band ft. Kyle Tuttle, Dom Leslie, Sam Leslie, Geoff Saunders **FRIDAY 1/9**"
+504,pma-ft-clay-parnell-steve-molitz-allen-aucoin-ben-silver-cervantes-other-side-2026-01-24,open_event_card,2026-01-09 06:05:09.730197+00,"PMA (ft. Clay Parnell, Steve Molitz, Allen Aucoin) & Ben Silver"
+505,pma-ft-clay-parnell-steve-molitz-allen-aucoin-ben-silver-cervantes-other-side-2026-01-24,show_price,2026-01-09 06:05:10.932695+00,"PMA (ft. Clay Parnell, Steve Molitz, Allen Aucoin) & Ben Silver"
+506,wake-up-and-live-a-bob-marley-tribute-w-a-mac-the-height-dj-selekta-razja-cervantes-other-side-2026-02-05,viewed,2026-01-09 06:07:33.473616+00,"Wake Up and Live – A Bob Marley Tribute w/ A-Mac & the Height, DJ Selekta Razja"
+507,lotus-friday-1-16-cervantes-masterpiece-ballroom-2026-01-16,viewed,2026-01-09 06:07:33.475028+00,Lotus **FRIDAY 1/16**
+508,yonder-mountain-string-band-w-kyle-tuttle-band-ft-kyle-tuttle-dom-leslie-sam-leslie-geoff-saunders-saturday-1-10-cervantes-masterpiece-ballroom-2026-01-10,viewed,2026-01-09 06:07:33.502548+00,"Yonder Mountain String Band w/ Kyle Tuttle Band ft. Kyle Tuttle, Dom Leslie, Sam Leslie, Geoff Saunders **SATURDAY 1/10**"
+509,wake-up-and-live-a-bob-marley-tribute-w-a-mac-the-height-dj-selekta-razja-cervantes-other-side-2026-02-05,open_event_card,2026-01-09 06:07:48.264135+00,"Wake Up and Live – A Bob Marley Tribute w/ A-Mac & the Height, DJ Selekta Razja"
+510,shift-ft-midicinal-w-catparty-phlo-philia-cervantes-other-side-2026-01-29,viewed,2026-01-09 06:14:07.512564+00,"SHIFT Ft. MIDIcinal w/ CatParty, PhLo, Philia"
+511,chmura-duffrey-at-ogden-theatre-cervantes-masterpiece-ballroom-2026-01-30,viewed,2026-01-09 06:14:07.507962+00,Chmura & Duffrey AT OGDEN THEATRE
+512,amnesiacs-radiohead-tribute-rally-round-the-family-rage-against-the-machine-tribute-w-apostles-of-fire-black-sabbath-cervantes-other-side-2026-02-06,viewed,2026-01-09 06:14:07.560462+00,Amnesiacs (Radiohead Tribute) & Rally ‘Round The Family (Rage Against The Machine Tribute) w/ Apostles of Fire (Black Sabbath)
+513,chmura-duffrey-at-ogden-theatre-cervantes-masterpiece-ballroom-2026-01-30,open_event_card,2026-01-09 06:14:17.542446+00,Chmura & Duffrey AT OGDEN THEATRE
+514,chmura-duffrey-at-ogden-theatre-cervantes-masterpiece-ballroom-2026-01-30,external_link_click,2026-01-09 06:14:26.489659+00,Chmura & Duffrey AT OGDEN THEATRE
+515,shift-ft-midicinal-w-catparty-phlo-philia-cervantes-other-side-2026-01-29,open_event_card,2026-01-09 06:14:51.035235+00,"SHIFT Ft. MIDIcinal w/ CatParty, PhLo, Philia"
+516,shift-ft-blookah-w-philia-jawnsin-gibbs-cervantes-other-side-2026-01-08,open_event_card,2026-01-09 08:43:16.497989+00,"SHIFT Ft. Blookah w/ Philia, Jawnsin, Gibbs"
+517,"Flamingosis w/ Blockhead, Pure Colors, Little Mac",open_event_card,2026-01-09 11:51:46.179471+00,
+518,miilk-w-buzz-junior-sweetboi-cervantes-other-side-2026-01-31,viewed,2026-01-09 14:33:11.031788+00,"Miilk w/ Buzz Junior, Sweetboi"
+519,pma-ft-clay-parnell-steve-molitz-allen-aucoin-ben-silver-cervantes-other-side-2026-01-24,viewed,2026-01-09 14:33:11.179741+00,"PMA (ft. Clay Parnell, Steve Molitz, Allen Aucoin) & Ben Silver"
+520,amnesiacs-radiohead-tribute-rally-round-the-family-rage-against-the-machine-tribute-w-apostles-of-fire-black-sabbath-cervantes-other-side-2026-02-06,viewed,2026-01-09 14:33:11.246771+00,Amnesiacs (Radiohead Tribute) & Rally ‘Round The Family (Rage Against The Machine Tribute) w/ Apostles of Fire (Black Sabbath)
+521,jimkata-w-barbara-cervantes-other-side-2026-01-22,viewed,2026-01-09 14:33:24.178004+00,Jimkata w/ Barbara
+522,great-blue-ft-peter-anspach-of-goose-w-jewel-house-and-special-guest-ruthie-bandit-dj-set-cervantes-other-side-2026-02-01,viewed,2026-01-09 14:33:24.196172+00,Great Blue ft. Peter Anspach of Goose w/ Jewel House and Special Guest Ruthie Bandit (DJ Set)
+523,ozztin-w-yojas-inari-split-velcroshirt-cervantes-other-side-2026-01-23,viewed,2026-01-09 14:33:24.194371+00,"Ozztin w/ Yojas, Inari, SPLiT, VelcroShirt"
+524,Jimkata w/ Barbara,open_event_card,2026-01-09 17:31:17.304447+00,
+525,"Flamingosis w/ Blockhead, Pure Colors, Little Mac",open_event_card,2026-01-09 17:49:11.65113+00,
+526,shift-ft-blookah-w-philia-jawnsin-gibbs-cervantes-other-side-2026-01-08,viewed,2026-01-09 18:02:49.906914+00,"SHIFT Ft. Blookah w/ Philia, Jawnsin, Gibbs"
+527,chmura-duffrey-at-ogden-theatre-cervantes-masterpiece-ballroom-2026-01-30,viewed,2026-01-09 18:02:49.905903+00,Chmura & Duffrey AT OGDEN THEATRE
+528,shift-ft-midicinal-w-catparty-phlo-philia-cervantes-other-side-2026-01-29,viewed,2026-01-09 18:02:49.906441+00,"SHIFT Ft. MIDIcinal w/ CatParty, PhLo, Philia"
+529,lotus-friday-1-16-cervantes-masterpiece-ballroom-2026-01-16,viewed,2026-01-09 18:03:13.56317+00,Lotus **FRIDAY 1/16**
+530,kitchen-dwellers-w-jammy-buffet-thursday-1-22-cervantes-masterpiece-ballroom-2026-01-22,viewed,2026-01-09 18:03:13.589047+00,Kitchen Dwellers w/ Jammy Buffet **THURSDAY 1/22**
+531,amnesiacs-radiohead-tribute-rally-round-the-family-rage-against-the-machine-tribute-w-apostles-of-fire-black-sabbath-cervantes-other-side-2026-02-06,viewed,2026-01-09 18:03:13.591493+00,Amnesiacs (Radiohead Tribute) & Rally ‘Round The Family (Rage Against The Machine Tribute) w/ Apostles of Fire (Black Sabbath)
+532,zach-nugent-s-dead-set-w-lucas-parker-band-the-buzz-cervantes-other-side-2026-01-17,viewed,2026-01-09 18:03:27.044138+00,"Zach Nugent’s Dead Set w/ Lucas Parker Band, The Buzz"
+533,chick-magnet-nostaljazz-slippery-when-wet-cervantes-other-side-2026-01-16,viewed,2026-01-09 18:03:27.067557+00,Chick Magnet & Nostaljazz & Slippery When Wet
+534,lotus-saturday-1-17-cervantes-masterpiece-ballroom-2026-01-17,viewed,2026-01-09 18:03:27.069003+00,Lotus **SATURDAY 1/17**
+535,chick-magnet-nostaljazz-slippery-when-wet-cervantes-other-side-2026-01-16,open_event_card,2026-01-09 18:03:33.798379+00,Chick Magnet & Nostaljazz & Slippery When Wet
+536,chick-magnet-nostaljazz-slippery-when-wet-cervantes-other-side-2026-01-16,show_price,2026-01-09 18:03:40.435475+00,Chick Magnet & Nostaljazz & Slippery When Wet
+537,"Flamingosis w/ Blockhead, Pure Colors, Little Mac",open_event_card,2026-01-09 18:04:02.277816+00,
+538,yonder-mountain-string-band-w-kyle-tuttle-band-ft-kyle-tuttle-dom-leslie-sam-leslie-geoff-saunders-friday-1-9-cervantes-masterpiece-ballroom-2026-01-09,viewed,2026-01-09 18:05:14.180914+00,"Yonder Mountain String Band w/ Kyle Tuttle Band ft. Kyle Tuttle, Dom Leslie, Sam Leslie, Geoff Saunders **FRIDAY 1/9**"
+539,shift-ft-blookah-w-philia-jawnsin-gibbs-cervantes-other-side-2026-01-08,viewed,2026-01-09 18:05:14.180782+00,"SHIFT Ft. Blookah w/ Philia, Jawnsin, Gibbs"
+540,flamingosis-w-blockhead-pure-colors-little-mac-cervantes-masterpiece-ballroom-2026-01-31,viewed,2026-01-09 18:05:14.180718+00,"Flamingosis w/ Blockhead, Pure Colors, Little Mac"
+541,lit-society-ft-dominic-lalli-big-gigantic-borahm-lee-pretty-lights-lyle-divinsky-and-more-isaac-sinclair-wayback-cervantes-other-side-2026-01-10,viewed,2026-01-09 18:06:04.925916+00,"Lit Society ft. Dominic Lalli (Big Gigantic), Borahm Lee (Pretty Lights), Lyle Divinsky and more & Isaac Sinclair Wayback"
+542,kyle-hollingsworth-band-w-breadbox-ballroom-dave-watts-friends-w-hot-like-mars-other-side-cervantes-other-side-2026-01-30,viewed,2026-01-09 18:06:04.93096+00,Kyle Hollingsworth Band w/ Breadbox (Ballroom) + Dave Watts & Friends w/ Hot Like Mars (Other Side)
+543,shift-ft-blookah-w-philia-jawnsin-gibbs-cervantes-other-side-2026-01-08,viewed,2026-01-09 18:06:04.937774+00,"SHIFT Ft. Blookah w/ Philia, Jawnsin, Gibbs"
+544,shift-ft-blookah-w-philia-jawnsin-gibbs-cervantes-other-side-2026-01-08,not_interested,2026-01-09 18:06:15.928993+00,"SHIFT Ft. Blookah w/ Philia, Jawnsin, Gibbs"
+545,lit-society-ft-dominic-lalli-big-gigantic-borahm-lee-pretty-lights-lyle-divinsky-and-more-isaac-sinclair-wayback-cervantes-other-side-2026-01-10,not_interested,2026-01-09 18:06:17.031213+00,"Lit Society ft. Dominic Lalli (Big Gigantic), Borahm Lee (Pretty Lights), Lyle Divinsky and more & Isaac Sinclair Wayback"
+546,kyle-hollingsworth-band-w-breadbox-ballroom-dave-watts-friends-w-hot-like-mars-other-side-cervantes-other-side-2026-01-30,not_interested,2026-01-09 18:06:18.252368+00,Kyle Hollingsworth Band w/ Breadbox (Ballroom) + Dave Watts & Friends w/ Hot Like Mars (Other Side)
+547,amnesiacs-radiohead-tribute-rally-round-the-family-rage-against-the-machine-tribute-w-apostles-of-fire-black-sabbath-cervantes-other-side-2026-02-06,viewed,2026-01-09 18:06:19.24981+00,Amnesiacs (Radiohead Tribute) & Rally ‘Round The Family (Rage Against The Machine Tribute) w/ Apostles of Fire (Black Sabbath)
+548,chick-magnet-nostaljazz-slippery-when-wet-cervantes-other-side-2026-01-16,viewed,2026-01-09 18:06:19.273091+00,Chick Magnet & Nostaljazz & Slippery When Wet
+549,chmura-duffrey-at-ogden-theatre-cervantes-masterpiece-ballroom-2026-01-30,viewed,2026-01-09 18:06:19.275233+00,Chmura & Duffrey AT OGDEN THEATRE
+550,amnesiacs-radiohead-tribute-rally-round-the-family-rage-against-the-machine-tribute-w-apostles-of-fire-black-sabbath-cervantes-other-side-2026-02-06,open_event_card,2026-01-09 18:06:21.166169+00,Amnesiacs (Radiohead Tribute) & Rally ‘Round The Family (Rage Against The Machine Tribute) w/ Apostles of Fire (Black Sabbath)
+551,amnesiacs-radiohead-tribute-rally-round-the-family-rage-against-the-machine-tribute-w-apostles-of-fire-black-sabbath-cervantes-other-side-2026-02-06,show_price,2026-01-09 18:06:24.314504+00,Amnesiacs (Radiohead Tribute) & Rally ‘Round The Family (Rage Against The Machine Tribute) w/ Apostles of Fire (Black Sabbath)
+552,chmura-duffrey-at-ogden-theatre-cervantes-masterpiece-ballroom-2026-01-30,open_event_card,2026-01-09 18:06:39.388915+00,Chmura & Duffrey AT OGDEN THEATRE
+553,amnesiacs-radiohead-tribute-rally-round-the-family-rage-against-the-machine-tribute-w-apostles-of-fire-black-sabbath-cervantes-other-side-2026-02-06,not_interested,2026-01-09 18:09:51.433711+00,Amnesiacs (Radiohead Tribute) & Rally ‘Round The Family (Rage Against The Machine Tribute) w/ Apostles of Fire (Black Sabbath)
+554,chmura-duffrey-at-ogden-theatre-cervantes-masterpiece-ballroom-2026-01-30,show_price,2026-01-09 18:09:53.516793+00,Chmura & Duffrey AT OGDEN THEATRE
+555,chmura-duffrey-at-ogden-theatre-cervantes-masterpiece-ballroom-2026-01-30,external_link_click,2026-01-09 18:09:57.951429+00,Chmura & Duffrey AT OGDEN THEATRE
+556,"Flamingosis w/ Blockhead, Pure Colors, Little Mac",external_link_click,2026-01-09 18:34:26.990831+00,
+557,shift-ft-midicinal-w-catparty-phlo-philia-cervantes-other-side-2026-01-29,viewed,2026-01-09 18:34:43.957929+00,"SHIFT Ft. MIDIcinal w/ CatParty, PhLo, Philia"
+558,wake-up-and-live-a-bob-marley-tribute-w-a-mac-the-height-dj-selekta-razja-cervantes-other-side-2026-02-05,viewed,2026-01-09 18:34:44.050252+00,"Wake Up and Live – A Bob Marley Tribute w/ A-Mac & the Height, DJ Selekta Razja"
+559,chick-magnet-nostaljazz-slippery-when-wet-cervantes-other-side-2026-01-16,viewed,2026-01-09 18:34:52.555732+00,Chick Magnet & Nostaljazz & Slippery When Wet
+560,flamingosis-w-blockhead-pure-colors-little-mac-cervantes-masterpiece-ballroom-2026-01-31,viewed,2026-01-09 18:34:54.590322+00,"Flamingosis w/ Blockhead, Pure Colors, Little Mac"
+561,lotus-friday-1-16-cervantes-masterpiece-ballroom-2026-01-16,viewed,2026-01-09 18:34:54.587599+00,Lotus **FRIDAY 1/16**
+562,miilk-w-buzz-junior-sweetboi-cervantes-other-side-2026-01-31,viewed,2026-01-09 18:34:54.685436+00,"Miilk w/ Buzz Junior, Sweetboi"
+563,lotus-friday-1-16-cervantes-masterpiece-ballroom-2026-01-16,viewed,2026-01-09 18:44:40.955001+00,Lotus **FRIDAY 1/16**
+564,miilk-w-buzz-junior-sweetboi-cervantes-other-side-2026-01-31,viewed,2026-01-09 18:44:40.976228+00,"Miilk w/ Buzz Junior, Sweetboi"
+565,lotus-saturday-1-17-cervantes-masterpiece-ballroom-2026-01-17,viewed,2026-01-09 18:44:40.988367+00,Lotus **SATURDAY 1/17**
+566,kitchen-dwellers-w-silas-herman-the-tone-unit-friday-1-23-cervantes-masterpiece-ballroom-2026-01-23,viewed,2026-01-09 21:06:05.046887+00,Kitchen Dwellers w/ Silas Herman & The Tone Unit **FRIDAY 1/23**
+567,lotus-friday-1-16-cervantes-masterpiece-ballroom-2026-01-16,viewed,2026-01-09 21:06:05.183502+00,Lotus **FRIDAY 1/16**
+568,tripp-st-w-rsun-rendr-vyhara-dizzy-cervantes-masterpiece-ballroom-2026-01-24,viewed,2026-01-09 21:06:05.211639+00,"Tripp St. w/ rSUN, Rendr, Vyhara, Dizzy!"
+569,kitchen-dwellers-w-silas-herman-the-tone-unit-friday-1-23-cervantes-masterpiece-ballroom-2026-01-23,not_interested,2026-01-09 21:13:10.18375+00,Kitchen Dwellers w/ Silas Herman & The Tone Unit **FRIDAY 1/23**
+570,tripp-st-w-rsun-rendr-vyhara-dizzy-cervantes-masterpiece-ballroom-2026-01-24,not_interested,2026-01-09 21:13:11.603382+00,"Tripp St. w/ rSUN, Rendr, Vyhara, Dizzy!"
+571,lotus-friday-1-16-cervantes-masterpiece-ballroom-2026-01-16,not_interested,2026-01-09 21:13:12.660824+00,Lotus **FRIDAY 1/16**
+572,yonder-mountain-string-band-w-kyle-tuttle-band-ft-kyle-tuttle-dom-leslie-sam-leslie-geoff-saunders-friday-1-9-cervantes-masterpiece-ballroom-2026-01-09,viewed,2026-01-10 01:04:09.426907+00,"Yonder Mountain String Band w/ Kyle Tuttle Band ft. Kyle Tuttle, Dom Leslie, Sam Leslie, Geoff Saunders **FRIDAY 1/9**"
+573,sts9-cervantes-masterpiece-ballroom-2026-01-25,viewed,2026-01-10 01:04:09.426882+00,STS9
+574,shift-ft-blookah-w-philia-jawnsin-gibbs-cervantes-other-side-2026-01-08,viewed,2026-01-10 01:04:09.426998+00,"SHIFT Ft. Blookah w/ Philia, Jawnsin, Gibbs"
+575,jimkata-w-barbara-cervantes-other-side-2026-01-22,viewed,2026-01-10 02:20:12.726621+00,Jimkata w/ Barbara
+576,kitchen-dwellers-w-jammy-buffet-thursday-1-22-cervantes-masterpiece-ballroom-2026-01-22,viewed,2026-01-10 02:20:12.795696+00,Kitchen Dwellers w/ Jammy Buffet **THURSDAY 1/22**
+577,miilk-w-buzz-junior-sweetboi-cervantes-other-side-2026-01-31,viewed,2026-01-10 02:20:12.905585+00,"Miilk w/ Buzz Junior, Sweetboi"
+578,kitchen-dwellers-w-jammy-buffet-thursday-1-22-cervantes-masterpiece-ballroom-2026-01-22,open_event_card,2026-01-10 02:20:26.552807+00,Kitchen Dwellers w/ Jammy Buffet **THURSDAY 1/22**
+579,jimkata-w-barbara-cervantes-other-side-2026-01-22,open_event_card,2026-01-10 02:20:59.87143+00,Jimkata w/ Barbara
+580,lit-society-ft-dominic-lalli-big-gigantic-borahm-lee-pretty-lights-lyle-divinsky-and-more-isaac-sinclair-wayback-cervantes-other-side-2026-01-10,viewed,2026-01-10 02:21:01.999204+00,"Lit Society ft. Dominic Lalli (Big Gigantic), Borahm Lee (Pretty Lights), Lyle Divinsky and more & Isaac Sinclair Wayback"
+581,mr-specific-big-shrimp-w-moonradish-cervantes-other-side-2026-01-09,viewed,2026-01-10 02:21:02.087156+00,Mr. Specific & Big Shrimp w/ MoonRadish
+582,yonder-mountain-string-band-w-kyle-tuttle-band-ft-kyle-tuttle-dom-leslie-sam-leslie-geoff-saunders-friday-1-9-cervantes-masterpiece-ballroom-2026-01-09,viewed,2026-01-10 02:21:02.136161+00,"Yonder Mountain String Band w/ Kyle Tuttle Band ft. Kyle Tuttle, Dom Leslie, Sam Leslie, Geoff Saunders **FRIDAY 1/9**"
+583,yonder-mountain-string-band-w-kyle-tuttle-band-ft-kyle-tuttle-dom-leslie-sam-leslie-geoff-saunders-friday-1-9-cervantes-masterpiece-ballroom-2026-01-09,open_event_card,2026-01-10 02:21:12.918356+00,"Yonder Mountain String Band w/ Kyle Tuttle Band ft. Kyle Tuttle, Dom Leslie, Sam Leslie, Geoff Saunders **FRIDAY 1/9**"
+584,mr-specific-big-shrimp-w-moonradish-cervantes-other-side-2026-01-09,open_event_card,2026-01-10 02:21:27.413383+00,Mr. Specific & Big Shrimp w/ MoonRadish
+585,lit-society-ft-dominic-lalli-big-gigantic-borahm-lee-pretty-lights-lyle-divinsky-and-more-isaac-sinclair-wayback-cervantes-other-side-2026-01-10,not_interested,2026-01-10 02:21:34.941429+00,"Lit Society ft. Dominic Lalli (Big Gigantic), Borahm Lee (Pretty Lights), Lyle Divinsky and more & Isaac Sinclair Wayback"
+586,lotus-friday-1-16-cervantes-masterpiece-ballroom-2026-01-16,viewed,2026-01-10 02:27:35.332656+00,Lotus **FRIDAY 1/16**
+587,pma-ft-clay-parnell-steve-molitz-allen-aucoin-ben-silver-cervantes-other-side-2026-01-24,viewed,2026-01-10 02:27:35.397866+00,"PMA (ft. Clay Parnell, Steve Molitz, Allen Aucoin) & Ben Silver"
+588,matteo-mancuso-cervantes-other-side-2026-02-04,viewed,2026-01-10 02:27:35.489255+00,Matteo Mancuso
+589,lotus-friday-1-16-cervantes-masterpiece-ballroom-2026-01-16,open_event_card,2026-01-10 02:27:40.718739+00,Lotus **FRIDAY 1/16**
+590,shift-ft-blookah-w-philia-jawnsin-gibbs-cervantes-other-side-2026-01-08,viewed,2026-01-10 02:29:18.041425+00,"SHIFT Ft. Blookah w/ Philia, Jawnsin, Gibbs"
+591,chmura-duffrey-at-ogden-theatre-cervantes-masterpiece-ballroom-2026-01-30,viewed,2026-01-10 02:29:18.055778+00,Chmura & Duffrey AT OGDEN THEATRE
+592,zach-nugent-s-dead-set-w-lucas-parker-band-the-buzz-cervantes-other-side-2026-01-17,viewed,2026-01-10 02:29:18.156003+00,"Zach Nugent’s Dead Set w/ Lucas Parker Band, The Buzz"
+593,chmura-duffrey-at-ogden-theatre-cervantes-masterpiece-ballroom-2026-01-30,open_event_card,2026-01-10 02:30:47.626439+00,Chmura & Duffrey AT OGDEN THEATRE
+594,yonder-mountain-string-band-w-kyle-tuttle-band-ft-kyle-tuttle-dom-leslie-sam-leslie-geoff-saunders-saturday-1-10-cervantes-masterpiece-ballroom-2026-01-10,viewed,2026-01-10 02:32:40.519196+00,"Yonder Mountain String Band w/ Kyle Tuttle Band ft. Kyle Tuttle, Dom Leslie, Sam Leslie, Geoff Saunders **SATURDAY 1/10**"
+595,sts9-cervantes-masterpiece-ballroom-2026-01-25,viewed,2026-01-10 02:32:40.53988+00,STS9
+596,kyle-hollingsworth-band-w-breadbox-ballroom-dave-watts-friends-w-hot-like-mars-other-side-cervantes-other-side-2026-01-30,viewed,2026-01-10 02:32:40.538272+00,Kyle Hollingsworth Band w/ Breadbox (Ballroom) + Dave Watts & Friends w/ Hot Like Mars (Other Side)
+597,chmura-duffrey-at-ogden-theatre-cervantes-masterpiece-ballroom-2026-01-30,viewed,2026-01-10 02:33:06.004882+00,Chmura & Duffrey AT OGDEN THEATRE
+598,lit-society-ft-dominic-lalli-big-gigantic-borahm-lee-pretty-lights-lyle-divinsky-and-more-isaac-sinclair-wayback-cervantes-other-side-2026-01-10,viewed,2026-01-10 02:33:06.016758+00,"Lit Society ft. Dominic Lalli (Big Gigantic), Borahm Lee (Pretty Lights), Lyle Divinsky and more & Isaac Sinclair Wayback"
+599,lotus-saturday-1-17-cervantes-masterpiece-ballroom-2026-01-17,viewed,2026-01-10 02:33:09.889119+00,Lotus **SATURDAY 1/17**
+600,shift-ft-blookah-w-philia-jawnsin-gibbs-cervantes-other-side-2026-01-08,viewed,2026-01-10 02:33:09.889119+00,"SHIFT Ft. Blookah w/ Philia, Jawnsin, Gibbs"
+601,kyle-hollingsworth-band-w-breadbox-ballroom-dave-watts-friends-w-hot-like-mars-other-side-cervantes-other-side-2026-01-30,open_event_card,2026-01-10 02:33:12.430569+00,Kyle Hollingsworth Band w/ Breadbox (Ballroom) + Dave Watts & Friends w/ Hot Like Mars (Other Side)
+602,kyle-hollingsworth-band-w-breadbox-ballroom-dave-watts-friends-w-hot-like-mars-other-side-cervantes-other-side-2026-01-30,show_price,2026-01-10 02:33:17.878353+00,Kyle Hollingsworth Band w/ Breadbox (Ballroom) + Dave Watts & Friends w/ Hot Like Mars (Other Side)
+603,lotus-saturday-1-17-cervantes-masterpiece-ballroom-2026-01-17,open_event_card,2026-01-10 02:33:20.546636+00,Lotus **SATURDAY 1/17**
+604,chick-magnet-nostaljazz-slippery-when-wet-cervantes-other-side-2026-01-16,viewed,2026-01-10 02:37:27.891417+00,Chick Magnet & Nostaljazz & Slippery When Wet
+605,lotus-saturday-1-17-cervantes-masterpiece-ballroom-2026-01-17,viewed,2026-01-10 02:37:27.993957+00,Lotus **SATURDAY 1/17**
+606,kitchen-dwellers-w-jammy-buffet-thursday-1-22-cervantes-masterpiece-ballroom-2026-01-22,viewed,2026-01-10 02:37:28.00781+00,Kitchen Dwellers w/ Jammy Buffet **THURSDAY 1/22**
+607,lotus-saturday-1-17-cervantes-masterpiece-ballroom-2026-01-17,open_event_card,2026-01-10 02:37:34.88243+00,Lotus **SATURDAY 1/17**
+608,lotus-saturday-1-17-cervantes-masterpiece-ballroom-2026-01-17,show_price,2026-01-10 02:37:39.22701+00,Lotus **SATURDAY 1/17**
+609,mr-specific-big-shrimp-w-moonradish-cervantes-other-side-2026-01-09,viewed,2026-01-10 02:40:40.693471+00,Mr. Specific & Big Shrimp w/ MoonRadish
+610,amnesiacs-radiohead-tribute-rally-round-the-family-rage-against-the-machine-tribute-w-apostles-of-fire-black-sabbath-cervantes-other-side-2026-02-06,viewed,2026-01-10 02:40:40.703153+00,Amnesiacs (Radiohead Tribute) & Rally ‘Round The Family (Rage Against The Machine Tribute) w/ Apostles of Fire (Black Sabbath)
+611,kitchen-dwellers-w-jammy-buffet-thursday-1-22-cervantes-masterpiece-ballroom-2026-01-22,viewed,2026-01-10 02:40:40.708778+00,Kitchen Dwellers w/ Jammy Buffet **THURSDAY 1/22**
+612,miilk-w-buzz-junior-sweetboi-cervantes-other-side-2026-01-31,viewed,2026-01-10 02:42:58.734359+00,"Miilk w/ Buzz Junior, Sweetboi"
+613,ozztin-w-yojas-inari-split-velcroshirt-cervantes-other-side-2026-01-23,viewed,2026-01-10 02:42:58.760532+00,"Ozztin w/ Yojas, Inari, SPLiT, VelcroShirt"
+614,kitchen-dwellers-w-jammy-buffet-thursday-1-22-cervantes-masterpiece-ballroom-2026-01-22,viewed,2026-01-10 02:42:58.81+00,Kitchen Dwellers w/ Jammy Buffet **THURSDAY 1/22**
+615,miilk-w-buzz-junior-sweetboi-cervantes-other-side-2026-01-31,not_interested,2026-01-10 02:43:13.287844+00,"Miilk w/ Buzz Junior, Sweetboi"
+616,ozztin-w-yojas-inari-split-velcroshirt-cervantes-other-side-2026-01-23,open_event_card,2026-01-10 02:43:15.174361+00,"Ozztin w/ Yojas, Inari, SPLiT, VelcroShirt"
+617,kitchen-dwellers-w-jammy-buffet-thursday-1-22-cervantes-masterpiece-ballroom-2026-01-22,open_event_card,2026-01-10 02:43:22.85577+00,Kitchen Dwellers w/ Jammy Buffet **THURSDAY 1/22**
+618,matteo-mancuso-cervantes-other-side-2026-02-04,viewed,2026-01-10 02:45:54.763278+00,Matteo Mancuso
+619,lit-society-ft-dominic-lalli-big-gigantic-borahm-lee-pretty-lights-lyle-divinsky-and-more-isaac-sinclair-wayback-cervantes-other-side-2026-01-10,viewed,2026-01-10 02:45:54.784696+00,"Lit Society ft. Dominic Lalli (Big Gigantic), Borahm Lee (Pretty Lights), Lyle Divinsky and more & Isaac Sinclair Wayback"
+620,shift-ft-midicinal-w-catparty-phlo-philia-cervantes-other-side-2026-01-29,viewed,2026-01-10 02:45:54.813073+00,"SHIFT Ft. MIDIcinal w/ CatParty, PhLo, Philia"
+621,lit-society-ft-dominic-lalli-big-gigantic-borahm-lee-pretty-lights-lyle-divinsky-and-more-isaac-sinclair-wayback-cervantes-other-side-2026-01-10,open_event_card,2026-01-10 02:46:20.236864+00,"Lit Society ft. Dominic Lalli (Big Gigantic), Borahm Lee (Pretty Lights), Lyle Divinsky and more & Isaac Sinclair Wayback"
+622,great-blue-ft-peter-anspach-of-goose-w-jewel-house-and-special-guest-ruthie-bandit-dj-set-cervantes-other-side-2026-02-01,viewed,2026-01-10 02:47:11.128389+00,Great Blue ft. Peter Anspach of Goose w/ Jewel House and Special Guest Ruthie Bandit (DJ Set)
+623,amnesiacs-radiohead-tribute-rally-round-the-family-rage-against-the-machine-tribute-w-apostles-of-fire-black-sabbath-cervantes-other-side-2026-02-06,viewed,2026-01-10 02:47:11.146792+00,Amnesiacs (Radiohead Tribute) & Rally ‘Round The Family (Rage Against The Machine Tribute) w/ Apostles of Fire (Black Sabbath)
+624,miilk-w-buzz-junior-sweetboi-cervantes-other-side-2026-01-31,viewed,2026-01-10 02:47:11.147153+00,"Miilk w/ Buzz Junior, Sweetboi"
+625,great-blue-ft-peter-anspach-of-goose-w-jewel-house-and-special-guest-ruthie-bandit-dj-set-cervantes-other-side-2026-02-01,open_event_card,2026-01-10 02:47:17.6076+00,Great Blue ft. Peter Anspach of Goose w/ Jewel House and Special Guest Ruthie Bandit (DJ Set)
+626,chick-magnet-nostaljazz-slippery-when-wet-cervantes-other-side-2026-01-16,viewed,2026-01-10 02:48:31.752158+00,Chick Magnet & Nostaljazz & Slippery When Wet
+627,shift-ft-blookah-w-philia-jawnsin-gibbs-cervantes-other-side-2026-01-08,viewed,2026-01-10 02:48:31.755732+00,"SHIFT Ft. Blookah w/ Philia, Jawnsin, Gibbs"
+628,yonder-mountain-string-band-w-kyle-tuttle-band-ft-kyle-tuttle-dom-leslie-sam-leslie-geoff-saunders-friday-1-9-cervantes-masterpiece-ballroom-2026-01-09,viewed,2026-01-10 02:48:31.759148+00,"Yonder Mountain String Band w/ Kyle Tuttle Band ft. Kyle Tuttle, Dom Leslie, Sam Leslie, Geoff Saunders **FRIDAY 1/9**"
+629,jimkata-w-barbara-cervantes-other-side-2026-01-22,viewed,2026-01-10 02:54:37.015909+00,Jimkata w/ Barbara
+630,sts9-cervantes-masterpiece-ballroom-2026-01-25,viewed,2026-01-10 02:54:37.009424+00,STS9
+631,great-blue-ft-peter-anspach-of-goose-w-jewel-house-and-special-guest-ruthie-bandit-dj-set-cervantes-other-side-2026-02-01,viewed,2026-01-10 02:54:37.055878+00,Great Blue ft. Peter Anspach of Goose w/ Jewel House and Special Guest Ruthie Bandit (DJ Set)
+632,jimkata-w-barbara-cervantes-other-side-2026-01-22,open_event_card,2026-01-10 02:54:56.072602+00,Jimkata w/ Barbara
+633,jimkata-w-barbara-cervantes-other-side-2026-01-22,external_link_click,2026-01-10 02:55:04.752171+00,Jimkata w/ Barbara
+634,jimkata-w-barbara-cervantes-other-side-2026-01-22,viewed,2026-01-10 03:27:47.190604+00,Jimkata w/ Barbara
+635,matteo-mancuso-cervantes-other-side-2026-02-04,viewed,2026-01-10 03:27:47.259975+00,Matteo Mancuso
+636,kitchen-dwellers-w-jammy-buffet-thursday-1-22-cervantes-masterpiece-ballroom-2026-01-22,viewed,2026-01-10 03:27:47.303267+00,Kitchen Dwellers w/ Jammy Buffet **THURSDAY 1/22**
+637,lit-society-ft-dominic-lalli-big-gigantic-borahm-lee-pretty-lights-lyle-divinsky-and-more-isaac-sinclair-wayback-cervantes-other-side-2026-01-10,viewed,2026-01-10 03:28:03.983044+00,"Lit Society ft. Dominic Lalli (Big Gigantic), Borahm Lee (Pretty Lights), Lyle Divinsky and more & Isaac Sinclair Wayback"
+638,shift-ft-blookah-w-philia-jawnsin-gibbs-cervantes-other-side-2026-01-08,viewed,2026-01-10 03:28:03.994866+00,"SHIFT Ft. Blookah w/ Philia, Jawnsin, Gibbs"
+639,wake-up-and-live-a-bob-marley-tribute-w-a-mac-the-height-dj-selekta-razja-cervantes-other-side-2026-02-05,viewed,2026-01-10 03:28:04.088396+00,"Wake Up and Live – A Bob Marley Tribute w/ A-Mac & the Height, DJ Selekta Razja"
+640,shift-ft-blookah-w-philia-jawnsin-gibbs-cervantes-other-side-2026-01-08,open_event_card,2026-01-10 03:28:20.008359+00,"SHIFT Ft. Blookah w/ Philia, Jawnsin, Gibbs"
+641,shift-ft-blookah-w-philia-jawnsin-gibbs-cervantes-other-side-2026-01-08,viewed,2026-01-10 03:33:59.907133+00,"SHIFT Ft. Blookah w/ Philia, Jawnsin, Gibbs"
+642,amnesiacs-radiohead-tribute-rally-round-the-family-rage-against-the-machine-tribute-w-apostles-of-fire-black-sabbath-cervantes-other-side-2026-02-06,viewed,2026-01-10 03:33:59.911728+00,Amnesiacs (Radiohead Tribute) & Rally ‘Round The Family (Rage Against The Machine Tribute) w/ Apostles of Fire (Black Sabbath)
+643,lotus-friday-1-16-cervantes-masterpiece-ballroom-2026-01-16,viewed,2026-01-10 03:33:59.929387+00,Lotus **FRIDAY 1/16**
+644,jimkata-w-barbara-cervantes-other-side-2026-01-22,viewed,2026-01-10 04:47:28.508894+00,Jimkata w/ Barbara
+645,yonder-mountain-string-band-w-kyle-tuttle-band-ft-kyle-tuttle-dom-leslie-sam-leslie-geoff-saunders-saturday-1-10-cervantes-masterpiece-ballroom-2026-01-10,viewed,2026-01-10 04:47:28.508701+00,"Yonder Mountain String Band w/ Kyle Tuttle Band ft. Kyle Tuttle, Dom Leslie, Sam Leslie, Geoff Saunders **SATURDAY 1/10**"
+646,amnesiacs-radiohead-tribute-rally-round-the-family-rage-against-the-machine-tribute-w-apostles-of-fire-black-sabbath-cervantes-other-side-2026-02-06,viewed,2026-01-10 04:47:28.508701+00,Amnesiacs (Radiohead Tribute) & Rally ‘Round The Family (Rage Against The Machine Tribute) w/ Apostles of Fire (Black Sabbath)
+647,matteo-mancuso-cervantes-other-side-2026-02-04,viewed,2026-01-10 07:10:09.846074+00,Matteo Mancuso
+648,lit-society-ft-dominic-lalli-big-gigantic-borahm-lee-pretty-lights-lyle-divinsky-and-more-isaac-sinclair-wayback-cervantes-other-side-2026-01-10,viewed,2026-01-10 07:10:09.844448+00,"Lit Society ft. Dominic Lalli (Big Gigantic), Borahm Lee (Pretty Lights), Lyle Divinsky and more & Isaac Sinclair Wayback"
+649,jimkata-w-barbara-cervantes-other-side-2026-01-22,viewed,2026-01-10 07:10:09.844447+00,Jimkata w/ Barbara
+650,kitchen-dwellers-w-jammy-buffet-thursday-1-22-cervantes-masterpiece-ballroom-2026-01-22,viewed,2026-01-10 12:26:49.797206+00,Kitchen Dwellers w/ Jammy Buffet **THURSDAY 1/22**
+651,jimkata-w-barbara-cervantes-other-side-2026-01-22,viewed,2026-01-10 12:26:49.79878+00,Jimkata w/ Barbara
+652,shift-ft-midicinal-w-catparty-phlo-philia-cervantes-other-side-2026-01-29,viewed,2026-01-10 12:26:49.797198+00,"SHIFT Ft. MIDIcinal w/ CatParty, PhLo, Philia"
+653,great-blue-ft-peter-anspach-of-goose-w-jewel-house-and-special-guest-ruthie-bandit-dj-set-cervantes-other-side-2026-02-01,open_event_card,2026-01-10 13:58:15.529417+00,Great Blue ft. Peter Anspach of Goose w/ Jewel House and Special Guest Ruthie Bandit (DJ Set)
+654,sts9-cervantes-masterpiece-ballroom-2026-01-25,viewed,2026-01-10 16:18:29.656069+00,STS9
+655,flamingosis-w-blockhead-pure-colors-little-mac-cervantes-masterpiece-ballroom-2026-01-31,viewed,2026-01-10 16:18:29.656074+00,"Flamingosis w/ Blockhead, Pure Colors, Little Mac"
+656,yonder-mountain-string-band-w-kyle-tuttle-band-ft-kyle-tuttle-dom-leslie-sam-leslie-geoff-saunders-friday-1-9-cervantes-masterpiece-ballroom-2026-01-09,viewed,2026-01-10 16:18:29.668281+00,"Yonder Mountain String Band w/ Kyle Tuttle Band ft. Kyle Tuttle, Dom Leslie, Sam Leslie, Geoff Saunders **FRIDAY 1/9**"
+657,chick-magnet-nostaljazz-slippery-when-wet-cervantes-other-side-2026-01-16,viewed,2026-01-10 18:29:39.035237+00,Chick Magnet & Nostaljazz & Slippery When Wet
+658,lotus-friday-1-16-cervantes-masterpiece-ballroom-2026-01-16,viewed,2026-01-10 18:29:39.035235+00,Lotus **FRIDAY 1/16**
+659,kitchen-dwellers-w-silas-herman-the-tone-unit-friday-1-23-cervantes-masterpiece-ballroom-2026-01-23,viewed,2026-01-10 18:29:39.035789+00,Kitchen Dwellers w/ Silas Herman & The Tone Unit **FRIDAY 1/23**
+660,kitchen-dwellers-w-jammy-buffet-thursday-1-22-cervantes-masterpiece-ballroom-2026-01-22,viewed,2026-01-10 20:53:08.984491+00,Kitchen Dwellers w/ Jammy Buffet **THURSDAY 1/22**
+661,chick-magnet-nostaljazz-slippery-when-wet-cervantes-other-side-2026-01-16,viewed,2026-01-10 20:53:08.983728+00,Chick Magnet & Nostaljazz & Slippery When Wet
+662,kitchen-dwellers-w-silas-herman-the-tone-unit-friday-1-23-cervantes-masterpiece-ballroom-2026-01-23,viewed,2026-01-10 20:53:08.984497+00,Kitchen Dwellers w/ Silas Herman & The Tone Unit **FRIDAY 1/23**
+663,kitchen-dwellers-w-silas-herman-the-tone-unit-friday-1-23-cervantes-masterpiece-ballroom-2026-01-23,open_event_card,2026-01-10 20:53:16.848121+00,Kitchen Dwellers w/ Silas Herman & The Tone Unit **FRIDAY 1/23**
+664,kitchen-dwellers-w-silas-herman-the-tone-unit-friday-1-23-cervantes-masterpiece-ballroom-2026-01-23,show_price,2026-01-10 20:53:24.145465+00,Kitchen Dwellers w/ Silas Herman & The Tone Unit **FRIDAY 1/23**
+665,kitchen-dwellers-w-silas-herman-the-tone-unit-friday-1-23-cervantes-masterpiece-ballroom-2026-01-23,external_link_click,2026-01-10 20:53:27.470639+00,Kitchen Dwellers w/ Silas Herman & The Tone Unit **FRIDAY 1/23**
+666,amnesiacs-radiohead-tribute-rally-round-the-family-rage-against-the-machine-tribute-w-apostles-of-fire-black-sabbath-cervantes-other-side-2026-02-06,open_event_card,2026-01-10 20:53:44.424562+00,Amnesiacs (Radiohead Tribute) & Rally ‘Round The Family (Rage Against The Machine Tribute) w/ Apostles of Fire (Black Sabbath)
+667,yonder-mountain-string-band-w-kyle-tuttle-band-ft-kyle-tuttle-dom-leslie-sam-leslie-geoff-saunders-saturday-1-10-cervantes-masterpiece-ballroom-2026-01-10,viewed,2026-01-10 20:53:48.219191+00,"Yonder Mountain String Band w/ Kyle Tuttle Band ft. Kyle Tuttle, Dom Leslie, Sam Leslie, Geoff Saunders **SATURDAY 1/10**"
+668,jimkata-w-barbara-cervantes-other-side-2026-01-22,viewed,2026-01-10 20:53:48.22179+00,Jimkata w/ Barbara
+669,shift-ft-midicinal-w-catparty-phlo-philia-cervantes-other-side-2026-01-29,viewed,2026-01-10 20:53:48.229007+00,"SHIFT Ft. MIDIcinal w/ CatParty, PhLo, Philia"
+670,yonder-mountain-string-band-w-kyle-tuttle-band-ft-kyle-tuttle-dom-leslie-sam-leslie-geoff-saunders-saturday-1-10-cervantes-masterpiece-ballroom-2026-01-10,open_event_card,2026-01-10 20:53:56.528802+00,"Yonder Mountain String Band w/ Kyle Tuttle Band ft. Kyle Tuttle, Dom Leslie, Sam Leslie, Geoff Saunders **SATURDAY 1/10**"
+671,yonder-mountain-string-band-w-kyle-tuttle-band-ft-kyle-tuttle-dom-leslie-sam-leslie-geoff-saunders-saturday-1-10-cervantes-masterpiece-ballroom-2026-01-10,show_price,2026-01-10 20:54:00.217125+00,"Yonder Mountain String Band w/ Kyle Tuttle Band ft. Kyle Tuttle, Dom Leslie, Sam Leslie, Geoff Saunders **SATURDAY 1/10**"
+672,yonder-mountain-string-band-w-kyle-tuttle-band-ft-kyle-tuttle-dom-leslie-sam-leslie-geoff-saunders-saturday-1-10-cervantes-masterpiece-ballroom-2026-01-10,external_link_click,2026-01-10 20:54:04.060548+00,"Yonder Mountain String Band w/ Kyle Tuttle Band ft. Kyle Tuttle, Dom Leslie, Sam Leslie, Geoff Saunders **SATURDAY 1/10**"
+673,shift-ft-midicinal-w-catparty-phlo-philia-cervantes-other-side-2026-01-29,open_event_card,2026-01-10 20:54:26.571425+00,"SHIFT Ft. MIDIcinal w/ CatParty, PhLo, Philia"
+674,shift-ft-midicinal-w-catparty-phlo-philia-cervantes-other-side-2026-01-29,external_link_click,2026-01-10 20:54:29.343878+00,"SHIFT Ft. MIDIcinal w/ CatParty, PhLo, Philia"
+675,amnesiacs-radiohead-tribute-rally-round-the-family-rage-against-the-machine-tribute-w-apostles-of-fire-black-sabbath-cervantes-other-side-2026-02-06,open_event_card,2026-01-10 21:21:51.892866+00,Amnesiacs (Radiohead Tribute) & Rally ‘Round The Family (Rage Against The Machine Tribute) w/ Apostles of Fire (Black Sabbath)
+676,ozztin-w-yojas-inari-split-velcroshirt-cervantes-other-side-2026-01-23,viewed,2026-01-10 22:54:37.219878+00,"Ozztin w/ Yojas, Inari, SPLiT, VelcroShirt"
+677,miilk-w-buzz-junior-sweetboi-cervantes-other-side-2026-01-31,viewed,2026-01-10 22:54:37.220057+00,"Miilk w/ Buzz Junior, Sweetboi"
+678,mr-specific-big-shrimp-w-moonradish-cervantes-other-side-2026-01-09,viewed,2026-01-10 22:54:37.223413+00,Mr. Specific & Big Shrimp w/ MoonRadish
+679,mr-specific-big-shrimp-w-moonradish-cervantes-other-side-2026-01-09,open_event_card,2026-01-10 22:54:43.129541+00,Mr. Specific & Big Shrimp w/ MoonRadish
+680,lotus-friday-1-16-cervantes-masterpiece-ballroom-2026-01-16,viewed,2026-01-10 22:54:56.767924+00,Lotus **FRIDAY 1/16**
+681,sts9-cervantes-masterpiece-ballroom-2026-01-25,viewed,2026-01-10 22:54:56.772643+00,STS9
+682,lotus-friday-1-16-cervantes-masterpiece-ballroom-2026-01-16,not_interested,2026-01-10 22:55:01.305658+00,Lotus **FRIDAY 1/16**
+683,zach-nugent-s-dead-set-w-lucas-parker-band-the-buzz-cervantes-other-side-2026-01-17,viewed,2026-01-11 01:57:01.125845+00,"Zach Nugent’s Dead Set w/ Lucas Parker Band, The Buzz"
+684,yonder-mountain-string-band-w-kyle-tuttle-band-ft-kyle-tuttle-dom-leslie-sam-leslie-geoff-saunders-friday-1-9-cervantes-masterpiece-ballroom-2026-01-09,viewed,2026-01-11 01:57:01.127513+00,"Yonder Mountain String Band w/ Kyle Tuttle Band ft. Kyle Tuttle, Dom Leslie, Sam Leslie, Geoff Saunders **FRIDAY 1/9**"
+685,great-blue-ft-peter-anspach-of-goose-w-jewel-house-and-special-guest-ruthie-bandit-dj-set-cervantes-other-side-2026-02-01,viewed,2026-01-11 01:57:01.125844+00,Great Blue ft. Peter Anspach of Goose w/ Jewel House and Special Guest Ruthie Bandit (DJ Set)
+686,ozztin-w-yojas-inari-split-velcroshirt-cervantes-other-side-2026-01-23,open_event_card,2026-01-11 06:33:18.372403+00,"Ozztin w/ Yojas, Inari, SPLiT, VelcroShirt"
+687,lotus-saturday-1-17-cervantes-masterpiece-ballroom-2026-01-17,viewed,2026-01-12 03:09:49.897555+00,Lotus **SATURDAY 1/17**
+688,tripp-st-w-rsun-rendr-vyhara-dizzy-cervantes-masterpiece-ballroom-2026-01-24,viewed,2026-01-12 03:09:49.897555+00,"Tripp St. w/ rSUN, Rendr, Vyhara, Dizzy!"
+689,yonder-mountain-string-band-w-kyle-tuttle-band-ft-kyle-tuttle-dom-leslie-sam-leslie-geoff-saunders-friday-1-9-cervantes-masterpiece-ballroom-2026-01-09,viewed,2026-01-12 03:09:49.89945+00,"Yonder Mountain String Band w/ Kyle Tuttle Band ft. Kyle Tuttle, Dom Leslie, Sam Leslie, Geoff Saunders **FRIDAY 1/9**"
+690,shift-ft-blookah-w-philia-jawnsin-gibbs-cervantes-other-side-2026-01-08,viewed,2026-01-12 03:09:51.348754+00,"SHIFT Ft. Blookah w/ Philia, Jawnsin, Gibbs"
+691,kyle-hollingsworth-band-w-breadbox-ballroom-dave-watts-friends-w-hot-like-mars-other-side-cervantes-other-side-2026-01-30,viewed,2026-01-12 03:09:51.350752+00,Kyle Hollingsworth Band w/ Breadbox (Ballroom) + Dave Watts & Friends w/ Hot Like Mars (Other Side)
+692,miilk-w-buzz-junior-sweetboi-cervantes-other-side-2026-01-31,viewed,2026-01-12 03:09:51.353878+00,"Miilk w/ Buzz Junior, Sweetboi"
+693,kitchen-dwellers-w-jammy-buffet-thursday-1-22-cervantes-masterpiece-ballroom-2026-01-22,open_event_card,2026-01-12 05:32:55.828079+00,Kitchen Dwellers w/ Jammy Buffet **THURSDAY 1/22**
+694,yonder-mountain-string-band-w-kyle-tuttle-band-ft-kyle-tuttle-dom-leslie-sam-leslie-geoff-saunders-saturday-1-10-cervantes-masterpiece-ballroom-2026-01-10,viewed,2026-01-12 09:18:15.359355+00,"Yonder Mountain String Band w/ Kyle Tuttle Band ft. Kyle Tuttle, Dom Leslie, Sam Leslie, Geoff Saunders **SATURDAY 1/10**"
+695,amnesiacs-radiohead-tribute-rally-round-the-family-rage-against-the-machine-tribute-w-apostles-of-fire-black-sabbath-cervantes-other-side-2026-02-06,viewed,2026-01-12 09:18:15.35767+00,Amnesiacs (Radiohead Tribute) & Rally ‘Round The Family (Rage Against The Machine Tribute) w/ Apostles of Fire (Black Sabbath)
+696,pma-ft-clay-parnell-steve-molitz-allen-aucoin-ben-silver-cervantes-other-side-2026-01-24,viewed,2026-01-12 09:18:15.35767+00,"PMA (ft. Clay Parnell, Steve Molitz, Allen Aucoin) & Ben Silver"
+697,kyle-hollingsworth-band-w-breadbox-ballroom-dave-watts-friends-w-hot-like-mars-other-side-cervantes-other-side-2026-01-30,viewed,2026-01-13 20:54:17.311104+00,Kyle Hollingsworth Band w/ Breadbox (Ballroom) + Dave Watts & Friends w/ Hot Like Mars (Other Side)
+698,lit-society-ft-dominic-lalli-big-gigantic-borahm-lee-pretty-lights-lyle-divinsky-and-more-isaac-sinclair-wayback-cervantes-other-side-2026-01-10,viewed,2026-01-13 20:54:17.311103+00,"Lit Society ft. Dominic Lalli (Big Gigantic), Borahm Lee (Pretty Lights), Lyle Divinsky and more & Isaac Sinclair Wayback"
+699,great-blue-ft-peter-anspach-of-goose-w-jewel-house-and-special-guest-ruthie-bandit-dj-set-cervantes-other-side-2026-02-01,viewed,2026-01-13 20:54:17.312828+00,Great Blue ft. Peter Anspach of Goose w/ Jewel House and Special Guest Ruthie Bandit (DJ Set)
+700,yonder-mountain-string-band-w-kyle-tuttle-band-ft-kyle-tuttle-dom-leslie-sam-leslie-geoff-saunders-saturday-1-10-cervantes-masterpiece-ballroom-2026-01-10,viewed,2026-01-13 20:54:17.520486+00,"Yonder Mountain String Band w/ Kyle Tuttle Band ft. Kyle Tuttle, Dom Leslie, Sam Leslie, Geoff Saunders **SATURDAY 1/10**"
+701,mr-specific-big-shrimp-w-moonradish-cervantes-other-side-2026-01-09,viewed,2026-01-13 20:54:17.528291+00,Mr. Specific & Big Shrimp w/ MoonRadish
+702,wake-up-and-live-a-bob-marley-tribute-w-a-mac-the-height-dj-selekta-razja-cervantes-other-side-2026-02-05,viewed,2026-01-13 20:54:17.539687+00,"Wake Up and Live – A Bob Marley Tribute w/ A-Mac & the Height, DJ Selekta Razja"
+703,shift-ft-midicinal-w-catparty-phlo-philia-cervantes-other-side-2026-01-29,viewed,2026-01-13 20:54:18.023054+00,"SHIFT Ft. MIDIcinal w/ CatParty, PhLo, Philia"
+704,zach-nugent-s-dead-set-w-lucas-parker-band-the-buzz-cervantes-other-side-2026-01-17,viewed,2026-01-13 20:54:18.020567+00,"Zach Nugent’s Dead Set w/ Lucas Parker Band, The Buzz"
+705,flamingosis-w-blockhead-pure-colors-little-mac-cervantes-masterpiece-ballroom-2026-01-31,viewed,2026-01-13 20:54:18.041239+00,"Flamingosis w/ Blockhead, Pure Colors, Little Mac"
+706,zach-nugent-s-dead-set-w-lucas-parker-band-the-buzz-cervantes-other-side-2026-01-17,open_event_card,2026-01-13 20:54:19.305163+00,"Zach Nugent’s Dead Set w/ Lucas Parker Band, The Buzz"
+707,zach-nugent-s-dead-set-w-lucas-parker-band-the-buzz-cervantes-other-side-2026-01-17,show_price,2026-01-13 20:54:20.673269+00,"Zach Nugent’s Dead Set w/ Lucas Parker Band, The Buzz"
+708,zach-nugent-s-dead-set-w-lucas-parker-band-the-buzz-cervantes-other-side-2026-01-17,external_link_click,2026-01-13 20:54:22.746153+00,"Zach Nugent’s Dead Set w/ Lucas Parker Band, The Buzz"
+709,yonder-mountain-string-band-w-kyle-tuttle-band-ft-kyle-tuttle-dom-leslie-sam-leslie-geoff-saunders-friday-1-9-cervantes-masterpiece-ballroom-2026-01-09,viewed,2026-01-13 20:54:37.757242+00,"Yonder Mountain String Band w/ Kyle Tuttle Band ft. Kyle Tuttle, Dom Leslie, Sam Leslie, Geoff Saunders **FRIDAY 1/9**"
+710,wake-up-and-live-a-bob-marley-tribute-w-a-mac-the-height-dj-selekta-razja-cervantes-other-side-2026-02-05,open_event_card,2026-01-13 20:54:39.279842+00,"Wake Up and Live – A Bob Marley Tribute w/ A-Mac & the Height, DJ Selekta Razja"
+711,tripp-st-w-rsun-rendr-vyhara-dizzy-cervantes-masterpiece-ballroom-2026-01-24,viewed,2026-01-13 20:56:53.106007+00,"Tripp St. w/ rSUN, Rendr, Vyhara, Dizzy!"
+712,chick-magnet-nostaljazz-slippery-when-wet-cervantes-other-side-2026-01-16,viewed,2026-01-13 20:56:53.159396+00,Chick Magnet & Nostaljazz & Slippery When Wet
+713,chick-magnet-nostaljazz-slippery-when-wet-cervantes-other-side-2026-01-16,open_event_card,2026-01-13 20:57:07.603359+00,Chick Magnet & Nostaljazz & Slippery When Wet
+714,tripp-st-w-rsun-rendr-vyhara-dizzy-cervantes-masterpiece-ballroom-2026-01-24,open_event_card,2026-01-13 20:57:13.867726+00,"Tripp St. w/ rSUN, Rendr, Vyhara, Dizzy!"
+715,mr-specific-big-shrimp-w-moonradish-cervantes-other-side-2026-01-09,open_event_card,2026-01-13 20:57:16.530576+00,Mr. Specific & Big Shrimp w/ MoonRadish
+716,shift-ft-blookah-w-philia-jawnsin-gibbs-cervantes-other-side-2026-01-08,viewed,2026-01-13 21:57:26.196794+00,"SHIFT Ft. Blookah w/ Philia, Jawnsin, Gibbs"
+717,great-blue-ft-peter-anspach-of-goose-w-jewel-house-and-special-guest-ruthie-bandit-dj-set-cervantes-other-side-2026-02-01,viewed,2026-01-13 21:57:26.323073+00,Great Blue ft. Peter Anspach of Goose w/ Jewel House and Special Guest Ruthie Bandit (DJ Set)
+718,matteo-mancuso-cervantes-other-side-2026-02-04,viewed,2026-01-13 21:57:26.344367+00,Matteo Mancuso
+719,kitchen-dwellers-w-silas-herman-the-tone-unit-friday-1-23-cervantes-masterpiece-ballroom-2026-01-23,viewed,2026-01-15 02:23:13.524877+00,Kitchen Dwellers w/ Silas Herman & The Tone Unit **FRIDAY 1/23**
+720,ozztin-w-yojas-inari-split-velcroshirt-cervantes-other-side-2026-01-23,viewed,2026-01-15 02:23:13.626069+00,"Ozztin w/ Yojas, Inari, SPLiT, VelcroShirt"
+721,shift-ft-midicinal-w-catparty-phlo-philia-cervantes-other-side-2026-01-29,viewed,2026-01-15 02:23:13.639156+00,"SHIFT Ft. MIDIcinal w/ CatParty, PhLo, Philia"
+722,ozztin-w-yojas-inari-split-velcroshirt-cervantes-other-side-2026-01-23,open_event_card,2026-01-15 02:23:33.447278+00,"Ozztin w/ Yojas, Inari, SPLiT, VelcroShirt"
+723,ozztin-w-yojas-inari-split-velcroshirt-cervantes-other-side-2026-01-23,show_price,2026-01-15 02:23:45.010191+00,"Ozztin w/ Yojas, Inari, SPLiT, VelcroShirt"
+724,ozztin-w-yojas-inari-split-velcroshirt-cervantes-other-side-2026-01-23,external_link_click,2026-01-15 02:23:52.361601+00,"Ozztin w/ Yojas, Inari, SPLiT, VelcroShirt"
+725,ozztin-w-yojas-inari-split-velcroshirt-cervantes-other-side-2026-01-23,open_event_card,2026-01-15 22:40:22.260078+00,"Ozztin w/ Yojas, Inari, SPLiT, VelcroShirt"
+726,mr-specific-big-shrimp-w-moonradish-cervantes-other-side-2026-01-09,viewed,2026-01-16 01:09:59.810391+00,Mr. Specific & Big Shrimp w/ MoonRadish
+727,chmura-duffrey-at-ogden-theatre-cervantes-masterpiece-ballroom-2026-01-30,viewed,2026-01-16 01:09:59.820228+00,Chmura & Duffrey AT OGDEN THEATRE
+728,pma-ft-clay-parnell-steve-molitz-allen-aucoin-ben-silver-cervantes-other-side-2026-01-24,viewed,2026-01-16 01:09:59.840241+00,"PMA (ft. Clay Parnell, Steve Molitz, Allen Aucoin) & Ben Silver"
+729,zach-nugent-s-dead-set-w-lucas-parker-band-the-buzz-cervantes-other-side-2026-01-17,viewed,2026-01-16 01:13:46.539611+00,"Zach Nugent’s Dead Set w/ Lucas Parker Band, The Buzz"
+730,lit-society-ft-dominic-lalli-big-gigantic-borahm-lee-pretty-lights-lyle-divinsky-and-more-isaac-sinclair-wayback-cervantes-other-side-2026-01-10,viewed,2026-01-16 01:13:46.54865+00,"Lit Society ft. Dominic Lalli (Big Gigantic), Borahm Lee (Pretty Lights), Lyle Divinsky and more & Isaac Sinclair Wayback"
+731,pma-ft-clay-parnell-steve-molitz-allen-aucoin-ben-silver-cervantes-other-side-2026-01-24,viewed,2026-01-16 01:13:46.552794+00,"PMA (ft. Clay Parnell, Steve Molitz, Allen Aucoin) & Ben Silver"
+732,lit-society-ft-dominic-lalli-big-gigantic-borahm-lee-pretty-lights-lyle-divinsky-and-more-isaac-sinclair-wayback-cervantes-other-side-2026-01-10,open_event_card,2026-01-16 01:14:08.723249+00,"Lit Society ft. Dominic Lalli (Big Gigantic), Borahm Lee (Pretty Lights), Lyle Divinsky and more & Isaac Sinclair Wayback"
+733,zach-nugent-s-dead-set-w-lucas-parker-band-the-buzz-cervantes-other-side-2026-01-17,viewed,2026-01-16 01:14:09.940096+00,"Zach Nugent’s Dead Set w/ Lucas Parker Band, The Buzz"
+734,lit-society-ft-dominic-lalli-big-gigantic-borahm-lee-pretty-lights-lyle-divinsky-and-more-isaac-sinclair-wayback-cervantes-other-side-2026-01-10,viewed,2026-01-16 01:14:09.94932+00,"Lit Society ft. Dominic Lalli (Big Gigantic), Borahm Lee (Pretty Lights), Lyle Divinsky and more & Isaac Sinclair Wayback"
+735,pma-ft-clay-parnell-steve-molitz-allen-aucoin-ben-silver-cervantes-other-side-2026-01-24,viewed,2026-01-16 01:14:09.958557+00,"PMA (ft. Clay Parnell, Steve Molitz, Allen Aucoin) & Ben Silver"
+736,chmura-duffrey-at-ogden-theatre-cervantes-masterpiece-ballroom-2026-01-30,viewed,2026-01-16 01:17:46.818391+00,Chmura & Duffrey AT OGDEN THEATRE
+737,tripp-st-w-rsun-rendr-vyhara-dizzy-cervantes-masterpiece-ballroom-2026-01-24,viewed,2026-01-16 01:17:46.818375+00,"Tripp St. w/ rSUN, Rendr, Vyhara, Dizzy!"
+738,pma-ft-clay-parnell-steve-molitz-allen-aucoin-ben-silver-cervantes-other-side-2026-01-24,viewed,2026-01-16 01:17:46.818521+00,"PMA (ft. Clay Parnell, Steve Molitz, Allen Aucoin) & Ben Silver"
+739,tripp-st-w-rsun-rendr-vyhara-dizzy-cervantes-masterpiece-ballroom-2026-01-24,open_event_card,2026-01-16 01:17:56.76897+00,"Tripp St. w/ rSUN, Rendr, Vyhara, Dizzy!"
+740,tripp-st-w-rsun-rendr-vyhara-dizzy-cervantes-masterpiece-ballroom-2026-01-24,viewed,2026-01-16 01:17:57.696032+00,"Tripp St. w/ rSUN, Rendr, Vyhara, Dizzy!"
+741,chmura-duffrey-at-ogden-theatre-cervantes-masterpiece-ballroom-2026-01-30,viewed,2026-01-16 01:17:57.712501+00,Chmura & Duffrey AT OGDEN THEATRE
+742,pma-ft-clay-parnell-steve-molitz-allen-aucoin-ben-silver-cervantes-other-side-2026-01-24,viewed,2026-01-16 01:17:57.723867+00,"PMA (ft. Clay Parnell, Steve Molitz, Allen Aucoin) & Ben Silver"
+743,chmura-duffrey-at-ogden-theatre-cervantes-masterpiece-ballroom-2026-01-30,open_event_card,2026-01-16 01:18:16.943802+00,Chmura & Duffrey AT OGDEN THEATRE
+744,lotus-friday-1-16-cervantes-masterpiece-ballroom-2026-01-16,viewed,2026-01-16 01:23:52.286665+00,Lotus **FRIDAY 1/16**
+745,mr-specific-big-shrimp-w-moonradish-cervantes-other-side-2026-01-09,viewed,2026-01-16 01:23:52.286666+00,Mr. Specific & Big Shrimp w/ MoonRadish
+746,chick-magnet-nostaljazz-slippery-when-wet-cervantes-other-side-2026-01-16,viewed,2026-01-16 01:23:52.295414+00,Chick Magnet & Nostaljazz & Slippery When Wet
+747,pma-ft-clay-parnell-steve-molitz-allen-aucoin-ben-silver-cervantes-other-side-2026-01-24,viewed,2026-01-16 01:24:07.673985+00,"PMA (ft. Clay Parnell, Steve Molitz, Allen Aucoin) & Ben Silver"
+748,matteo-mancuso-cervantes-other-side-2026-02-04,viewed,2026-01-16 01:24:07.681365+00,Matteo Mancuso
+749,lotus-saturday-1-17-cervantes-masterpiece-ballroom-2026-01-17,viewed,2026-01-16 01:24:07.684698+00,Lotus **SATURDAY 1/17**
+750,chick-magnet-nostaljazz-slippery-when-wet-cervantes-other-side-2026-01-16,viewed,2026-01-16 01:24:15.399916+00,Chick Magnet & Nostaljazz & Slippery When Wet
+751,yonder-mountain-string-band-w-kyle-tuttle-band-ft-kyle-tuttle-dom-leslie-sam-leslie-geoff-saunders-friday-1-9-cervantes-masterpiece-ballroom-2026-01-09,viewed,2026-01-16 01:24:15.402346+00,"Yonder Mountain String Band w/ Kyle Tuttle Band ft. Kyle Tuttle, Dom Leslie, Sam Leslie, Geoff Saunders **FRIDAY 1/9**"
+752,yonder-mountain-string-band-w-kyle-tuttle-band-ft-kyle-tuttle-dom-leslie-sam-leslie-geoff-saunders-saturday-1-10-cervantes-masterpiece-ballroom-2026-01-10,viewed,2026-01-16 01:24:15.413051+00,"Yonder Mountain String Band w/ Kyle Tuttle Band ft. Kyle Tuttle, Dom Leslie, Sam Leslie, Geoff Saunders **SATURDAY 1/10**"
+753,chick-magnet-nostaljazz-slippery-when-wet-cervantes-other-side-2026-01-16,open_event_card,2026-01-16 01:24:29.791219+00,Chick Magnet & Nostaljazz & Slippery When Wet
+754,kitchen-dwellers-w-jammy-buffet-thursday-1-22-cervantes-masterpiece-ballroom-2026-01-22,viewed,2026-01-16 01:31:41.843701+00,Kitchen Dwellers w/ Jammy Buffet **THURSDAY 1/22**
+755,tripp-st-w-rsun-rendr-vyhara-dizzy-cervantes-masterpiece-ballroom-2026-01-24,viewed,2026-01-16 01:31:41.843871+00,"Tripp St. w/ rSUN, Rendr, Vyhara, Dizzy!"
+756,great-blue-ft-peter-anspach-of-goose-w-jewel-house-and-special-guest-ruthie-bandit-dj-set-cervantes-other-side-2026-02-01,viewed,2026-01-16 01:31:41.843714+00,Great Blue ft. Peter Anspach of Goose w/ Jewel House and Special Guest Ruthie Bandit (DJ Set)
+757,miilk-w-buzz-junior-sweetboi-cervantes-other-side-2026-01-31,viewed,2026-01-16 01:31:49.524966+00,"Miilk w/ Buzz Junior, Sweetboi"
+758,kitchen-dwellers-w-silas-herman-the-tone-unit-friday-1-23-cervantes-masterpiece-ballroom-2026-01-23,viewed,2026-01-16 01:31:49.523835+00,Kitchen Dwellers w/ Silas Herman & The Tone Unit **FRIDAY 1/23**
+759,yonder-mountain-string-band-w-kyle-tuttle-band-ft-kyle-tuttle-dom-leslie-sam-leslie-geoff-saunders-saturday-1-10-cervantes-masterpiece-ballroom-2026-01-10,viewed,2026-01-16 01:31:49.539795+00,"Yonder Mountain String Band w/ Kyle Tuttle Band ft. Kyle Tuttle, Dom Leslie, Sam Leslie, Geoff Saunders **SATURDAY 1/10**"
+760,yonder-mountain-string-band-w-kyle-tuttle-band-ft-kyle-tuttle-dom-leslie-sam-leslie-geoff-saunders-saturday-1-10-cervantes-masterpiece-ballroom-2026-01-10,viewed,2026-01-16 01:33:52.874061+00,"Yonder Mountain String Band w/ Kyle Tuttle Band ft. Kyle Tuttle, Dom Leslie, Sam Leslie, Geoff Saunders **SATURDAY 1/10**"
+761,chmura-duffrey-at-ogden-theatre-cervantes-masterpiece-ballroom-2026-01-30,viewed,2026-01-16 01:33:52.896942+00,Chmura & Duffrey AT OGDEN THEATRE
+762,yonder-mountain-string-band-w-kyle-tuttle-band-ft-kyle-tuttle-dom-leslie-sam-leslie-geoff-saunders-friday-1-9-cervantes-masterpiece-ballroom-2026-01-09,viewed,2026-01-16 01:33:52.907242+00,"Yonder Mountain String Band w/ Kyle Tuttle Band ft. Kyle Tuttle, Dom Leslie, Sam Leslie, Geoff Saunders **FRIDAY 1/9**"
+763,yonder-mountain-string-band-w-kyle-tuttle-band-ft-kyle-tuttle-dom-leslie-sam-leslie-geoff-saunders-saturday-1-10-cervantes-masterpiece-ballroom-2026-01-10,open_event_card,2026-01-16 01:34:17.097298+00,"Yonder Mountain String Band w/ Kyle Tuttle Band ft. Kyle Tuttle, Dom Leslie, Sam Leslie, Geoff Saunders **SATURDAY 1/10**"
+764,ozztin-w-yojas-inari-split-velcroshirt-cervantes-other-side-2026-01-23,viewed,2026-01-16 01:35:57.706591+00,"Ozztin w/ Yojas, Inari, SPLiT, VelcroShirt"
+765,shift-ft-blookah-w-philia-jawnsin-gibbs-cervantes-other-side-2026-01-08,viewed,2026-01-16 01:35:57.711942+00,"SHIFT Ft. Blookah w/ Philia, Jawnsin, Gibbs"
+766,wake-up-and-live-a-bob-marley-tribute-w-a-mac-the-height-dj-selekta-razja-cervantes-other-side-2026-02-05,viewed,2026-01-16 01:35:57.72591+00,"Wake Up and Live – A Bob Marley Tribute w/ A-Mac & the Height, DJ Selekta Razja"
+767,pma-ft-clay-parnell-steve-molitz-allen-aucoin-ben-silver-cervantes-other-side-2026-01-24,viewed,2026-01-16 01:37:23.874875+00,"PMA (ft. Clay Parnell, Steve Molitz, Allen Aucoin) & Ben Silver"
+768,tripp-st-w-rsun-rendr-vyhara-dizzy-cervantes-masterpiece-ballroom-2026-01-24,viewed,2026-01-16 01:37:23.87522+00,"Tripp St. w/ rSUN, Rendr, Vyhara, Dizzy!"
+769,lotus-saturday-1-17-cervantes-masterpiece-ballroom-2026-01-17,viewed,2026-01-16 01:37:23.893794+00,Lotus **SATURDAY 1/17**
+770,flamingosis-w-blockhead-pure-colors-little-mac-cervantes-masterpiece-ballroom-2026-01-31,viewed,2026-01-16 01:41:09.837637+00,"Flamingosis w/ Blockhead, Pure Colors, Little Mac"
+771,yonder-mountain-string-band-w-kyle-tuttle-band-ft-kyle-tuttle-dom-leslie-sam-leslie-geoff-saunders-friday-1-9-cervantes-masterpiece-ballroom-2026-01-09,viewed,2026-01-16 01:41:09.837451+00,"Yonder Mountain String Band w/ Kyle Tuttle Band ft. Kyle Tuttle, Dom Leslie, Sam Leslie, Geoff Saunders **FRIDAY 1/9**"
+772,shift-ft-blookah-w-philia-jawnsin-gibbs-cervantes-other-side-2026-01-08,viewed,2026-01-16 01:41:09.837642+00,"SHIFT Ft. Blookah w/ Philia, Jawnsin, Gibbs"
+773,yonder-mountain-string-band-w-kyle-tuttle-band-ft-kyle-tuttle-dom-leslie-sam-leslie-geoff-saunders-friday-1-9-cervantes-masterpiece-ballroom-2026-01-09,open_event_card,2026-01-16 01:41:15.799107+00,"Yonder Mountain String Band w/ Kyle Tuttle Band ft. Kyle Tuttle, Dom Leslie, Sam Leslie, Geoff Saunders **FRIDAY 1/9**"
+774,flamingosis-w-blockhead-pure-colors-little-mac-cervantes-masterpiece-ballroom-2026-01-31,viewed,2026-01-16 01:41:17.9464+00,"Flamingosis w/ Blockhead, Pure Colors, Little Mac"
+775,shift-ft-blookah-w-philia-jawnsin-gibbs-cervantes-other-side-2026-01-08,viewed,2026-01-16 01:41:17.943979+00,"SHIFT Ft. Blookah w/ Philia, Jawnsin, Gibbs"
+776,yonder-mountain-string-band-w-kyle-tuttle-band-ft-kyle-tuttle-dom-leslie-sam-leslie-geoff-saunders-friday-1-9-cervantes-masterpiece-ballroom-2026-01-09,viewed,2026-01-16 01:41:17.964161+00,"Yonder Mountain String Band w/ Kyle Tuttle Band ft. Kyle Tuttle, Dom Leslie, Sam Leslie, Geoff Saunders **FRIDAY 1/9**"
+777,shift-ft-blookah-w-philia-jawnsin-gibbs-cervantes-other-side-2026-01-08,open_event_card,2026-01-16 01:41:19.276554+00,"SHIFT Ft. Blookah w/ Philia, Jawnsin, Gibbs"
+778,zach-nugent-s-dead-set-w-lucas-parker-band-the-buzz-cervantes-other-side-2026-01-17,viewed,2026-01-16 01:41:22.802604+00,"Zach Nugent’s Dead Set w/ Lucas Parker Band, The Buzz"
+779,kyle-hollingsworth-band-w-breadbox-ballroom-dave-watts-friends-w-hot-like-mars-other-side-cervantes-other-side-2026-01-30,viewed,2026-01-16 01:41:59.486371+00,Kyle Hollingsworth Band w/ Breadbox (Ballroom) + Dave Watts & Friends w/ Hot Like Mars (Other Side)
+780,lotus-saturday-1-17-cervantes-masterpiece-ballroom-2026-01-17,viewed,2026-01-16 01:41:59.503462+00,Lotus **SATURDAY 1/17**
+781,kitchen-dwellers-w-jammy-buffet-thursday-1-22-cervantes-masterpiece-ballroom-2026-01-22,viewed,2026-01-16 01:41:59.509716+00,Kitchen Dwellers w/ Jammy Buffet **THURSDAY 1/22**
+782,kyle-hollingsworth-band-w-breadbox-ballroom-dave-watts-friends-w-hot-like-mars-other-side-cervantes-other-side-2026-01-30,open_event_card,2026-01-16 01:42:02.733955+00,Kyle Hollingsworth Band w/ Breadbox (Ballroom) + Dave Watts & Friends w/ Hot Like Mars (Other Side)
+783,kyle-hollingsworth-band-w-breadbox-ballroom-dave-watts-friends-w-hot-like-mars-other-side-cervantes-other-side-2026-01-30,viewed,2026-01-16 01:42:04.800168+00,Kyle Hollingsworth Band w/ Breadbox (Ballroom) + Dave Watts & Friends w/ Hot Like Mars (Other Side)
+784,lotus-saturday-1-17-cervantes-masterpiece-ballroom-2026-01-17,viewed,2026-01-16 01:42:04.790854+00,Lotus **SATURDAY 1/17**
+785,kitchen-dwellers-w-jammy-buffet-thursday-1-22-cervantes-masterpiece-ballroom-2026-01-22,viewed,2026-01-16 01:42:04.812782+00,Kitchen Dwellers w/ Jammy Buffet **THURSDAY 1/22**
+786,jimkata-w-barbara-cervantes-other-side-2026-01-22,viewed,2026-01-16 01:42:05.286682+00,Jimkata w/ Barbara
+787,matteo-mancuso-cervantes-other-side-2026-02-04,viewed,2026-01-16 01:42:05.292842+00,Matteo Mancuso
+788,flamingosis-w-blockhead-pure-colors-little-mac-cervantes-masterpiece-ballroom-2026-01-31,viewed,2026-01-16 01:42:05.318818+00,"Flamingosis w/ Blockhead, Pure Colors, Little Mac"
+789,jimkata-w-barbara-cervantes-other-side-2026-01-22,open_event_card,2026-01-16 01:42:06.070417+00,Jimkata w/ Barbara
+790,matteo-mancuso-cervantes-other-side-2026-02-04,open_event_card,2026-01-16 01:42:08.679517+00,Matteo Mancuso
+791,flamingosis-w-blockhead-pure-colors-little-mac-cervantes-masterpiece-ballroom-2026-01-31,open_event_card,2026-01-16 01:42:10.282606+00,"Flamingosis w/ Blockhead, Pure Colors, Little Mac"
+792,lotus-saturday-1-17-cervantes-masterpiece-ballroom-2026-01-17,viewed,2026-01-16 01:45:15.206973+00,Lotus **SATURDAY 1/17**
+793,kitchen-dwellers-w-silas-herman-the-tone-unit-friday-1-23-cervantes-masterpiece-ballroom-2026-01-23,viewed,2026-01-16 01:45:15.217313+00,Kitchen Dwellers w/ Silas Herman & The Tone Unit **FRIDAY 1/23**
+794,kyle-hollingsworth-band-w-breadbox-ballroom-dave-watts-friends-w-hot-like-mars-other-side-cervantes-other-side-2026-01-30,viewed,2026-01-16 01:45:15.233517+00,Kyle Hollingsworth Band w/ Breadbox (Ballroom) + Dave Watts & Friends w/ Hot Like Mars (Other Side)
+795,chmura-duffrey-at-ogden-theatre-cervantes-masterpiece-ballroom-2026-01-30,viewed,2026-01-16 01:45:45.133242+00,Chmura & Duffrey AT OGDEN THEATRE
+796,great-blue-ft-peter-anspach-of-goose-w-jewel-house-and-special-guest-ruthie-bandit-dj-set-cervantes-other-side-2026-02-01,viewed,2026-01-16 01:45:45.124122+00,Great Blue ft. Peter Anspach of Goose w/ Jewel House and Special Guest Ruthie Bandit (DJ Set)
+797,flamingosis-w-blockhead-pure-colors-little-mac-cervantes-masterpiece-ballroom-2026-01-31,viewed,2026-01-16 01:45:45.139474+00,"Flamingosis w/ Blockhead, Pure Colors, Little Mac"
+798,kitchen-dwellers-w-silas-herman-the-tone-unit-friday-1-23-cervantes-masterpiece-ballroom-2026-01-23,viewed,2026-01-16 02:02:20.596813+00,Kitchen Dwellers w/ Silas Herman & The Tone Unit **FRIDAY 1/23**
+799,amnesiacs-radiohead-tribute-rally-round-the-family-rage-against-the-machine-tribute-w-apostles-of-fire-black-sabbath-cervantes-other-side-2026-02-06,viewed,2026-01-16 02:02:20.597424+00,Amnesiacs (Radiohead Tribute) & Rally ‘Round The Family (Rage Against The Machine Tribute) w/ Apostles of Fire (Black Sabbath)
+800,yonder-mountain-string-band-w-kyle-tuttle-band-ft-kyle-tuttle-dom-leslie-sam-leslie-geoff-saunders-friday-1-9-cervantes-masterpiece-ballroom-2026-01-09,viewed,2026-01-16 02:02:20.60223+00,"Yonder Mountain String Band w/ Kyle Tuttle Band ft. Kyle Tuttle, Dom Leslie, Sam Leslie, Geoff Saunders **FRIDAY 1/9**"
+801,wake-up-and-live-a-bob-marley-tribute-w-a-mac-the-height-dj-selekta-razja-cervantes-other-side-2026-02-05,viewed,2026-01-16 02:03:01.312374+00,"Wake Up and Live – A Bob Marley Tribute w/ A-Mac & the Height, DJ Selekta Razja"
+802,shift-ft-blookah-w-philia-jawnsin-gibbs-cervantes-other-side-2026-01-08,viewed,2026-01-16 02:03:01.314317+00,"SHIFT Ft. Blookah w/ Philia, Jawnsin, Gibbs"
+803,yonder-mountain-string-band-w-kyle-tuttle-band-ft-kyle-tuttle-dom-leslie-sam-leslie-geoff-saunders-saturday-1-10-cervantes-masterpiece-ballroom-2026-01-10,viewed,2026-01-16 02:03:01.315787+00,"Yonder Mountain String Band w/ Kyle Tuttle Band ft. Kyle Tuttle, Dom Leslie, Sam Leslie, Geoff Saunders **SATURDAY 1/10**"
+804,tripp-st-w-rsun-rendr-vyhara-dizzy-cervantes-masterpiece-ballroom-2026-01-24,viewed,2026-01-16 02:03:02.98906+00,"Tripp St. w/ rSUN, Rendr, Vyhara, Dizzy!"
+805,zach-nugent-s-dead-set-w-lucas-parker-band-the-buzz-cervantes-other-side-2026-01-17,viewed,2026-01-16 02:03:04.709557+00,"Zach Nugent’s Dead Set w/ Lucas Parker Band, The Buzz"
+806,matteo-mancuso-cervantes-other-side-2026-02-04,viewed,2026-01-16 02:03:09.847503+00,Matteo Mancuso
+807,chick-magnet-nostaljazz-slippery-when-wet-cervantes-other-side-2026-01-16,viewed,2026-01-16 02:03:09.85285+00,Chick Magnet & Nostaljazz & Slippery When Wet
+808,kyle-hollingsworth-band-w-breadbox-ballroom-dave-watts-friends-w-hot-like-mars-other-side-cervantes-other-side-2026-01-30,viewed,2026-01-16 02:03:09.859036+00,Kyle Hollingsworth Band w/ Breadbox (Ballroom) + Dave Watts & Friends w/ Hot Like Mars (Other Side)
+809,flamingosis-w-blockhead-pure-colors-little-mac-cervantes-masterpiece-ballroom-2026-01-31,viewed,2026-01-16 02:03:25.827556+00,"Flamingosis w/ Blockhead, Pure Colors, Little Mac"
+810,yonder-mountain-string-band-w-kyle-tuttle-band-ft-kyle-tuttle-dom-leslie-sam-leslie-geoff-saunders-friday-1-9-cervantes-masterpiece-ballroom-2026-01-09,viewed,2026-01-16 02:03:25.826241+00,"Yonder Mountain String Band w/ Kyle Tuttle Band ft. Kyle Tuttle, Dom Leslie, Sam Leslie, Geoff Saunders **FRIDAY 1/9**"
+811,great-blue-ft-peter-anspach-of-goose-w-jewel-house-and-special-guest-ruthie-bandit-dj-set-cervantes-other-side-2026-02-01,viewed,2026-01-16 02:03:25.843779+00,Great Blue ft. Peter Anspach of Goose w/ Jewel House and Special Guest Ruthie Bandit (DJ Set)
+812,sts9-cervantes-masterpiece-ballroom-2026-01-25,viewed,2026-01-16 02:03:37.414916+00,STS9
+813,flamingosis-w-blockhead-pure-colors-little-mac-cervantes-masterpiece-ballroom-2026-01-31,viewed,2026-01-16 02:03:37.4311+00,"Flamingosis w/ Blockhead, Pure Colors, Little Mac"
+814,lit-society-ft-dominic-lalli-big-gigantic-borahm-lee-pretty-lights-lyle-divinsky-and-more-isaac-sinclair-wayback-cervantes-other-side-2026-01-10,viewed,2026-01-16 02:03:37.437622+00,"Lit Society ft. Dominic Lalli (Big Gigantic), Borahm Lee (Pretty Lights), Lyle Divinsky and more & Isaac Sinclair Wayback"
+815,shift-ft-blookah-w-philia-jawnsin-gibbs-cervantes-other-side-2026-01-08,viewed,2026-01-16 02:03:52.524689+00,"SHIFT Ft. Blookah w/ Philia, Jawnsin, Gibbs"
+816,amnesiacs-radiohead-tribute-rally-round-the-family-rage-against-the-machine-tribute-w-apostles-of-fire-black-sabbath-cervantes-other-side-2026-02-06,viewed,2026-01-16 02:03:52.526895+00,Amnesiacs (Radiohead Tribute) & Rally ‘Round The Family (Rage Against The Machine Tribute) w/ Apostles of Fire (Black Sabbath)
+817,kitchen-dwellers-w-silas-herman-the-tone-unit-friday-1-23-cervantes-masterpiece-ballroom-2026-01-23,viewed,2026-01-16 02:03:52.532861+00,Kitchen Dwellers w/ Silas Herman & The Tone Unit **FRIDAY 1/23**
+818,miilk-w-buzz-junior-sweetboi-cervantes-other-side-2026-01-31,viewed,2026-01-16 02:06:49.199668+00,"Miilk w/ Buzz Junior, Sweetboi"
+819,kitchen-dwellers-w-jammy-buffet-thursday-1-22-cervantes-masterpiece-ballroom-2026-01-22,viewed,2026-01-16 02:06:49.199693+00,Kitchen Dwellers w/ Jammy Buffet **THURSDAY 1/22**
+820,yonder-mountain-string-band-w-kyle-tuttle-band-ft-kyle-tuttle-dom-leslie-sam-leslie-geoff-saunders-saturday-1-10-cervantes-masterpiece-ballroom-2026-01-10,viewed,2026-01-16 02:06:49.19916+00,"Yonder Mountain String Band w/ Kyle Tuttle Band ft. Kyle Tuttle, Dom Leslie, Sam Leslie, Geoff Saunders **SATURDAY 1/10**"
+821,zach-nugent-s-dead-set-w-lucas-parker-band-the-buzz-cervantes-other-side-2026-01-17,viewed,2026-01-16 02:07:03.607877+00,"Zach Nugent’s Dead Set w/ Lucas Parker Band, The Buzz"
+822,kyle-hollingsworth-band-w-breadbox-ballroom-dave-watts-friends-w-hot-like-mars-other-side-cervantes-other-side-2026-01-30,viewed,2026-01-16 02:07:03.616741+00,Kyle Hollingsworth Band w/ Breadbox (Ballroom) + Dave Watts & Friends w/ Hot Like Mars (Other Side)
+823,pma-ft-clay-parnell-steve-molitz-allen-aucoin-ben-silver-cervantes-other-side-2026-01-24,viewed,2026-01-16 02:07:03.625358+00,"PMA (ft. Clay Parnell, Steve Molitz, Allen Aucoin) & Ben Silver"
+824,sts9-cervantes-masterpiece-ballroom-2026-01-25,viewed,2026-01-16 02:22:48.64638+00,STS9
+825,great-blue-ft-peter-anspach-of-goose-w-jewel-house-and-special-guest-ruthie-bandit-dj-set-cervantes-other-side-2026-02-01,viewed,2026-01-16 02:22:48.668024+00,Great Blue ft. Peter Anspach of Goose w/ Jewel House and Special Guest Ruthie Bandit (DJ Set)
+826,matteo-mancuso-cervantes-other-side-2026-02-04,viewed,2026-01-16 02:22:48.667353+00,Matteo Mancuso
+827,sts9-cervantes-masterpiece-ballroom-2026-01-25,open_event_card,2026-01-16 02:22:52.670724+00,STS9
+828,matteo-mancuso-cervantes-other-side-2026-02-04,open_event_card,2026-01-16 02:22:55.743982+00,Matteo Mancuso
+829,chmura-duffrey-at-ogden-theatre-cervantes-masterpiece-ballroom-2026-01-30,viewed,2026-01-16 02:22:59.001511+00,Chmura & Duffrey AT OGDEN THEATRE
+830,chick-magnet-nostaljazz-slippery-when-wet-cervantes-other-side-2026-01-16,viewed,2026-01-16 02:22:59.013458+00,Chick Magnet & Nostaljazz & Slippery When Wet
+831,chmura-duffrey-at-ogden-theatre-cervantes-masterpiece-ballroom-2026-01-30,open_event_card,2026-01-16 02:23:02.650841+00,Chmura & Duffrey AT OGDEN THEATRE
+832,kitchen-dwellers-w-silas-herman-the-tone-unit-friday-1-23-cervantes-masterpiece-ballroom-2026-01-23,viewed,2026-01-16 02:23:13.494767+00,Kitchen Dwellers w/ Silas Herman & The Tone Unit **FRIDAY 1/23**
+833,chmura-duffrey-at-ogden-theatre-cervantes-masterpiece-ballroom-2026-01-30,viewed,2026-01-16 02:23:13.496814+00,Chmura & Duffrey AT OGDEN THEATRE
+834,lotus-saturday-1-17-cervantes-masterpiece-ballroom-2026-01-17,viewed,2026-01-16 02:23:13.497123+00,Lotus **SATURDAY 1/17**
+835,chmura-duffrey-at-ogden-theatre-cervantes-masterpiece-ballroom-2026-01-30,open_event_card,2026-01-16 02:23:37.75798+00,Chmura & Duffrey AT OGDEN THEATRE
+836,kitchen-dwellers-w-silas-herman-the-tone-unit-friday-1-23-cervantes-masterpiece-ballroom-2026-01-23,open_event_card,2026-01-16 02:23:40.889686+00,Kitchen Dwellers w/ Silas Herman & The Tone Unit **FRIDAY 1/23**
+837,kitchen-dwellers-w-silas-herman-the-tone-unit-friday-1-23-cervantes-masterpiece-ballroom-2026-01-23,show_price,2026-01-16 02:23:41.811475+00,Kitchen Dwellers w/ Silas Herman & The Tone Unit **FRIDAY 1/23**
+838,lotus-saturday-1-17-cervantes-masterpiece-ballroom-2026-01-17,open_event_card,2026-01-16 02:23:43.829151+00,Lotus **SATURDAY 1/17**
+839,lotus-saturday-1-17-cervantes-masterpiece-ballroom-2026-01-17,external_link_click,2026-01-16 02:23:44.912086+00,Lotus **SATURDAY 1/17**
+840,great-blue-ft-peter-anspach-of-goose-w-jewel-house-and-special-guest-ruthie-bandit-dj-set-cervantes-other-side-2026-02-01,viewed,2026-01-16 02:24:30.710314+00,Great Blue ft. Peter Anspach of Goose w/ Jewel House and Special Guest Ruthie Bandit (DJ Set)
+841,jimkata-w-barbara-cervantes-other-side-2026-01-22,viewed,2026-01-16 02:24:30.712661+00,Jimkata w/ Barbara
+842,kyle-hollingsworth-band-w-breadbox-ballroom-dave-watts-friends-w-hot-like-mars-other-side-cervantes-other-side-2026-01-30,viewed,2026-01-16 02:24:30.74114+00,Kyle Hollingsworth Band w/ Breadbox (Ballroom) + Dave Watts & Friends w/ Hot Like Mars (Other Side)
+843,zach-nugent-s-dead-set-w-lucas-parker-band-the-buzz-cervantes-other-side-2026-01-17,viewed,2026-01-16 02:24:47.191826+00,"Zach Nugent’s Dead Set w/ Lucas Parker Band, The Buzz"
+844,jimkata-w-barbara-cervantes-other-side-2026-01-22,viewed,2026-01-16 02:24:47.181122+00,Jimkata w/ Barbara
+845,chick-magnet-nostaljazz-slippery-when-wet-cervantes-other-side-2026-01-16,viewed,2026-01-16 02:24:47.195638+00,Chick Magnet & Nostaljazz & Slippery When Wet
+846,shift-ft-midicinal-w-catparty-phlo-philia-cervantes-other-side-2026-01-29,viewed,2026-01-16 02:24:48.422191+00,"SHIFT Ft. MIDIcinal w/ CatParty, PhLo, Philia"
+847,lotus-saturday-1-17-cervantes-masterpiece-ballroom-2026-01-17,viewed,2026-01-16 02:24:48.424796+00,Lotus **SATURDAY 1/17**
+848,zach-nugent-s-dead-set-w-lucas-parker-band-the-buzz-cervantes-other-side-2026-01-17,viewed,2026-01-16 02:24:48.427672+00,"Zach Nugent’s Dead Set w/ Lucas Parker Band, The Buzz"
+849,ozztin-w-yojas-inari-split-velcroshirt-cervantes-other-side-2026-01-23,viewed,2026-01-16 02:24:54.017052+00,"Ozztin w/ Yojas, Inari, SPLiT, VelcroShirt"
+850,chick-magnet-nostaljazz-slippery-when-wet-cervantes-other-side-2026-01-16,viewed,2026-01-16 02:24:54.02438+00,Chick Magnet & Nostaljazz & Slippery When Wet
+851,tripp-st-w-rsun-rendr-vyhara-dizzy-cervantes-masterpiece-ballroom-2026-01-24,viewed,2026-01-16 02:24:54.031611+00,"Tripp St. w/ rSUN, Rendr, Vyhara, Dizzy!"
+852,kitchen-dwellers-w-jammy-buffet-thursday-1-22-cervantes-masterpiece-ballroom-2026-01-22,viewed,2026-01-16 02:26:00.183056+00,Kitchen Dwellers w/ Jammy Buffet **THURSDAY 1/22**
+853,amnesiacs-radiohead-tribute-rally-round-the-family-rage-against-the-machine-tribute-w-apostles-of-fire-black-sabbath-cervantes-other-side-2026-02-06,viewed,2026-01-16 02:26:00.177149+00,Amnesiacs (Radiohead Tribute) & Rally ‘Round The Family (Rage Against The Machine Tribute) w/ Apostles of Fire (Black Sabbath)
+854,jimkata-w-barbara-cervantes-other-side-2026-01-22,viewed,2026-01-16 02:26:00.176397+00,Jimkata w/ Barbara
+855,flamingosis-w-blockhead-pure-colors-little-mac-cervantes-masterpiece-ballroom-2026-01-31,viewed,2026-01-16 02:27:37.662322+00,"Flamingosis w/ Blockhead, Pure Colors, Little Mac"
+856,miilk-w-buzz-junior-sweetboi-cervantes-other-side-2026-01-31,viewed,2026-01-16 02:27:37.671323+00,"Miilk w/ Buzz Junior, Sweetboi"
+857,chick-magnet-nostaljazz-slippery-when-wet-cervantes-other-side-2026-01-16,viewed,2026-01-16 02:27:37.673366+00,Chick Magnet & Nostaljazz & Slippery When Wet
+858,sts9-cervantes-masterpiece-ballroom-2026-01-25,viewed,2026-01-16 02:27:38.768078+00,STS9
+859,kitchen-dwellers-w-silas-herman-the-tone-unit-friday-1-23-cervantes-masterpiece-ballroom-2026-01-23,viewed,2026-01-16 02:27:38.768996+00,Kitchen Dwellers w/ Silas Herman & The Tone Unit **FRIDAY 1/23**
+860,jimkata-w-barbara-cervantes-other-side-2026-01-22,open_event_card,2026-01-16 02:30:25.024895+00,Jimkata w/ Barbara
+861,jimkata-w-barbara-cervantes-other-side-2026-01-22,show_price,2026-01-16 02:30:31.018819+00,Jimkata w/ Barbara
+862,jimkata-w-barbara-cervantes-other-side-2026-01-22,external_link_click,2026-01-16 02:30:34.753121+00,Jimkata w/ Barbara
+863,sts9-cervantes-masterpiece-ballroom-2026-01-25,open_event_card,2026-01-16 02:31:32.697571+00,STS9
+864,zach-nugent-s-dead-set-w-lucas-parker-band-the-buzz-cervantes-other-side-2026-01-17,viewed,2026-01-16 02:32:21.96162+00,"Zach Nugent’s Dead Set w/ Lucas Parker Band, The Buzz"
+865,ozztin-w-yojas-inari-split-velcroshirt-cervantes-other-side-2026-01-23,viewed,2026-01-16 02:32:21.971622+00,"Ozztin w/ Yojas, Inari, SPLiT, VelcroShirt"
+866,kyle-hollingsworth-band-w-breadbox-ballroom-dave-watts-friends-w-hot-like-mars-other-side-cervantes-other-side-2026-01-30,viewed,2026-01-16 02:32:21.996014+00,Kyle Hollingsworth Band w/ Breadbox (Ballroom) + Dave Watts & Friends w/ Hot Like Mars (Other Side)
+867,shift-ft-midicinal-w-catparty-phlo-philia-cervantes-other-side-2026-01-29,viewed,2026-01-16 02:32:49.343142+00,"SHIFT Ft. MIDIcinal w/ CatParty, PhLo, Philia"
+868,zach-nugent-s-dead-set-w-lucas-parker-band-the-buzz-cervantes-other-side-2026-01-17,viewed,2026-01-16 02:32:49.359979+00,"Zach Nugent’s Dead Set w/ Lucas Parker Band, The Buzz"
+869,chick-magnet-nostaljazz-slippery-when-wet-cervantes-other-side-2026-01-16,viewed,2026-01-16 02:32:49.360113+00,Chick Magnet & Nostaljazz & Slippery When Wet
+870,shift-ft-midicinal-w-catparty-phlo-philia-cervantes-other-side-2026-01-29,viewed,2026-01-16 02:32:57.026451+00,"SHIFT Ft. MIDIcinal w/ CatParty, PhLo, Philia"
+871,chick-magnet-nostaljazz-slippery-when-wet-cervantes-other-side-2026-01-16,viewed,2026-01-16 02:32:57.029353+00,Chick Magnet & Nostaljazz & Slippery When Wet
+872,zach-nugent-s-dead-set-w-lucas-parker-band-the-buzz-cervantes-other-side-2026-01-17,viewed,2026-01-16 02:32:57.030466+00,"Zach Nugent’s Dead Set w/ Lucas Parker Band, The Buzz"
+873,chick-magnet-nostaljazz-slippery-when-wet-cervantes-other-side-2026-01-16,open_event_card,2026-01-16 02:32:58.00945+00,Chick Magnet & Nostaljazz & Slippery When Wet
+874,zach-nugent-s-dead-set-w-lucas-parker-band-the-buzz-cervantes-other-side-2026-01-17,open_event_card,2026-01-16 02:33:02.006075+00,"Zach Nugent’s Dead Set w/ Lucas Parker Band, The Buzz"
+875,chmura-duffrey-at-ogden-theatre-cervantes-masterpiece-ballroom-2026-01-30,viewed,2026-01-16 02:33:04.667642+00,Chmura & Duffrey AT OGDEN THEATRE
+876,kyle-hollingsworth-band-w-breadbox-ballroom-dave-watts-friends-w-hot-like-mars-other-side-cervantes-other-side-2026-01-30,viewed,2026-01-16 02:33:04.677528+00,Kyle Hollingsworth Band w/ Breadbox (Ballroom) + Dave Watts & Friends w/ Hot Like Mars (Other Side)
+877,kyle-hollingsworth-band-w-breadbox-ballroom-dave-watts-friends-w-hot-like-mars-other-side-cervantes-other-side-2026-01-30,open_event_card,2026-01-16 02:33:05.268866+00,Kyle Hollingsworth Band w/ Breadbox (Ballroom) + Dave Watts & Friends w/ Hot Like Mars (Other Side)
+878,chmura-duffrey-at-ogden-theatre-cervantes-masterpiece-ballroom-2026-01-30,open_event_card,2026-01-16 02:33:07.579013+00,Chmura & Duffrey AT OGDEN THEATRE
+879,kitchen-dwellers-w-silas-herman-the-tone-unit-friday-1-23-cervantes-masterpiece-ballroom-2026-01-23,viewed,2026-01-16 02:36:21.903485+00,Kitchen Dwellers w/ Silas Herman & The Tone Unit **FRIDAY 1/23**
+880,kitchen-dwellers-w-jammy-buffet-thursday-1-22-cervantes-masterpiece-ballroom-2026-01-22,viewed,2026-01-16 02:36:21.902765+00,Kitchen Dwellers w/ Jammy Buffet **THURSDAY 1/22**
+881,sts9-cervantes-masterpiece-ballroom-2026-01-25,viewed,2026-01-16 02:36:21.91014+00,STS9
+882,kitchen-dwellers-w-jammy-buffet-thursday-1-22-cervantes-masterpiece-ballroom-2026-01-22,viewed,2026-01-16 02:36:34.418035+00,Kitchen Dwellers w/ Jammy Buffet **THURSDAY 1/22**
+883,sts9-cervantes-masterpiece-ballroom-2026-01-25,viewed,2026-01-16 02:36:34.421628+00,STS9
+884,kitchen-dwellers-w-silas-herman-the-tone-unit-friday-1-23-cervantes-masterpiece-ballroom-2026-01-23,viewed,2026-01-16 02:36:34.436618+00,Kitchen Dwellers w/ Silas Herman & The Tone Unit **FRIDAY 1/23**
+885,lotus-saturday-1-17-cervantes-masterpiece-ballroom-2026-01-17,viewed,2026-01-16 02:36:36.709372+00,Lotus **SATURDAY 1/17**
+886,flamingosis-w-blockhead-pure-colors-little-mac-cervantes-masterpiece-ballroom-2026-01-31,viewed,2026-01-16 02:36:36.712315+00,"Flamingosis w/ Blockhead, Pure Colors, Little Mac"
+887,matteo-mancuso-cervantes-other-side-2026-02-04,viewed,2026-01-16 02:37:01.920861+00,Matteo Mancuso
+888,zach-nugent-s-dead-set-w-lucas-parker-band-the-buzz-cervantes-other-side-2026-01-17,viewed,2026-01-16 02:37:01.920624+00,"Zach Nugent’s Dead Set w/ Lucas Parker Band, The Buzz"
+889,kyle-hollingsworth-band-w-breadbox-ballroom-dave-watts-friends-w-hot-like-mars-other-side-cervantes-other-side-2026-01-30,viewed,2026-01-16 02:37:01.927289+00,Kyle Hollingsworth Band w/ Breadbox (Ballroom) + Dave Watts & Friends w/ Hot Like Mars (Other Side)
+890,matteo-mancuso-cervantes-other-side-2026-02-04,open_event_card,2026-01-16 02:37:06.179229+00,Matteo Mancuso
+891,kyle-hollingsworth-band-w-breadbox-ballroom-dave-watts-friends-w-hot-like-mars-other-side-cervantes-other-side-2026-01-30,open_event_card,2026-01-16 02:37:08.626692+00,Kyle Hollingsworth Band w/ Breadbox (Ballroom) + Dave Watts & Friends w/ Hot Like Mars (Other Side)
+892,zach-nugent-s-dead-set-w-lucas-parker-band-the-buzz-cervantes-other-side-2026-01-17,open_event_card,2026-01-16 02:37:11.505541+00,"Zach Nugent’s Dead Set w/ Lucas Parker Band, The Buzz"
+893,kitchen-dwellers-w-jammy-buffet-thursday-1-22-cervantes-masterpiece-ballroom-2026-01-22,viewed,2026-01-16 02:38:45.418135+00,Kitchen Dwellers w/ Jammy Buffet **THURSDAY 1/22**
+894,chick-magnet-nostaljazz-slippery-when-wet-cervantes-other-side-2026-01-16,viewed,2026-01-16 02:38:45.421941+00,Chick Magnet & Nostaljazz & Slippery When Wet
+895,pma-ft-clay-parnell-steve-molitz-allen-aucoin-ben-silver-cervantes-other-side-2026-01-24,viewed,2026-01-16 02:38:45.422011+00,"PMA (ft. Clay Parnell, Steve Molitz, Allen Aucoin) & Ben Silver"
+896,ozztin-w-yojas-inari-split-velcroshirt-cervantes-other-side-2026-01-23,viewed,2026-01-16 02:50:29.761267+00,"Ozztin w/ Yojas, Inari, SPLiT, VelcroShirt"
+897,kitchen-dwellers-w-jammy-buffet-thursday-1-22-cervantes-masterpiece-ballroom-2026-01-22,viewed,2026-01-16 02:50:29.762009+00,Kitchen Dwellers w/ Jammy Buffet **THURSDAY 1/22**
+898,miilk-w-buzz-junior-sweetboi-cervantes-other-side-2026-01-31,viewed,2026-01-16 02:50:29.761357+00,"Miilk w/ Buzz Junior, Sweetboi"
+899,flamingosis-w-blockhead-pure-colors-little-mac-cervantes-masterpiece-ballroom-2026-01-31,viewed,2026-01-16 02:51:17.092811+00,"Flamingosis w/ Blockhead, Pure Colors, Little Mac"
+900,zach-nugent-s-dead-set-w-lucas-parker-band-the-buzz-cervantes-other-side-2026-01-17,viewed,2026-01-16 02:51:17.116135+00,"Zach Nugent’s Dead Set w/ Lucas Parker Band, The Buzz"
+901,tripp-st-w-rsun-rendr-vyhara-dizzy-cervantes-masterpiece-ballroom-2026-01-24,viewed,2026-01-16 02:51:17.129198+00,"Tripp St. w/ rSUN, Rendr, Vyhara, Dizzy!"
+902,amnesiacs-radiohead-tribute-rally-round-the-family-rage-against-the-machine-tribute-w-apostles-of-fire-black-sabbath-cervantes-other-side-2026-02-06,viewed,2026-01-16 04:27:39.649862+00,Amnesiacs (Radiohead Tribute) & Rally ‘Round The Family (Rage Against The Machine Tribute) w/ Apostles of Fire (Black Sabbath)
+903,ozztin-w-yojas-inari-split-velcroshirt-cervantes-other-side-2026-01-23,viewed,2026-01-16 04:27:39.651397+00,"Ozztin w/ Yojas, Inari, SPLiT, VelcroShirt"
+904,lotus-friday-1-16-cervantes-masterpiece-ballroom-2026-01-16,viewed,2026-01-16 04:27:39.649865+00,Lotus **FRIDAY 1/16**
+905,kyle-hollingsworth-band-w-breadbox-ballroom-dave-watts-friends-w-hot-like-mars-other-side-cervantes-other-side-2026-01-30,viewed,2026-01-16 19:24:49.407096+00,Kyle Hollingsworth Band w/ Breadbox (Ballroom) + Dave Watts & Friends w/ Hot Like Mars (Other Side)
+906,kitchen-dwellers-w-silas-herman-the-tone-unit-friday-1-23-cervantes-masterpiece-ballroom-2026-01-23,viewed,2026-01-16 19:24:49.407119+00,Kitchen Dwellers w/ Silas Herman & The Tone Unit **FRIDAY 1/23**
+907,lotus-saturday-1-17-cervantes-masterpiece-ballroom-2026-01-17,viewed,2026-01-16 19:24:49.406242+00,Lotus **SATURDAY 1/17**
+908,wake-up-and-live-a-bob-marley-tribute-w-a-mac-the-height-dj-selekta-razja-cervantes-other-side-2026-02-05,viewed,2026-01-16 23:14:55.284005+00,"Wake Up and Live – A Bob Marley Tribute w/ A-Mac & the Height, DJ Selekta Razja"
+909,lotus-friday-1-16-cervantes-masterpiece-ballroom-2026-01-16,viewed,2026-01-16 23:14:55.285752+00,Lotus **FRIDAY 1/16**
+910,kyle-hollingsworth-band-w-breadbox-ballroom-dave-watts-friends-w-hot-like-mars-other-side-cervantes-other-side-2026-01-30,viewed,2026-01-16 23:14:55.284023+00,Kyle Hollingsworth Band w/ Breadbox (Ballroom) + Dave Watts & Friends w/ Hot Like Mars (Other Side)
+911,zach-nugent-s-dead-set-w-lucas-parker-band-the-buzz-cervantes-other-side-2026-01-17,viewed,2026-01-17 02:51:15.745634+00,"Zach Nugent’s Dead Set w/ Lucas Parker Band, The Buzz"
+912,chick-magnet-nostaljazz-slippery-when-wet-cervantes-other-side-2026-01-16,viewed,2026-01-17 02:51:15.745438+00,Chick Magnet & Nostaljazz & Slippery When Wet
+913,lotus-friday-1-16-cervantes-masterpiece-ballroom-2026-01-16,viewed,2026-01-17 02:51:15.745447+00,Lotus **FRIDAY 1/16**
+914,wake-up-and-live-a-bob-marley-tribute-w-a-mac-the-height-dj-selekta-razja-cervantes-other-side-2026-02-05,viewed,2026-01-17 02:51:28.574169+00,"Wake Up and Live – A Bob Marley Tribute w/ A-Mac & the Height, DJ Selekta Razja"
+915,chick-magnet-nostaljazz-slippery-when-wet-cervantes-other-side-2026-01-16,viewed,2026-01-17 02:51:28.598365+00,Chick Magnet & Nostaljazz & Slippery When Wet
+916,lotus-friday-1-16-cervantes-masterpiece-ballroom-2026-01-16,viewed,2026-01-17 02:51:28.599209+00,Lotus **FRIDAY 1/16**
+917,lotus-friday-1-16-cervantes-masterpiece-ballroom-2026-01-16,open_event_card,2026-01-17 02:51:34.556208+00,Lotus **FRIDAY 1/16**
+918,sts9-cervantes-masterpiece-ballroom-2026-01-25,viewed,2026-01-17 02:54:03.663488+00,STS9
+919,ozztin-w-yojas-inari-split-velcroshirt-cervantes-other-side-2026-01-23,viewed,2026-01-17 02:54:03.668271+00,"Ozztin w/ Yojas, Inari, SPLiT, VelcroShirt"
+920,lotus-saturday-1-17-cervantes-masterpiece-ballroom-2026-01-17,viewed,2026-01-17 02:54:03.663691+00,Lotus **SATURDAY 1/17**
+921,sts9-cervantes-masterpiece-ballroom-2026-01-25,viewed,2026-01-17 03:02:24.920246+00,STS9
+922,shift-ft-midicinal-w-catparty-phlo-philia-cervantes-other-side-2026-01-29,viewed,2026-01-17 03:02:24.920238+00,"SHIFT Ft. MIDIcinal w/ CatParty, PhLo, Philia"
+923,ozztin-w-yojas-inari-split-velcroshirt-cervantes-other-side-2026-01-23,viewed,2026-01-17 03:02:24.926886+00,"Ozztin w/ Yojas, Inari, SPLiT, VelcroShirt"
+924,lotus-friday-1-16-cervantes-masterpiece-ballroom-2026-01-16,viewed,2026-01-17 03:03:29.096082+00,Lotus **FRIDAY 1/16**
+925,chick-magnet-nostaljazz-slippery-when-wet-cervantes-other-side-2026-01-16,viewed,2026-01-17 03:03:29.104674+00,Chick Magnet & Nostaljazz & Slippery When Wet
+926,wake-up-and-live-a-bob-marley-tribute-w-a-mac-the-height-dj-selekta-razja-cervantes-other-side-2026-02-05,viewed,2026-01-17 03:03:29.117953+00,"Wake Up and Live – A Bob Marley Tribute w/ A-Mac & the Height, DJ Selekta Razja"
+927,great-blue-ft-peter-anspach-of-goose-w-jewel-house-and-special-guest-ruthie-bandit-dj-set-cervantes-other-side-2026-02-01,viewed,2026-01-17 03:10:45.13385+00,Great Blue ft. Peter Anspach of Goose w/ Jewel House and Special Guest Ruthie Bandit (DJ Set)
+928,miilk-w-buzz-junior-sweetboi-cervantes-other-side-2026-01-31,viewed,2026-01-17 03:10:45.149172+00,"Miilk w/ Buzz Junior, Sweetboi"
+929,flamingosis-w-blockhead-pure-colors-little-mac-cervantes-masterpiece-ballroom-2026-01-31,viewed,2026-01-17 03:10:45.149976+00,"Flamingosis w/ Blockhead, Pure Colors, Little Mac"
+930,ozztin-w-yojas-inari-split-velcroshirt-cervantes-other-side-2026-01-23,viewed,2026-01-17 03:11:35.821321+00,"Ozztin w/ Yojas, Inari, SPLiT, VelcroShirt"
+931,jimkata-w-barbara-cervantes-other-side-2026-01-22,viewed,2026-01-17 03:11:35.826106+00,Jimkata w/ Barbara
+932,lotus-friday-1-16-cervantes-masterpiece-ballroom-2026-01-16,viewed,2026-01-17 03:11:35.862363+00,Lotus **FRIDAY 1/16**
+933,chmura-duffrey-at-ogden-theatre-cervantes-masterpiece-ballroom-2026-01-30,viewed,2026-01-17 03:11:58.613358+00,Chmura & Duffrey AT OGDEN THEATRE
+934,kitchen-dwellers-w-silas-herman-the-tone-unit-friday-1-23-cervantes-masterpiece-ballroom-2026-01-23,viewed,2026-01-17 03:11:58.612939+00,Kitchen Dwellers w/ Silas Herman & The Tone Unit **FRIDAY 1/23**
+935,matteo-mancuso-cervantes-other-side-2026-02-04,viewed,2026-01-17 03:11:58.606367+00,Matteo Mancuso
+936,amnesiacs-radiohead-tribute-rally-round-the-family-rage-against-the-machine-tribute-w-apostles-of-fire-black-sabbath-cervantes-other-side-2026-02-06,viewed,2026-01-17 03:12:03.959247+00,Amnesiacs (Radiohead Tribute) & Rally ‘Round The Family (Rage Against The Machine Tribute) w/ Apostles of Fire (Black Sabbath)
+937,great-blue-ft-peter-anspach-of-goose-w-jewel-house-and-special-guest-ruthie-bandit-dj-set-cervantes-other-side-2026-02-01,viewed,2026-01-17 03:12:03.962929+00,Great Blue ft. Peter Anspach of Goose w/ Jewel House and Special Guest Ruthie Bandit (DJ Set)
+938,miilk-w-buzz-junior-sweetboi-cervantes-other-side-2026-01-31,viewed,2026-01-17 03:12:03.97043+00,"Miilk w/ Buzz Junior, Sweetboi"
+939,lotus-saturday-1-17-cervantes-masterpiece-ballroom-2026-01-17,viewed,2026-01-17 03:12:06.051764+00,Lotus **SATURDAY 1/17**
+940,jimkata-w-barbara-cervantes-other-side-2026-01-22,viewed,2026-01-17 03:12:06.051776+00,Jimkata w/ Barbara
+941,lotus-friday-1-16-cervantes-masterpiece-ballroom-2026-01-16,viewed,2026-01-17 03:12:06.053012+00,Lotus **FRIDAY 1/16**
+942,matteo-mancuso-cervantes-other-side-2026-02-04,viewed,2026-01-17 03:12:09.363945+00,Matteo Mancuso
+943,chick-magnet-nostaljazz-slippery-when-wet-cervantes-other-side-2026-01-16,viewed,2026-01-17 03:12:09.367065+00,Chick Magnet & Nostaljazz & Slippery When Wet
+944,sts9-cervantes-masterpiece-ballroom-2026-01-25,viewed,2026-01-17 03:12:09.354947+00,STS9
+945,pma-ft-clay-parnell-steve-molitz-allen-aucoin-ben-silver-cervantes-other-side-2026-01-24,viewed,2026-01-17 03:19:30.49167+00,"PMA (ft. Clay Parnell, Steve Molitz, Allen Aucoin) & Ben Silver"
+946,kitchen-dwellers-w-jammy-buffet-thursday-1-22-cervantes-masterpiece-ballroom-2026-01-22,viewed,2026-01-17 03:19:30.49173+00,Kitchen Dwellers w/ Jammy Buffet **THURSDAY 1/22**
+947,jimkata-w-barbara-cervantes-other-side-2026-01-22,viewed,2026-01-17 03:19:30.492124+00,Jimkata w/ Barbara
+948,jimkata-w-barbara-cervantes-other-side-2026-01-22,open_event_card,2026-01-17 03:19:32.784246+00,Jimkata w/ Barbara
+949,pma-ft-clay-parnell-steve-molitz-allen-aucoin-ben-silver-cervantes-other-side-2026-01-24,viewed,2026-01-17 03:19:59.333662+00,"PMA (ft. Clay Parnell, Steve Molitz, Allen Aucoin) & Ben Silver"
+950,amnesiacs-radiohead-tribute-rally-round-the-family-rage-against-the-machine-tribute-w-apostles-of-fire-black-sabbath-cervantes-other-side-2026-02-06,viewed,2026-01-17 03:19:59.339914+00,Amnesiacs (Radiohead Tribute) & Rally ‘Round The Family (Rage Against The Machine Tribute) w/ Apostles of Fire (Black Sabbath)
+951,ozztin-w-yojas-inari-split-velcroshirt-cervantes-other-side-2026-01-23,viewed,2026-01-17 03:19:59.340426+00,"Ozztin w/ Yojas, Inari, SPLiT, VelcroShirt"
+952,jimkata-w-barbara-cervantes-other-side-2026-01-22,viewed,2026-01-17 03:24:08.38381+00,Jimkata w/ Barbara
+953,shift-ft-midicinal-w-catparty-phlo-philia-cervantes-other-side-2026-01-29,viewed,2026-01-17 03:24:08.383879+00,"SHIFT Ft. MIDIcinal w/ CatParty, PhLo, Philia"
+954,miilk-w-buzz-junior-sweetboi-cervantes-other-side-2026-01-31,viewed,2026-01-17 03:24:08.383683+00,"Miilk w/ Buzz Junior, Sweetboi"
+955,ozztin-w-yojas-inari-split-velcroshirt-cervantes-other-side-2026-01-23,viewed,2026-01-17 03:24:23.900449+00,"Ozztin w/ Yojas, Inari, SPLiT, VelcroShirt"
+956,sts9-cervantes-masterpiece-ballroom-2026-01-25,viewed,2026-01-17 03:24:23.909192+00,STS9
+957,flamingosis-w-blockhead-pure-colors-little-mac-cervantes-masterpiece-ballroom-2026-01-31,viewed,2026-01-17 03:24:23.914473+00,"Flamingosis w/ Blockhead, Pure Colors, Little Mac"
+958,chmura-duffrey-at-ogden-theatre-cervantes-masterpiece-ballroom-2026-01-30,viewed,2026-01-17 03:24:28.328991+00,Chmura & Duffrey AT OGDEN THEATRE
+959,chick-magnet-nostaljazz-slippery-when-wet-cervantes-other-side-2026-01-16,viewed,2026-01-17 03:24:28.343702+00,Chick Magnet & Nostaljazz & Slippery When Wet
+960,sts9-cervantes-masterpiece-ballroom-2026-01-25,viewed,2026-01-17 03:24:28.344446+00,STS9
+961,matteo-mancuso-cervantes-other-side-2026-02-04,viewed,2026-01-17 03:24:37.924658+00,Matteo Mancuso
+962,kyle-hollingsworth-band-w-breadbox-ballroom-dave-watts-friends-w-hot-like-mars-other-side-cervantes-other-side-2026-01-30,viewed,2026-01-17 03:24:37.933935+00,Kyle Hollingsworth Band w/ Breadbox (Ballroom) + Dave Watts & Friends w/ Hot Like Mars (Other Side)
+963,jimkata-w-barbara-cervantes-other-side-2026-01-22,viewed,2026-01-17 03:24:37.968909+00,Jimkata w/ Barbara
+964,chick-magnet-nostaljazz-slippery-when-wet-cervantes-other-side-2026-01-16,viewed,2026-01-17 03:24:40.592114+00,Chick Magnet & Nostaljazz & Slippery When Wet
+965,sts9-cervantes-masterpiece-ballroom-2026-01-25,viewed,2026-01-17 03:24:40.592579+00,STS9
+966,chmura-duffrey-at-ogden-theatre-cervantes-masterpiece-ballroom-2026-01-30,viewed,2026-01-17 03:24:40.595946+00,Chmura & Duffrey AT OGDEN THEATRE
+967,sts9-cervantes-masterpiece-ballroom-2026-01-25,open_event_card,2026-01-17 03:24:41.621109+00,STS9
+968,sts9-cervantes-masterpiece-ballroom-2026-01-25,viewed,2026-01-17 03:24:42.293715+00,STS9
+969,ozztin-w-yojas-inari-split-velcroshirt-cervantes-other-side-2026-01-23,viewed,2026-01-17 03:24:42.304022+00,"Ozztin w/ Yojas, Inari, SPLiT, VelcroShirt"
+970,flamingosis-w-blockhead-pure-colors-little-mac-cervantes-masterpiece-ballroom-2026-01-31,viewed,2026-01-17 03:24:42.307697+00,"Flamingosis w/ Blockhead, Pure Colors, Little Mac"
+971,chick-magnet-nostaljazz-slippery-when-wet-cervantes-other-side-2026-01-16,viewed,2026-01-17 03:24:43.539682+00,Chick Magnet & Nostaljazz & Slippery When Wet
+972,jimkata-w-barbara-cervantes-other-side-2026-01-22,viewed,2026-01-17 03:24:43.548359+00,Jimkata w/ Barbara
+973,amnesiacs-radiohead-tribute-rally-round-the-family-rage-against-the-machine-tribute-w-apostles-of-fire-black-sabbath-cervantes-other-side-2026-02-06,viewed,2026-01-17 03:24:43.55332+00,Amnesiacs (Radiohead Tribute) & Rally ‘Round The Family (Rage Against The Machine Tribute) w/ Apostles of Fire (Black Sabbath)
+974,chmura-duffrey-at-ogden-theatre-cervantes-masterpiece-ballroom-2026-01-30,open_event_card,2026-01-17 03:24:45.710997+00,Chmura & Duffrey AT OGDEN THEATRE
+975,matteo-mancuso-cervantes-other-side-2026-02-04,viewed,2026-01-17 03:24:50.301803+00,Matteo Mancuso
+976,wake-up-and-live-a-bob-marley-tribute-w-a-mac-the-height-dj-selekta-razja-cervantes-other-side-2026-02-05,viewed,2026-01-17 03:24:50.301803+00,"Wake Up and Live – A Bob Marley Tribute w/ A-Mac & the Height, DJ Selekta Razja"
+977,lotus-saturday-1-17-cervantes-masterpiece-ballroom-2026-01-17,viewed,2026-01-17 03:24:55.283748+00,Lotus **SATURDAY 1/17**
+978,kyle-hollingsworth-band-w-breadbox-ballroom-dave-watts-friends-w-hot-like-mars-other-side-cervantes-other-side-2026-01-30,viewed,2026-01-17 03:24:55.283936+00,Kyle Hollingsworth Band w/ Breadbox (Ballroom) + Dave Watts & Friends w/ Hot Like Mars (Other Side)
+979,zach-nugent-s-dead-set-w-lucas-parker-band-the-buzz-cervantes-other-side-2026-01-17,viewed,2026-01-17 03:24:55.287774+00,"Zach Nugent’s Dead Set w/ Lucas Parker Band, The Buzz"
+980,zach-nugent-s-dead-set-w-lucas-parker-band-the-buzz-cervantes-other-side-2026-01-17,open_event_card,2026-01-17 03:25:19.272863+00,"Zach Nugent’s Dead Set w/ Lucas Parker Band, The Buzz"
+981,zach-nugent-s-dead-set-w-lucas-parker-band-the-buzz-cervantes-other-side-2026-01-17,external_link_click,2026-01-17 03:25:27.564739+00,"Zach Nugent’s Dead Set w/ Lucas Parker Band, The Buzz"
+982,kyle-hollingsworth-band-w-breadbox-ballroom-dave-watts-friends-w-hot-like-mars-other-side-cervantes-other-side-2026-01-30,viewed,2026-01-17 03:32:59.921533+00,Kyle Hollingsworth Band w/ Breadbox (Ballroom) + Dave Watts & Friends w/ Hot Like Mars (Other Side)
+983,jimkata-w-barbara-cervantes-other-side-2026-01-22,viewed,2026-01-17 03:32:59.924266+00,Jimkata w/ Barbara
+984,ozztin-w-yojas-inari-split-velcroshirt-cervantes-other-side-2026-01-23,viewed,2026-01-17 03:33:00.2279+00,"Ozztin w/ Yojas, Inari, SPLiT, VelcroShirt"
+985,chick-magnet-nostaljazz-slippery-when-wet-cervantes-other-side-2026-01-16,viewed,2026-01-17 03:33:00.815941+00,Chick Magnet & Nostaljazz & Slippery When Wet
+986,amnesiacs-radiohead-tribute-rally-round-the-family-rage-against-the-machine-tribute-w-apostles-of-fire-black-sabbath-cervantes-other-side-2026-02-06,viewed,2026-01-17 03:33:00.816873+00,Amnesiacs (Radiohead Tribute) & Rally ‘Round The Family (Rage Against The Machine Tribute) w/ Apostles of Fire (Black Sabbath)
+987,kyle-hollingsworth-band-w-breadbox-ballroom-dave-watts-friends-w-hot-like-mars-other-side-cervantes-other-side-2026-01-30,viewed,2026-01-17 03:33:00.829247+00,Kyle Hollingsworth Band w/ Breadbox (Ballroom) + Dave Watts & Friends w/ Hot Like Mars (Other Side)
+988,pma-ft-clay-parnell-steve-molitz-allen-aucoin-ben-silver-cervantes-other-side-2026-01-24,viewed,2026-01-17 03:35:24.405278+00,"PMA (ft. Clay Parnell, Steve Molitz, Allen Aucoin) & Ben Silver"
+989,kitchen-dwellers-w-silas-herman-the-tone-unit-friday-1-23-cervantes-masterpiece-ballroom-2026-01-23,viewed,2026-01-17 03:35:24.40591+00,Kitchen Dwellers w/ Silas Herman & The Tone Unit **FRIDAY 1/23**
+990,great-blue-ft-peter-anspach-of-goose-w-jewel-house-and-special-guest-ruthie-bandit-dj-set-cervantes-other-side-2026-02-01,viewed,2026-01-17 03:35:24.412017+00,Great Blue ft. Peter Anspach of Goose w/ Jewel House and Special Guest Ruthie Bandit (DJ Set)
+991,shift-ft-midicinal-w-catparty-phlo-philia-cervantes-other-side-2026-01-29,viewed,2026-01-17 03:36:57.910479+00,"SHIFT Ft. MIDIcinal w/ CatParty, PhLo, Philia"
+992,chmura-duffrey-at-ogden-theatre-cervantes-masterpiece-ballroom-2026-01-30,viewed,2026-01-17 03:36:57.917787+00,Chmura & Duffrey AT OGDEN THEATRE
+993,lotus-saturday-1-17-cervantes-masterpiece-ballroom-2026-01-17,viewed,2026-01-17 03:36:57.933765+00,Lotus **SATURDAY 1/17**
+994,amnesiacs-radiohead-tribute-rally-round-the-family-rage-against-the-machine-tribute-w-apostles-of-fire-black-sabbath-cervantes-other-side-2026-02-06,viewed,2026-01-17 03:41:41.530408+00,Amnesiacs (Radiohead Tribute) & Rally ‘Round The Family (Rage Against The Machine Tribute) w/ Apostles of Fire (Black Sabbath)
+995,chick-magnet-nostaljazz-slippery-when-wet-cervantes-other-side-2026-01-16,viewed,2026-01-17 03:41:41.529866+00,Chick Magnet & Nostaljazz & Slippery When Wet
+996,kitchen-dwellers-w-silas-herman-the-tone-unit-friday-1-23-cervantes-masterpiece-ballroom-2026-01-23,viewed,2026-01-17 03:41:41.530507+00,Kitchen Dwellers w/ Silas Herman & The Tone Unit **FRIDAY 1/23**
+997,wake-up-and-live-a-bob-marley-tribute-w-a-mac-the-height-dj-selekta-razja-cervantes-other-side-2026-02-05,viewed,2026-01-17 03:42:32.554718+00,"Wake Up and Live – A Bob Marley Tribute w/ A-Mac & the Height, DJ Selekta Razja"
+998,flamingosis-w-blockhead-pure-colors-little-mac-cervantes-masterpiece-ballroom-2026-01-31,viewed,2026-01-17 03:42:32.557353+00,"Flamingosis w/ Blockhead, Pure Colors, Little Mac"
+999,ozztin-w-yojas-inari-split-velcroshirt-cervantes-other-side-2026-01-23,viewed,2026-01-17 03:42:32.568181+00,"Ozztin w/ Yojas, Inari, SPLiT, VelcroShirt"
+1000,chick-magnet-nostaljazz-slippery-when-wet-cervantes-other-side-2026-01-16,viewed,2026-01-17 03:45:40.0323+00,Chick Magnet & Nostaljazz & Slippery When Wet
+1001,sts9-cervantes-masterpiece-ballroom-2026-01-25,viewed,2026-01-17 03:45:40.033217+00,STS9
+1002,tripp-st-w-rsun-rendr-vyhara-dizzy-cervantes-masterpiece-ballroom-2026-01-24,viewed,2026-01-17 03:45:40.057187+00,"Tripp St. w/ rSUN, Rendr, Vyhara, Dizzy!"
+1003,matteo-mancuso-cervantes-other-side-2026-02-04,viewed,2026-01-17 03:46:32.667667+00,Matteo Mancuso
+1004,kyle-hollingsworth-band-w-breadbox-ballroom-dave-watts-friends-w-hot-like-mars-other-side-cervantes-other-side-2026-01-30,viewed,2026-01-17 03:46:32.673878+00,Kyle Hollingsworth Band w/ Breadbox (Ballroom) + Dave Watts & Friends w/ Hot Like Mars (Other Side)
+1005,ozztin-w-yojas-inari-split-velcroshirt-cervantes-other-side-2026-01-23,viewed,2026-01-17 03:46:32.675071+00,"Ozztin w/ Yojas, Inari, SPLiT, VelcroShirt"
+1006,shift-ft-midicinal-w-catparty-phlo-philia-cervantes-other-side-2026-01-29,viewed,2026-01-17 03:46:39.211701+00,"SHIFT Ft. MIDIcinal w/ CatParty, PhLo, Philia"
+1007,miilk-w-buzz-junior-sweetboi-cervantes-other-side-2026-01-31,viewed,2026-01-17 03:46:39.213169+00,"Miilk w/ Buzz Junior, Sweetboi"
+1008,great-blue-ft-peter-anspach-of-goose-w-jewel-house-and-special-guest-ruthie-bandit-dj-set-cervantes-other-side-2026-02-01,viewed,2026-01-17 03:46:39.214647+00,Great Blue ft. Peter Anspach of Goose w/ Jewel House and Special Guest Ruthie Bandit (DJ Set)
+1009,chmura-duffrey-at-ogden-theatre-cervantes-masterpiece-ballroom-2026-01-30,open_event_card,2026-01-17 03:46:57.451004+00,Chmura & Duffrey AT OGDEN THEATRE
+1010,chmura-duffrey-at-ogden-theatre-cervantes-masterpiece-ballroom-2026-01-30,show_price,2026-01-17 03:47:04.651149+00,Chmura & Duffrey AT OGDEN THEATRE
+1011,kyle-hollingsworth-band-w-breadbox-ballroom-dave-watts-friends-w-hot-like-mars-other-side-cervantes-other-side-2026-01-30,viewed,2026-01-17 03:49:03.961368+00,Kyle Hollingsworth Band w/ Breadbox (Ballroom) + Dave Watts & Friends w/ Hot Like Mars (Other Side)
+1012,matteo-mancuso-cervantes-other-side-2026-02-04,viewed,2026-01-17 03:49:03.969163+00,Matteo Mancuso
+1013,amnesiacs-radiohead-tribute-rally-round-the-family-rage-against-the-machine-tribute-w-apostles-of-fire-black-sabbath-cervantes-other-side-2026-02-06,viewed,2026-01-17 03:49:03.987293+00,Amnesiacs (Radiohead Tribute) & Rally ‘Round The Family (Rage Against The Machine Tribute) w/ Apostles of Fire (Black Sabbath)
+1014,chick-magnet-nostaljazz-slippery-when-wet-cervantes-other-side-2026-01-16,viewed,2026-01-17 03:50:25.460297+00,Chick Magnet & Nostaljazz & Slippery When Wet
+1015,sts9-cervantes-masterpiece-ballroom-2026-01-25,viewed,2026-01-17 03:50:25.499045+00,STS9
+1016,pma-ft-clay-parnell-steve-molitz-allen-aucoin-ben-silver-cervantes-other-side-2026-01-24,viewed,2026-01-17 03:50:25.514145+00,"PMA (ft. Clay Parnell, Steve Molitz, Allen Aucoin) & Ben Silver"
+1017,sts9-cervantes-masterpiece-ballroom-2026-01-25,open_event_card,2026-01-17 03:50:36.214315+00,STS9
+1018,amnesiacs-radiohead-tribute-rally-round-the-family-rage-against-the-machine-tribute-w-apostles-of-fire-black-sabbath-cervantes-other-side-2026-02-06,viewed,2026-01-17 03:52:17.967264+00,Amnesiacs (Radiohead Tribute) & Rally ‘Round The Family (Rage Against The Machine Tribute) w/ Apostles of Fire (Black Sabbath)
+1019,kyle-hollingsworth-band-w-breadbox-ballroom-dave-watts-friends-w-hot-like-mars-other-side-cervantes-other-side-2026-01-30,viewed,2026-01-17 03:52:17.975062+00,Kyle Hollingsworth Band w/ Breadbox (Ballroom) + Dave Watts & Friends w/ Hot Like Mars (Other Side)
+1020,pma-ft-clay-parnell-steve-molitz-allen-aucoin-ben-silver-cervantes-other-side-2026-01-24,viewed,2026-01-17 03:52:17.978925+00,"PMA (ft. Clay Parnell, Steve Molitz, Allen Aucoin) & Ben Silver"
+1021,shift-ft-midicinal-w-catparty-phlo-philia-cervantes-other-side-2026-01-29,viewed,2026-01-17 03:52:49.47766+00,"SHIFT Ft. MIDIcinal w/ CatParty, PhLo, Philia"
+1022,kitchen-dwellers-w-silas-herman-the-tone-unit-friday-1-23-cervantes-masterpiece-ballroom-2026-01-23,viewed,2026-01-17 03:52:49.45774+00,Kitchen Dwellers w/ Silas Herman & The Tone Unit **FRIDAY 1/23**
+1023,chick-magnet-nostaljazz-slippery-when-wet-cervantes-other-side-2026-01-16,viewed,2026-01-17 03:52:49.457601+00,Chick Magnet & Nostaljazz & Slippery When Wet
+1024,tripp-st-w-rsun-rendr-vyhara-dizzy-cervantes-masterpiece-ballroom-2026-01-24,viewed,2026-01-17 03:52:49.458484+00,"Tripp St. w/ rSUN, Rendr, Vyhara, Dizzy!"
+1025,lotus-saturday-1-17-cervantes-masterpiece-ballroom-2026-01-17,viewed,2026-01-17 03:52:49.467075+00,Lotus **SATURDAY 1/17**
+1026,lotus-friday-1-16-cervantes-masterpiece-ballroom-2026-01-16,viewed,2026-01-17 03:52:49.463237+00,Lotus **FRIDAY 1/16**
+1027,sts9-cervantes-masterpiece-ballroom-2026-01-25,viewed,2026-01-17 03:53:03.170901+00,STS9
+1028,miilk-w-buzz-junior-sweetboi-cervantes-other-side-2026-01-31,viewed,2026-01-17 03:53:03.191122+00,"Miilk w/ Buzz Junior, Sweetboi"
+1029,ozztin-w-yojas-inari-split-velcroshirt-cervantes-other-side-2026-01-23,viewed,2026-01-17 03:53:03.195705+00,"Ozztin w/ Yojas, Inari, SPLiT, VelcroShirt"
+1030,sts9-cervantes-masterpiece-ballroom-2026-01-25,open_event_card,2026-01-17 03:53:09.346634+00,STS9
+1031,kitchen-dwellers-w-silas-herman-the-tone-unit-friday-1-23-cervantes-masterpiece-ballroom-2026-01-23,viewed,2026-01-17 03:56:09.52591+00,Kitchen Dwellers w/ Silas Herman & The Tone Unit **FRIDAY 1/23**
+1032,amnesiacs-radiohead-tribute-rally-round-the-family-rage-against-the-machine-tribute-w-apostles-of-fire-black-sabbath-cervantes-other-side-2026-02-06,viewed,2026-01-17 03:56:09.528993+00,Amnesiacs (Radiohead Tribute) & Rally ‘Round The Family (Rage Against The Machine Tribute) w/ Apostles of Fire (Black Sabbath)
+1033,chmura-duffrey-at-ogden-theatre-cervantes-masterpiece-ballroom-2026-01-30,viewed,2026-01-17 03:56:09.539277+00,Chmura & Duffrey AT OGDEN THEATRE
+1034,lotus-friday-1-16-cervantes-masterpiece-ballroom-2026-01-16,viewed,2026-01-17 03:56:35.783112+00,Lotus **FRIDAY 1/16**
+1035,shift-ft-midicinal-w-catparty-phlo-philia-cervantes-other-side-2026-01-29,viewed,2026-01-17 03:56:35.784308+00,"SHIFT Ft. MIDIcinal w/ CatParty, PhLo, Philia"
+1036,ozztin-w-yojas-inari-split-velcroshirt-cervantes-other-side-2026-01-23,viewed,2026-01-17 03:56:35.794082+00,"Ozztin w/ Yojas, Inari, SPLiT, VelcroShirt"
+1037,pma-ft-clay-parnell-steve-molitz-allen-aucoin-ben-silver-cervantes-other-side-2026-01-24,viewed,2026-01-17 04:01:37.723011+00,"PMA (ft. Clay Parnell, Steve Molitz, Allen Aucoin) & Ben Silver"
+1038,shift-ft-midicinal-w-catparty-phlo-philia-cervantes-other-side-2026-01-29,viewed,2026-01-17 04:01:37.737432+00,"SHIFT Ft. MIDIcinal w/ CatParty, PhLo, Philia"
+1039,kyle-hollingsworth-band-w-breadbox-ballroom-dave-watts-friends-w-hot-like-mars-other-side-cervantes-other-side-2026-01-30,viewed,2026-01-17 04:01:37.738394+00,Kyle Hollingsworth Band w/ Breadbox (Ballroom) + Dave Watts & Friends w/ Hot Like Mars (Other Side)
+1040,kyle-hollingsworth-band-w-breadbox-ballroom-dave-watts-friends-w-hot-like-mars-other-side-cervantes-other-side-2026-01-30,viewed,2026-01-17 05:18:25.371598+00,Kyle Hollingsworth Band w/ Breadbox (Ballroom) + Dave Watts & Friends w/ Hot Like Mars (Other Side)
+1041,miilk-w-buzz-junior-sweetboi-cervantes-other-side-2026-01-31,viewed,2026-01-17 05:18:25.371598+00,"Miilk w/ Buzz Junior, Sweetboi"
+1042,kitchen-dwellers-w-jammy-buffet-thursday-1-22-cervantes-masterpiece-ballroom-2026-01-22,viewed,2026-01-17 05:18:25.372403+00,Kitchen Dwellers w/ Jammy Buffet **THURSDAY 1/22**
+1043,sts9-cervantes-masterpiece-ballroom-2026-01-25,viewed,2026-01-17 05:33:58.826351+00,STS9
+1044,wake-up-and-live-a-bob-marley-tribute-w-a-mac-the-height-dj-selekta-razja-cervantes-other-side-2026-02-05,viewed,2026-01-17 05:33:58.826403+00,"Wake Up and Live – A Bob Marley Tribute w/ A-Mac & the Height, DJ Selekta Razja"
+1045,kyle-hollingsworth-band-w-breadbox-ballroom-dave-watts-friends-w-hot-like-mars-other-side-cervantes-other-side-2026-01-30,viewed,2026-01-17 05:33:58.826542+00,Kyle Hollingsworth Band w/ Breadbox (Ballroom) + Dave Watts & Friends w/ Hot Like Mars (Other Side)
+1046,amnesiacs-radiohead-tribute-rally-round-the-family-rage-against-the-machine-tribute-w-apostles-of-fire-black-sabbath-cervantes-other-side-2026-02-06,viewed,2026-01-17 07:38:29.057524+00,Amnesiacs (Radiohead Tribute) & Rally ‘Round The Family (Rage Against The Machine Tribute) w/ Apostles of Fire (Black Sabbath)
+1047,shift-ft-midicinal-w-catparty-phlo-philia-cervantes-other-side-2026-01-29,viewed,2026-01-17 07:38:29.057614+00,"SHIFT Ft. MIDIcinal w/ CatParty, PhLo, Philia"
+1048,kitchen-dwellers-w-jammy-buffet-thursday-1-22-cervantes-masterpiece-ballroom-2026-01-22,viewed,2026-01-17 07:38:29.057493+00,Kitchen Dwellers w/ Jammy Buffet **THURSDAY 1/22**
+1049,pma-ft-clay-parnell-steve-molitz-allen-aucoin-ben-silver-cervantes-other-side-2026-01-24,viewed,2026-01-17 08:00:02.651464+00,"PMA (ft. Clay Parnell, Steve Molitz, Allen Aucoin) & Ben Silver"
+1050,sts9-cervantes-masterpiece-ballroom-2026-01-25,viewed,2026-01-17 08:00:02.639694+00,STS9
+1051,ozztin-w-yojas-inari-split-velcroshirt-cervantes-other-side-2026-01-23,viewed,2026-01-17 08:00:02.640375+00,"Ozztin w/ Yojas, Inari, SPLiT, VelcroShirt"
+1052,lotus-saturday-1-17-cervantes-masterpiece-ballroom-2026-01-17,viewed,2026-01-17 08:02:24.156501+00,Lotus **SATURDAY 1/17**
+1053,chmura-duffrey-at-ogden-theatre-cervantes-masterpiece-ballroom-2026-01-30,viewed,2026-01-17 08:02:24.175634+00,Chmura & Duffrey AT OGDEN THEATRE
+1054,jimkata-w-barbara-cervantes-other-side-2026-01-22,viewed,2026-01-17 08:02:24.19086+00,Jimkata w/ Barbara
+1055,kitchen-dwellers-w-jammy-buffet-thursday-1-22-cervantes-masterpiece-ballroom-2026-01-22,viewed,2026-01-17 09:25:06.147562+00,Kitchen Dwellers w/ Jammy Buffet **THURSDAY 1/22**
+1056,ozztin-w-yojas-inari-split-velcroshirt-cervantes-other-side-2026-01-23,viewed,2026-01-17 09:25:06.147678+00,"Ozztin w/ Yojas, Inari, SPLiT, VelcroShirt"
+1057,jimkata-w-barbara-cervantes-other-side-2026-01-22,viewed,2026-01-17 09:25:06.14756+00,Jimkata w/ Barbara
+1058,kyle-hollingsworth-band-w-breadbox-ballroom-dave-watts-friends-w-hot-like-mars-other-side-cervantes-other-side-2026-01-30,viewed,2026-01-17 09:35:04.570419+00,Kyle Hollingsworth Band w/ Breadbox (Ballroom) + Dave Watts & Friends w/ Hot Like Mars (Other Side)
+1059,miilk-w-buzz-junior-sweetboi-cervantes-other-side-2026-01-31,viewed,2026-01-17 09:35:04.571187+00,"Miilk w/ Buzz Junior, Sweetboi"
+1060,flamingosis-w-blockhead-pure-colors-little-mac-cervantes-masterpiece-ballroom-2026-01-31,viewed,2026-01-17 09:35:04.571283+00,"Flamingosis w/ Blockhead, Pure Colors, Little Mac"
+1061,amnesiacs-radiohead-tribute-rally-round-the-family-rage-against-the-machine-tribute-w-apostles-of-fire-black-sabbath-cervantes-other-side-2026-02-06,viewed,2026-01-17 10:49:02.34579+00,Amnesiacs (Radiohead Tribute) & Rally ‘Round The Family (Rage Against The Machine Tribute) w/ Apostles of Fire (Black Sabbath)
+1062,wake-up-and-live-a-bob-marley-tribute-w-a-mac-the-height-dj-selekta-razja-cervantes-other-side-2026-02-05,viewed,2026-01-17 10:49:02.34579+00,"Wake Up and Live – A Bob Marley Tribute w/ A-Mac & the Height, DJ Selekta Razja"
+1063,sts9-cervantes-masterpiece-ballroom-2026-01-25,viewed,2026-01-17 10:49:02.347317+00,STS9
+1064,ozztin-w-yojas-inari-split-velcroshirt-cervantes-other-side-2026-01-23,viewed,2026-01-17 17:39:54.983031+00,"Ozztin w/ Yojas, Inari, SPLiT, VelcroShirt"
+1065,zach-nugent-s-dead-set-w-lucas-parker-band-the-buzz-cervantes-other-side-2026-01-17,viewed,2026-01-17 17:39:54.983041+00,"Zach Nugent’s Dead Set w/ Lucas Parker Band, The Buzz"
+1066,lotus-friday-1-16-cervantes-masterpiece-ballroom-2026-01-16,viewed,2026-01-17 17:39:54.984593+00,Lotus **FRIDAY 1/16**
+1067,pma-ft-clay-parnell-steve-molitz-allen-aucoin-ben-silver-cervantes-other-side-2026-01-24,viewed,2026-01-18 02:11:28.557446+00,"PMA (ft. Clay Parnell, Steve Molitz, Allen Aucoin) & Ben Silver"
+1068,zach-nugent-s-dead-set-w-lucas-parker-band-the-buzz-cervantes-other-side-2026-01-17,viewed,2026-01-18 02:11:28.558968+00,"Zach Nugent’s Dead Set w/ Lucas Parker Band, The Buzz"
+1069,tripp-st-w-rsun-rendr-vyhara-dizzy-cervantes-masterpiece-ballroom-2026-01-24,viewed,2026-01-18 02:11:28.557425+00,"Tripp St. w/ rSUN, Rendr, Vyhara, Dizzy!"
+1070,lotus-friday-1-16-cervantes-masterpiece-ballroom-2026-01-16,viewed,2026-01-18 04:07:51.581317+00,Lotus **FRIDAY 1/16**
+1071,kyle-hollingsworth-band-w-breadbox-ballroom-dave-watts-friends-w-hot-like-mars-other-side-cervantes-other-side-2026-01-30,viewed,2026-01-18 04:07:51.582969+00,Kyle Hollingsworth Band w/ Breadbox (Ballroom) + Dave Watts & Friends w/ Hot Like Mars (Other Side)
+1072,chick-magnet-nostaljazz-slippery-when-wet-cervantes-other-side-2026-01-16,viewed,2026-01-18 04:07:51.581317+00,Chick Magnet & Nostaljazz & Slippery When Wet
+1073,sts9-cervantes-masterpiece-ballroom-2026-01-25,open_event_card,2026-01-18 04:15:53.304297+00,STS9
+1074,kitchen-dwellers-w-silas-herman-the-tone-unit-friday-1-23-cervantes-masterpiece-ballroom-2026-01-23,viewed,2026-01-18 04:15:54.475209+00,Kitchen Dwellers w/ Silas Herman & The Tone Unit **FRIDAY 1/23**
+1075,matteo-mancuso-cervantes-other-side-2026-02-04,viewed,2026-01-18 04:15:54.585376+00,Matteo Mancuso
+1076,chmura-duffrey-at-ogden-theatre-cervantes-masterpiece-ballroom-2026-01-30,viewed,2026-01-18 04:15:54.588232+00,Chmura & Duffrey AT OGDEN THEATRE
+1077,lotus-friday-1-16-cervantes-masterpiece-ballroom-2026-01-16,viewed,2026-01-18 06:24:32.591711+00,Lotus **FRIDAY 1/16**
+1078,wake-up-and-live-a-bob-marley-tribute-w-a-mac-the-height-dj-selekta-razja-cervantes-other-side-2026-02-05,viewed,2026-01-18 06:24:32.591766+00,"Wake Up and Live – A Bob Marley Tribute w/ A-Mac & the Height, DJ Selekta Razja"
+1079,zach-nugent-s-dead-set-w-lucas-parker-band-the-buzz-cervantes-other-side-2026-01-17,viewed,2026-01-18 06:24:32.591818+00,"Zach Nugent’s Dead Set w/ Lucas Parker Band, The Buzz"
+1080,chick-magnet-nostaljazz-slippery-when-wet-cervantes-other-side-2026-01-16,viewed,2026-01-18 11:20:19.848647+00,Chick Magnet & Nostaljazz & Slippery When Wet
+1081,pma-ft-clay-parnell-steve-molitz-allen-aucoin-ben-silver-cervantes-other-side-2026-01-24,viewed,2026-01-18 11:20:19.847055+00,"PMA (ft. Clay Parnell, Steve Molitz, Allen Aucoin) & Ben Silver"
+1082,lotus-friday-1-16-cervantes-masterpiece-ballroom-2026-01-16,viewed,2026-01-18 11:20:19.847056+00,Lotus **FRIDAY 1/16**
+1083,pma-ft-clay-parnell-steve-molitz-allen-aucoin-ben-silver-cervantes-other-side-2026-01-24,viewed,2026-01-18 21:50:47.546651+00,"PMA (ft. Clay Parnell, Steve Molitz, Allen Aucoin) & Ben Silver"
+1084,chick-magnet-nostaljazz-slippery-when-wet-cervantes-other-side-2026-01-16,viewed,2026-01-18 21:50:47.546763+00,Chick Magnet & Nostaljazz & Slippery When Wet
+1085,sts9-cervantes-masterpiece-ballroom-2026-01-25,viewed,2026-01-18 21:50:47.546636+00,STS9
+1086,sts9-cervantes-masterpiece-ballroom-2026-01-25,viewed,2026-01-18 23:13:25.556413+00,STS9
+1087,lotus-friday-1-16-cervantes-masterpiece-ballroom-2026-01-16,viewed,2026-01-18 23:13:25.558519+00,Lotus **FRIDAY 1/16**
+1088,kyle-hollingsworth-band-w-breadbox-ballroom-dave-watts-friends-w-hot-like-mars-other-side-cervantes-other-side-2026-01-30,viewed,2026-01-18 23:13:25.556382+00,Kyle Hollingsworth Band w/ Breadbox (Ballroom) + Dave Watts & Friends w/ Hot Like Mars (Other Side)
+1089,sts9-cervantes-masterpiece-ballroom-2026-01-25,open_event_card,2026-01-18 23:14:17.091435+00,STS9
+1090,sts9-cervantes-masterpiece-ballroom-2026-01-25,show_price,2026-01-18 23:14:20.404319+00,STS9
+1091,sts9-cervantes-masterpiece-ballroom-2026-01-25,external_link_click,2026-01-18 23:14:23.824825+00,STS9
+1092,great-blue-ft-peter-anspach-of-goose-w-jewel-house-and-special-guest-ruthie-bandit-dj-set-cervantes-other-side-2026-02-01,viewed,2026-01-19 03:25:31.421918+00,Great Blue ft. Peter Anspach of Goose w/ Jewel House and Special Guest Ruthie Bandit (DJ Set)
+1093,shift-ft-midicinal-w-catparty-phlo-philia-cervantes-other-side-2026-01-29,viewed,2026-01-19 03:25:31.423902+00,"SHIFT Ft. MIDIcinal w/ CatParty, PhLo, Philia"
+1094,lotus-friday-1-16-cervantes-masterpiece-ballroom-2026-01-16,viewed,2026-01-19 03:25:31.421942+00,Lotus **FRIDAY 1/16**
+1095,matteo-mancuso-cervantes-other-side-2026-02-04,viewed,2026-01-19 07:21:12.152602+00,Matteo Mancuso
+1096,lotus-saturday-1-17-cervantes-masterpiece-ballroom-2026-01-17,viewed,2026-01-19 07:21:12.152373+00,Lotus **SATURDAY 1/17**
+1097,sts9-cervantes-masterpiece-ballroom-2026-01-25,viewed,2026-01-19 07:21:12.16258+00,STS9
+1098,zach-nugent-s-dead-set-w-lucas-parker-band-the-buzz-cervantes-other-side-2026-01-17,viewed,2026-01-19 07:32:31.702751+00,"Zach Nugent’s Dead Set w/ Lucas Parker Band, The Buzz"
+1099,chick-magnet-nostaljazz-slippery-when-wet-cervantes-other-side-2026-01-16,viewed,2026-01-19 07:32:31.702017+00,Chick Magnet & Nostaljazz & Slippery When Wet
+1100,lotus-friday-1-16-cervantes-masterpiece-ballroom-2026-01-16,viewed,2026-01-19 07:32:31.70201+00,Lotus **FRIDAY 1/16**
+1101,ozztin-w-yojas-inari-split-velcroshirt-cervantes-other-side-2026-01-23,viewed,2026-01-19 16:05:54.487602+00,"Ozztin w/ Yojas, Inari, SPLiT, VelcroShirt"
+1102,miilk-w-buzz-junior-sweetboi-cervantes-other-side-2026-01-31,viewed,2026-01-19 16:05:54.487607+00,"Miilk w/ Buzz Junior, Sweetboi"
+1103,amnesiacs-radiohead-tribute-rally-round-the-family-rage-against-the-machine-tribute-w-apostles-of-fire-black-sabbath-cervantes-other-side-2026-02-06,viewed,2026-01-19 16:05:54.489373+00,Amnesiacs (Radiohead Tribute) & Rally ‘Round The Family (Rage Against The Machine Tribute) w/ Apostles of Fire (Black Sabbath)
+1104,amnesiacs-radiohead-tribute-rally-round-the-family-rage-against-the-machine-tribute-w-apostles-of-fire-black-sabbath-cervantes-other-side-2026-02-06,viewed,2026-01-19 21:56:48.018727+00,Amnesiacs (Radiohead Tribute) & Rally ‘Round The Family (Rage Against The Machine Tribute) w/ Apostles of Fire (Black Sabbath)
+1105,miilk-w-buzz-junior-sweetboi-cervantes-other-side-2026-01-31,viewed,2026-01-19 21:56:48.01709+00,"Miilk w/ Buzz Junior, Sweetboi"
+1106,sts9-cervantes-masterpiece-ballroom-2026-01-25,viewed,2026-01-19 21:56:48.017091+00,STS9
+1107,shift-ft-midicinal-w-catparty-phlo-philia-cervantes-other-side-2026-01-29,viewed,2026-01-21 08:37:01.300317+00,"SHIFT Ft. MIDIcinal w/ CatParty, PhLo, Philia"
+1108,pma-ft-clay-parnell-steve-molitz-allen-aucoin-ben-silver-cervantes-other-side-2026-01-24,viewed,2026-01-21 08:37:01.298911+00,"PMA (ft. Clay Parnell, Steve Molitz, Allen Aucoin) & Ben Silver"
+1109,ozztin-w-yojas-inari-split-velcroshirt-cervantes-other-side-2026-01-23,viewed,2026-01-21 08:37:01.298937+00,"Ozztin w/ Yojas, Inari, SPLiT, VelcroShirt"
+1110,zach-nugent-s-dead-set-w-lucas-parker-band-the-buzz-cervantes-other-side-2026-01-17,viewed,2026-01-21 18:17:01.631166+00,"Zach Nugent’s Dead Set w/ Lucas Parker Band, The Buzz"
+1111,great-blue-ft-peter-anspach-of-goose-w-jewel-house-and-special-guest-ruthie-bandit-dj-set-cervantes-other-side-2026-02-01,viewed,2026-01-21 18:17:01.629366+00,Great Blue ft. Peter Anspach of Goose w/ Jewel House and Special Guest Ruthie Bandit (DJ Set)
+1112,tripp-st-w-rsun-rendr-vyhara-dizzy-cervantes-masterpiece-ballroom-2026-01-24,viewed,2026-01-21 18:17:01.629381+00,"Tripp St. w/ rSUN, Rendr, Vyhara, Dizzy!"
+1113,miilk-w-buzz-junior-sweetboi-cervantes-other-side-2026-01-31,viewed,2026-01-21 18:17:15.070232+00,"Miilk w/ Buzz Junior, Sweetboi"
+1114,wake-up-and-live-a-bob-marley-tribute-w-a-mac-the-height-dj-selekta-razja-cervantes-other-side-2026-02-05,viewed,2026-01-21 18:17:15.074697+00,"Wake Up and Live – A Bob Marley Tribute w/ A-Mac & the Height, DJ Selekta Razja"
+1115,ozztin-w-yojas-inari-split-velcroshirt-cervantes-other-side-2026-01-23,viewed,2026-01-21 18:17:15.083426+00,"Ozztin w/ Yojas, Inari, SPLiT, VelcroShirt"
+1116,kitchen-dwellers-w-silas-herman-the-tone-unit-friday-1-23-cervantes-masterpiece-ballroom-2026-01-23,viewed,2026-01-21 18:17:36.251894+00,Kitchen Dwellers w/ Silas Herman & The Tone Unit **FRIDAY 1/23**
+1117,chmura-duffrey-at-ogden-theatre-cervantes-masterpiece-ballroom-2026-01-30,viewed,2026-01-21 18:17:36.251747+00,Chmura & Duffrey AT OGDEN THEATRE
+1118,miilk-w-buzz-junior-sweetboi-cervantes-other-side-2026-01-31,viewed,2026-01-21 18:17:36.258302+00,"Miilk w/ Buzz Junior, Sweetboi"
+1119,kitchen-dwellers-w-silas-herman-the-tone-unit-friday-1-23-cervantes-masterpiece-ballroom-2026-01-23,viewed,2026-01-22 02:59:37.387617+00,Kitchen Dwellers w/ Silas Herman & The Tone Unit **FRIDAY 1/23**
+1120,jimkata-w-barbara-cervantes-other-side-2026-01-22,viewed,2026-01-22 02:59:37.387617+00,Jimkata w/ Barbara
+1121,kyle-hollingsworth-band-w-breadbox-ballroom-dave-watts-friends-w-hot-like-mars-other-side-cervantes-other-side-2026-01-30,viewed,2026-01-22 02:59:37.389082+00,Kyle Hollingsworth Band w/ Breadbox (Ballroom) + Dave Watts & Friends w/ Hot Like Mars (Other Side)
+1122,jimkata-w-barbara-cervantes-other-side-2026-01-22,open_event_card,2026-01-22 02:59:45.073322+00,Jimkata w/ Barbara
+1123,wake-up-and-live-a-bob-marley-tribute-w-a-mac-the-height-dj-selekta-razja-cervantes-other-side-2026-02-05,viewed,2026-01-22 02:59:50.985686+00,"Wake Up and Live – A Bob Marley Tribute w/ A-Mac & the Height, DJ Selekta Razja"
+1124,lotus-saturday-1-17-cervantes-masterpiece-ballroom-2026-01-17,viewed,2026-01-22 02:59:51.070233+00,Lotus **SATURDAY 1/17**
+1125,pma-ft-clay-parnell-steve-molitz-allen-aucoin-ben-silver-cervantes-other-side-2026-01-24,viewed,2026-01-22 02:59:51.503163+00,"PMA (ft. Clay Parnell, Steve Molitz, Allen Aucoin) & Ben Silver"
+1126,shift-ft-midicinal-w-catparty-phlo-philia-cervantes-other-side-2026-01-29,viewed,2026-01-22 02:59:51.512928+00,"SHIFT Ft. MIDIcinal w/ CatParty, PhLo, Philia"
+1127,tripp-st-w-rsun-rendr-vyhara-dizzy-cervantes-masterpiece-ballroom-2026-01-24,viewed,2026-01-22 02:59:51.63072+00,"Tripp St. w/ rSUN, Rendr, Vyhara, Dizzy!"
+1128,tripp-st-w-rsun-rendr-vyhara-dizzy-cervantes-masterpiece-ballroom-2026-01-24,open_event_card,2026-01-22 02:59:54.085553+00,"Tripp St. w/ rSUN, Rendr, Vyhara, Dizzy!"
+1129,flamingosis-w-blockhead-pure-colors-little-mac-cervantes-masterpiece-ballroom-2026-01-31,viewed,2026-01-22 02:59:58.780959+00,"Flamingosis w/ Blockhead, Pure Colors, Little Mac"
+1130,miilk-w-buzz-junior-sweetboi-cervantes-other-side-2026-01-31,viewed,2026-01-22 02:59:58.794607+00,"Miilk w/ Buzz Junior, Sweetboi"
+1131,amnesiacs-radiohead-tribute-rally-round-the-family-rage-against-the-machine-tribute-w-apostles-of-fire-black-sabbath-cervantes-other-side-2026-02-06,viewed,2026-01-22 02:59:59.326311+00,Amnesiacs (Radiohead Tribute) & Rally ‘Round The Family (Rage Against The Machine Tribute) w/ Apostles of Fire (Black Sabbath)
+1132,chmura-duffrey-at-ogden-theatre-cervantes-masterpiece-ballroom-2026-01-30,viewed,2026-01-22 03:00:00.460709+00,Chmura & Duffrey AT OGDEN THEATRE
+1133,great-blue-ft-peter-anspach-of-goose-w-jewel-house-and-special-guest-ruthie-bandit-dj-set-cervantes-other-side-2026-02-01,viewed,2026-01-22 03:00:01.769113+00,Great Blue ft. Peter Anspach of Goose w/ Jewel House and Special Guest Ruthie Bandit (DJ Set)
+1134,ozztin-w-yojas-inari-split-velcroshirt-cervantes-other-side-2026-01-23,viewed,2026-01-22 03:00:01.777275+00,"Ozztin w/ Yojas, Inari, SPLiT, VelcroShirt"
+1135,kitchen-dwellers-w-jammy-buffet-thursday-1-22-cervantes-masterpiece-ballroom-2026-01-22,viewed,2026-01-22 03:00:04.48654+00,Kitchen Dwellers w/ Jammy Buffet **THURSDAY 1/22**
+1136,zach-nugent-s-dead-set-w-lucas-parker-band-the-buzz-cervantes-other-side-2026-01-17,viewed,2026-01-22 03:00:04.513849+00,"Zach Nugent’s Dead Set w/ Lucas Parker Band, The Buzz"
+1137,chick-magnet-nostaljazz-slippery-when-wet-cervantes-other-side-2026-01-16,viewed,2026-01-22 03:00:04.523992+00,Chick Magnet & Nostaljazz & Slippery When Wet
+1138,lotus-friday-1-16-cervantes-masterpiece-ballroom-2026-01-16,viewed,2026-01-22 03:00:04.848178+00,Lotus **FRIDAY 1/16**
+1139,matteo-mancuso-cervantes-other-side-2026-02-04,viewed,2026-01-22 03:00:20.042608+00,Matteo Mancuso
+1140,sts9-cervantes-masterpiece-ballroom-2026-01-25,viewed,2026-01-22 03:00:22.286739+00,STS9
+1141,flamingosis-w-blockhead-pure-colors-little-mac-cervantes-masterpiece-ballroom-2026-01-31,open_event_card,2026-01-22 03:00:49.860637+00,"Flamingosis w/ Blockhead, Pure Colors, Little Mac"
+1142,lotus-friday-1-16-cervantes-masterpiece-ballroom-2026-01-16,open_event_card,2026-01-22 03:00:57.741049+00,Lotus **FRIDAY 1/16**
+1143,lotus-friday-1-16-cervantes-masterpiece-ballroom-2026-01-16,show_price,2026-01-22 03:01:02.795868+00,Lotus **FRIDAY 1/16**
+1144,lotus-friday-1-16-cervantes-masterpiece-ballroom-2026-01-16,external_link_click,2026-01-22 03:01:04.731883+00,Lotus **FRIDAY 1/16**
+1145,chmura-duffrey-at-ogden-theatre-cervantes-masterpiece-ballroom-2026-01-30,open_event_card,2026-01-22 03:02:14.806654+00,Chmura & Duffrey AT OGDEN THEATRE
+1146,lotus-saturday-1-17-cervantes-masterpiece-ballroom-2026-01-17,viewed,2026-01-22 03:02:33.074669+00,Lotus **SATURDAY 1/17**
+1147,chick-magnet-nostaljazz-slippery-when-wet-cervantes-other-side-2026-01-16,viewed,2026-01-22 03:02:33.078378+00,Chick Magnet & Nostaljazz & Slippery When Wet
+1148,zach-nugent-s-dead-set-w-lucas-parker-band-the-buzz-cervantes-other-side-2026-01-17,viewed,2026-01-22 03:02:33.12312+00,"Zach Nugent’s Dead Set w/ Lucas Parker Band, The Buzz"
+1149,zach-nugent-s-dead-set-w-lucas-parker-band-the-buzz-cervantes-other-side-2026-01-17,viewed,2026-01-22 03:58:59.078225+00,"Zach Nugent’s Dead Set w/ Lucas Parker Band, The Buzz"
+1150,ozztin-w-yojas-inari-split-velcroshirt-cervantes-other-side-2026-01-23,viewed,2026-01-22 03:59:02.247492+00,"Ozztin w/ Yojas, Inari, SPLiT, VelcroShirt"
+1151,kitchen-dwellers-w-silas-herman-the-tone-unit-friday-1-23-cervantes-masterpiece-ballroom-2026-01-23,viewed,2026-01-22 03:59:04.572581+00,Kitchen Dwellers w/ Silas Herman & The Tone Unit **FRIDAY 1/23**
+1152,zach-nugent-s-dead-set-w-lucas-parker-band-the-buzz-cervantes-other-side-2026-01-17,viewed,2026-01-22 03:59:11.459012+00,"Zach Nugent’s Dead Set w/ Lucas Parker Band, The Buzz"
+1153,zach-nugent-s-dead-set-w-lucas-parker-band-the-buzz-cervantes-other-side-2026-01-17,viewed,2026-01-22 03:59:11.553289+00,"Zach Nugent’s Dead Set w/ Lucas Parker Band, The Buzz"
+1154,ozztin-w-yojas-inari-split-velcroshirt-cervantes-other-side-2026-01-23,viewed,2026-01-22 03:59:11.612028+00,"Ozztin w/ Yojas, Inari, SPLiT, VelcroShirt"
+1155,ozztin-w-yojas-inari-split-velcroshirt-cervantes-other-side-2026-01-23,viewed,2026-01-22 03:59:11.706884+00,"Ozztin w/ Yojas, Inari, SPLiT, VelcroShirt"
+1156,kitchen-dwellers-w-silas-herman-the-tone-unit-friday-1-23-cervantes-masterpiece-ballroom-2026-01-23,viewed,2026-01-22 03:59:11.760557+00,Kitchen Dwellers w/ Silas Herman & The Tone Unit **FRIDAY 1/23**
+1157,kitchen-dwellers-w-silas-herman-the-tone-unit-friday-1-23-cervantes-masterpiece-ballroom-2026-01-23,viewed,2026-01-22 03:59:11.893477+00,Kitchen Dwellers w/ Silas Herman & The Tone Unit **FRIDAY 1/23**
+1158,kitchen-dwellers-w-jammy-buffet-thursday-1-22-cervantes-masterpiece-ballroom-2026-01-22,viewed,2026-01-23 07:21:20.568127+00,Kitchen Dwellers w/ Jammy Buffet **THURSDAY 1/22**
+1159,wake-up-and-live-a-bob-marley-tribute-w-a-mac-the-height-dj-selekta-razja-cervantes-other-side-2026-02-05,viewed,2026-01-23 07:29:00.624216+00,"Wake Up and Live – A Bob Marley Tribute w/ A-Mac & the Height, DJ Selekta Razja"
+1160,miilk-w-buzz-junior-sweetboi-cervantes-other-side-2026-01-31,viewed,2026-01-23 07:29:00.624281+00,"Miilk w/ Buzz Junior, Sweetboi"
+1161,jimkata-w-barbara-cervantes-other-side-2026-01-22,viewed,2026-01-23 07:29:00.624318+00,Jimkata w/ Barbara
+1162,chick-magnet-nostaljazz-slippery-when-wet-cervantes-other-side-2026-01-16,viewed,2026-01-23 16:09:36.283353+00,Chick Magnet & Nostaljazz & Slippery When Wet
+1163,kitchen-dwellers-w-silas-herman-the-tone-unit-friday-1-23-cervantes-masterpiece-ballroom-2026-01-23,viewed,2026-01-23 16:09:36.283219+00,Kitchen Dwellers w/ Silas Herman & The Tone Unit **FRIDAY 1/23**
+1164,great-blue-ft-peter-anspach-of-goose-w-jewel-house-and-special-guest-ruthie-bandit-dj-set-cervantes-other-side-2026-02-01,viewed,2026-01-23 16:09:36.283196+00,Great Blue ft. Peter Anspach of Goose w/ Jewel House and Special Guest Ruthie Bandit (DJ Set)
+1165,flamingosis-w-blockhead-pure-colors-little-mac-cervantes-masterpiece-ballroom-2026-01-31,viewed,2026-01-23 16:21:55.111468+00,"Flamingosis w/ Blockhead, Pure Colors, Little Mac"
+1166,lotus-friday-1-16-cervantes-masterpiece-ballroom-2026-01-16,viewed,2026-01-23 16:21:55.117442+00,Lotus **FRIDAY 1/16**
+1167,chmura-duffrey-at-ogden-theatre-cervantes-masterpiece-ballroom-2026-01-30,viewed,2026-01-23 16:21:55.12126+00,Chmura & Duffrey AT OGDEN THEATRE

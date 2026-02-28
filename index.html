@@ -1,144 +1,384 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cervantes — Demand & Click Insights</title>
-  </head>
-  <body>
-    <div id="app">
-      <header class="topbar">
-        <div class="brand">
-          <div class="logo-dot"></div>
-          <div>
-            <div class="kicker">FEEDBACK • VENUE INSIGHTS</div>
-            <h1>Cervantes — Demand Signals Dashboard</h1>
-            <div class="sub">Clicks → intent → booking confidence (demo)</div>
-          </div>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>feedback5280 — Live Music Denver</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-        <div class="controls">
-          <div class="control">
-            <label>Date range</label>
-            <div class="row">
-              <input id="fromDate" type="date" />
-              <span class="sep">→</span>
-              <input id="toDate" type="date" />
-            </div>
-          </div>
+    :root {
+      --black: #080808;
+      --charcoal: #111111;
+      --mid: #161616;
+      --border: rgba(255,255,255,0.07);
+      --border-hover: rgba(255,255,255,0.14);
+      --amber: #c8922a;
+      --amber-light: #e8b04a;
+      --white: #f0ece4;
+      --muted: rgba(240,236,228,0.4);
+      --font-display: 'Bebas Neue', sans-serif;
+      --font-body: 'DM Sans', sans-serif;
+    }
 
-          <div class="control">
-            <label>Venue</label>
-            <select id="venueFilter">
-              <option value="ALL">All</option>
-              <option value="Ballroom">Ballroom</option>
-              <option value="Other Side">Other Side</option>
-            </select>
-          </div>
+    html, body {
+      min-height: 100vh;
+      background: var(--black);
+      color: var(--white);
+      font-family: var(--font-body);
+      overflow-x: hidden;
+    }
 
-          <button id="resetBtn" class="btn">Reset</button>
-        </div>
-      </header>
+    /* Grain */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+      opacity: 0.028;
+      pointer-events: none;
+      z-index: 999;
+    }
 
-      <main class="grid">
-        <section class="card kpis">
-          <div class="card-head">
-            <h2>Key metrics</h2>
-            <div class="hint">Based on current filter</div>
-          </div>
-          <div class="kpi-row">
-            <div class="kpi">
-              <div class="kpi-label">Total interactions</div>
-              <div class="kpi-value" id="kpiTotal">—</div>
-              <div class="kpi-sub" id="kpiRange">—</div>
-            </div>
-            <div class="kpi">
-              <div class="kpi-label">Unique shows</div>
-              <div class="kpi-value" id="kpiEvents">—</div>
-              <div class="kpi-sub">tracked in dataset</div>
-            </div>
-            <div class="kpi">
-              <div class="kpi-label">Open rate</div>
-              <div class="kpi-value" id="kpiOpenRate">—</div>
-              <div class="kpi-sub">opens / views</div>
-            </div>
-            <div class="kpi">
-              <div class="kpi-label">Ticket intent rate</div>
-              <div class="kpi-value" id="kpiTicketRate">—</div>
-              <div class="kpi-sub">ticket clicks / views</div>
-            </div>
-          </div>
+    /* Ambient glow */
+    .glow-bg {
+      position: fixed;
+      top: -30%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 900px;
+      height: 500px;
+      background: radial-gradient(ellipse, rgba(200,146,42,0.07) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
 
-          <div class="funnel-mini">
-            <div class="funnel-item">
-              <div class="lbl">Views</div><div class="val" id="fViews">—</div>
-            </div>
-            <div class="funnel-item">
-              <div class="lbl">Opens</div><div class="val" id="fOpens">—</div>
-            </div>
-            <div class="funnel-item">
-              <div class="lbl">Price checks</div><div class="val" id="fPrice">—</div>
-            </div>
-            <div class="funnel-item">
-              <div class="lbl">Ticket clicks</div><div class="val" id="fTickets">—</div>
-            </div>
-            <div class="funnel-item danger">
-              <div class="lbl">Not interested</div><div class="val" id="fNope">—</div>
-            </div>
-          </div>
-        </section>
+    /* Header */
+    header {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 28px 40px;
+      border-bottom: 1px solid var(--border);
+      animation: fadeDown 0.6s ease both;
+    }
 
-        <section class="card chart">
-          <div class="card-head">
-            <h2>Daily trend</h2>
-            <div class="hint">Volume by action (Denver time)</div>
-          </div>
-          <canvas id="trendChart" height="120"></canvas>
-        </section>
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
 
-        <section class="card chart">
-          <div class="card-head">
-            <h2>Funnel</h2>
-            <div class="hint">Where intent drops</div>
-          </div>
-          <canvas id="funnelChart" height="120"></canvas>
-        </section>
+    .logo {
+      font-family: var(--font-display);
+      font-size: 22px;
+      letter-spacing: 0.1em;
+      color: var(--white);
+      text-decoration: none;
+    }
 
-        <section class="card table">
-          <div class="card-head">
-            <h2>Top shows</h2>
-            <div class="hint">Sorted by engagement score (ticket intent weighted)</div>
-          </div>
+    .logo span {
+      color: var(--amber);
+    }
 
-          <div class="table-wrap">
-            <table id="eventsTable">
-              <thead>
-                <tr>
-                  <th data-sort="title">Show</th>
-                  <th data-sort="venue">Venue</th>
-                  <th class="num" data-sort="viewed">Views</th>
-                  <th class="num" data-sort="open_rate">Open%</th>
-                  <th class="num" data-sort="price_rate">Price%</th>
-                  <th class="num" data-sort="ticket_intent">Ticket clicks</th>
-                  <th class="num" data-sort="score">Score</th>
-                </tr>
-              </thead>
-              <tbody></tbody>
-            </table>
-          </div>
+    .header-sub {
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
 
-          <div class="footer-note">
-            Tip: click column headers to sort.
-          </div>
-        </section>
-      </main>
+    /* Main */
+    main {
+      position: relative;
+      z-index: 1;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 64px 40px 100px;
+    }
 
-      <footer class="footer">
-        <div>Feedback Demo dashboard • built for venue pilot</div>
-        <div class="muted">Data source: clicks_rows.csv</div>
-      </footer>
+    /* Section heading */
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+      margin-bottom: 40px;
+      animation: fadeUp 0.7s ease 0.1s both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .section-header h2 {
+      font-family: var(--font-display);
+      font-size: 48px;
+      letter-spacing: 0.04em;
+      color: var(--white);
+      line-height: 1;
+    }
+
+    .section-header .line {
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* Show list */
+    .show-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    /* Show card */
+    .show-card {
+      display: grid;
+      grid-template-columns: 80px 1fr auto;
+      align-items: center;
+      gap: 28px;
+      padding: 24px 28px;
+      background: var(--charcoal);
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      text-decoration: none;
+      color: var(--white);
+      transition: border-color 0.2s, background 0.2s, transform 0.2s;
+      animation: fadeUp 0.7s ease both;
+    }
+
+    .show-card:hover {
+      border-color: var(--border-hover);
+      background: var(--mid);
+      transform: translateX(4px);
+    }
+
+    .show-card:nth-child(1) { animation-delay: 0.15s; }
+    .show-card:nth-child(2) { animation-delay: 0.25s; }
+    .show-card:nth-child(3) { animation-delay: 0.35s; }
+    .show-card:nth-child(4) { animation-delay: 0.45s; }
+
+    /* Date block */
+    .date-block {
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    .date-month {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 2px;
+    }
+
+    .date-day {
+      font-family: var(--font-display);
+      font-size: 42px;
+      line-height: 1;
+      color: var(--white);
+    }
+
+    /* Show info */
+    .show-info {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .show-artist {
+      font-family: var(--font-display);
+      font-size: 28px;
+      letter-spacing: 0.04em;
+      color: var(--white);
+      line-height: 1;
+    }
+
+    .show-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .show-venue,
+    .show-city {
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+    }
+
+    .show-meta .dot {
+      width: 3px;
+      height: 3px;
+      background: rgba(240,236,228,0.2);
+      border-radius: 50%;
+    }
+
+    /* RSVP button */
+    .rsvp-cta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      border: 1px solid rgba(200,146,42,0.4);
+      border-radius: 2px;
+      color: var(--amber);
+      font-family: var(--font-display);
+      font-size: 14px;
+      letter-spacing: 0.1em;
+      padding: 10px 18px;
+      white-space: nowrap;
+      transition: background 0.2s, border-color 0.2s, color 0.2s;
+      flex-shrink: 0;
+    }
+
+    .show-card:hover .rsvp-cta {
+      background: var(--amber);
+      border-color: var(--amber);
+      color: var(--black);
+    }
+
+    .rsvp-cta-arrow {
+      font-size: 16px;
+      transition: transform 0.2s;
+    }
+
+    .show-card:hover .rsvp-cta-arrow {
+      transform: translateX(3px);
+    }
+
+    /* Past / sold out state */
+    .show-card.past {
+      opacity: 0.45;
+      pointer-events: none;
+    }
+
+    .show-card.past .rsvp-cta {
+      border-color: rgba(255,255,255,0.1);
+      color: var(--muted);
+    }
+
+    /* Empty state */
+    .empty-state {
+      text-align: center;
+      padding: 80px 0;
+      color: var(--muted);
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      animation: fadeUp 0.7s ease 0.3s both;
+    }
+
+    /* Footer */
+    footer {
+      position: relative;
+      z-index: 1;
+      border-top: 1px solid var(--border);
+      padding: 24px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .footer-logo {
+      font-family: var(--font-display);
+      font-size: 14px;
+      letter-spacing: 0.1em;
+      color: rgba(240,236,228,0.2);
+    }
+
+    .footer-logo span { color: rgba(200,146,42,0.4); }
+
+    .footer-city {
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(240,236,228,0.15);
+    }
+
+    @media (max-width: 600px) {
+      header { padding: 20px 20px; }
+      main { padding: 40px 20px 80px; }
+      footer { padding: 20px; }
+
+      .show-card {
+        grid-template-columns: 60px 1fr;
+        grid-template-rows: auto auto;
+        gap: 16px;
+        padding: 18px 20px;
+      }
+
+      .date-day { font-size: 32px; }
+      .show-artist { font-size: 22px; }
+      .rsvp-cta { display: none; }
+
+      .section-header h2 { font-size: 36px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="glow-bg"></div>
+
+  <header>
+    <a href="/" class="logo">feedback<span>5280</span></a>
+    <span class="header-sub">Denver · Live Music</span>
+  </header>
+
+  <main>
+    <div class="section-header">
+      <h2>Upcoming Shows</h2>
+      <div class="line"></div>
     </div>
 
-    <script type="module" src="/src/main.js"></script>
-  </body>
+    <div class="show-list">
+
+      <!-- SHOW 1: Luke Jensen -->
+      <a class="show-card" href="/luke/">
+        <div class="date-block">
+          <div class="date-month">Feb</div>
+          <div class="date-day">28</div>
+        </div>
+        <div class="show-info">
+          <div class="show-artist">Luke Jensen</div>
+          <div class="show-meta">
+            <span class="show-venue">Cervantes</span>
+            <span class="dot"></span>
+            <span class="show-city">Denver, CO</span>
+          </div>
+        </div>
+        <div class="rsvp-cta">
+          RSVP <span class="rsvp-cta-arrow">→</span>
+        </div>
+      </a>
+
+      <!-- SHOW 2: Mūs — update href to /mus or whatever your folder is named -->
+      <a class="show-card" href="/mus/">
+        <div class="date-block">
+          <div class="date-month">May</div>
+          <div class="date-day">8</div>
+        </div>
+        <div class="show-info">
+          <div class="show-artist">Mūs</div>
+          <div class="show-meta">
+            <span class="show-city">Denver, CO</span>
+          </div>
+        </div>
+        <div class="rsvp-cta">
+          RSVP <span class="rsvp-cta-arrow">→</span>
+        </div>
+      </a> -->
+
+      <!-- ADD MORE SHOWS BELOW — copy the block above -->
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-logo">feedback<span>5280</span></div>
+    <div class="footer-city">Denver, CO</div>
+  </footer>
+</body>
 </html>

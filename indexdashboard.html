@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cervantes — Demand & Click Insights</title>
+  </head>
+  <body>
+    <div id="app">
+      <header class="topbar">
+        <div class="brand">
+          <div class="logo-dot"></div>
+          <div>
+            <div class="kicker">FEEDBACK • VENUE INSIGHTS</div>
+            <h1>Cervantes — Demand Signals Dashboard</h1>
+            <div class="sub">Clicks → intent → booking confidence (demo)</div>
+          </div>
+        </div>
+
+        <div class="controls">
+          <div class="control">
+            <label>Date range</label>
+            <div class="row">
+              <input id="fromDate" type="date" />
+              <span class="sep">→</span>
+              <input id="toDate" type="date" />
+            </div>
+          </div>
+
+          <div class="control">
+            <label>Venue</label>
+            <select id="venueFilter">
+              <option value="ALL">All</option>
+              <option value="Ballroom">Ballroom</option>
+              <option value="Other Side">Other Side</option>
+            </select>
+          </div>
+
+          <button id="resetBtn" class="btn">Reset</button>
+        </div>
+      </header>
+
+      <main class="grid">
+        <section class="card kpis">
+          <div class="card-head">
+            <h2>Key metrics</h2>
+            <div class="hint">Based on current filter</div>
+          </div>
+          <div class="kpi-row">
+            <div class="kpi">
+              <div class="kpi-label">Total interactions</div>
+              <div class="kpi-value" id="kpiTotal">—</div>
+              <div class="kpi-sub" id="kpiRange">—</div>
+            </div>
+            <div class="kpi">
+              <div class="kpi-label">Unique shows</div>
+              <div class="kpi-value" id="kpiEvents">—</div>
+              <div class="kpi-sub">tracked in dataset</div>
+            </div>
+            <div class="kpi">
+              <div class="kpi-label">Open rate</div>
+              <div class="kpi-value" id="kpiOpenRate">—</div>
+              <div class="kpi-sub">opens / views</div>
+            </div>
+            <div class="kpi">
+              <div class="kpi-label">Ticket intent rate</div>
+              <div class="kpi-value" id="kpiTicketRate">—</div>
+              <div class="kpi-sub">ticket clicks / views</div>
+            </div>
+          </div>
+
+          <div class="funnel-mini">
+            <div class="funnel-item">
+              <div class="lbl">Views</div><div class="val" id="fViews">—</div>
+            </div>
+            <div class="funnel-item">
+              <div class="lbl">Opens</div><div class="val" id="fOpens">—</div>
+            </div>
+            <div class="funnel-item">
+              <div class="lbl">Price checks</div><div class="val" id="fPrice">—</div>
+            </div>
+            <div class="funnel-item">
+              <div class="lbl">Ticket clicks</div><div class="val" id="fTickets">—</div>
+            </div>
+            <div class="funnel-item danger">
+              <div class="lbl">Not interested</div><div class="val" id="fNope">—</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card chart">
+          <div class="card-head">
+            <h2>Daily trend</h2>
+            <div class="hint">Volume by action (Denver time)</div>
+          </div>
+          <canvas id="trendChart" height="120"></canvas>
+        </section>
+
+        <section class="card chart">
+          <div class="card-head">
+            <h2>Funnel</h2>
+            <div class="hint">Where intent drops</div>
+          </div>
+          <canvas id="funnelChart" height="120"></canvas>
+        </section>
+
+        <section class="card table">
+          <div class="card-head">
+            <h2>Top shows</h2>
+            <div class="hint">Sorted by engagement score (ticket intent weighted)</div>
+          </div>
+
+          <div class="table-wrap">
+            <table id="eventsTable">
+              <thead>
+                <tr>
+                  <th data-sort="title">Show</th>
+                  <th data-sort="venue">Venue</th>
+                  <th class="num" data-sort="viewed">Views</th>
+                  <th class="num" data-sort="open_rate">Open%</th>
+                  <th class="num" data-sort="price_rate">Price%</th>
+                  <th class="num" data-sort="ticket_intent">Ticket clicks</th>
+                  <th class="num" data-sort="score">Score</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+
+          <div class="footer-note">
+            Tip: click column headers to sort.
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div>Feedback Demo dashboard • built for venue pilot</div>
+        <div class="muted">Data source: clicks_rows.csv</div>
+      </footer>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

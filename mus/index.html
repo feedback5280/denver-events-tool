@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mūs — Inaugural Show</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black: #080808;
+      --charcoal: #111111;
+      --mid: #1a1a1a;
+      --border: rgba(255,255,255,0.07);
+      --amber: #c8922a;
+      --amber-light: #e8b04a;
+      --white: #f0ece4;
+      --muted: rgba(240,236,228,0.45);
+      --font-display: 'Bebas Neue', sans-serif;
+      --font-body: 'DM Sans', sans-serif;
+    }
+
+    html, body {
+      min-height: 100vh;
+      background: var(--black);
+      color: var(--white);
+      font-family: var(--font-body);
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+      opacity: 0.032;
+      pointer-events: none;
+      z-index: 999;
+    }
+
+    .glow-bg {
+      position: fixed;
+      top: -20%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 800px;
+      height: 600px;
+      background: radial-gradient(ellipse, rgba(200,146,42,0.12) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+      animation: pulseGlow 6s ease-in-out infinite alternate;
+    }
+
+    @keyframes pulseGlow {
+      from { opacity: 0.6; transform: translateX(-50%) scaleX(1); }
+      to   { opacity: 1;   transform: translateX(-50%) scaleX(1.15); }
+    }
+
+    .page {
+      position: relative;
+      z-index: 1;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 24px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 520px;
+      background: var(--charcoal);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 40px 120px rgba(0,0,0,0.7), 0 0 0 1px rgba(200,146,42,0.08);
+      animation: fadeUp 0.8s cubic-bezier(0.16,1,0.3,1) both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero {
+      position: relative;
+      height: 340px;
+      overflow: hidden;
+    }
+
+    .hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      filter: saturate(0.6) brightness(0.75);
+      transition: transform 8s ease;
+    }
+
+    .card:hover .hero img {
+      transform: scale(1.04);
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        rgba(8,8,8,0.15) 40%,
+        rgba(8,8,8,0.85) 80%,
+        var(--charcoal) 100%
+      );
+    }
+
+    .hero-tag {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-family: var(--font-body);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--amber);
+      border: 1px solid rgba(200,146,42,0.4);
+      padding: 5px 10px;
+      backdrop-filter: blur(4px);
+      background: rgba(8,8,8,0.4);
+    }
+
+    .hero-name {
+      position: absolute;
+      bottom: 24px;
+      left: 24px;
+      right: 24px;
+    }
+
+    .hero-name h1 {
+      font-family: var(--font-display);
+      font-size: clamp(52px, 14vw, 72px);
+      line-height: 0.9;
+      letter-spacing: 0.02em;
+      color: var(--white);
+      text-shadow: 0 2px 40px rgba(0,0,0,0.8);
+    }
+
+    .body {
+      padding: 28px 28px 32px;
+    }
+
+    .details-strip {
+      display: flex;
+      gap: 0;
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      overflow: hidden;
+      margin-bottom: 28px;
+    }
+
+    .detail-item {
+      flex: 1;
+      padding: 14px 16px;
+      border-right: 1px solid var(--border);
+      animation: fadeUp 0.8s cubic-bezier(0.16,1,0.3,1) both;
+    }
+
+    .detail-item:last-child { border-right: none; }
+    .detail-item:nth-child(1) { animation-delay: 0.1s; }
+    .detail-item:nth-child(2) { animation-delay: 0.2s; }
+    .detail-item:nth-child(3) { animation-delay: 0.3s; }
+
+    .detail-label {
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 4px;
+    }
+
+    .detail-value {
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--white);
+      line-height: 1.3;
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 22px;
+      opacity: 0.3;
+    }
+    .divider-line { flex: 1; height: 1px; background: var(--white); }
+    .divider-dot { width: 4px; height: 4px; background: var(--amber); border-radius: 50%; }
+
+    .form-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .input-row {
+      display: flex;
+      gap: 10px;
+    }
+
+    .email-input {
+      flex: 1;
+      background: var(--mid);
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      color: var(--white);
+      font-family: var(--font-body);
+      font-size: 14px;
+      padding: 14px 16px;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .email-input::placeholder { color: rgba(240,236,228,0.25); }
+
+    .email-input:focus {
+      border-color: rgba(200,146,42,0.5);
+      box-shadow: 0 0 0 3px rgba(200,146,42,0.08);
+    }
+
+    .rsvp-btn {
+      background: var(--amber);
+      color: var(--black);
+      border: none;
+      border-radius: 2px;
+      font-family: var(--font-display);
+      font-size: 18px;
+      letter-spacing: 0.06em;
+      padding: 0 22px;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .rsvp-btn:hover { background: var(--amber-light); transform: translateY(-1px); }
+    .rsvp-btn:active { transform: translateY(0); }
+    .rsvp-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+
+    .error-msg {
+      font-size: 12px;
+      color: #e05555;
+      margin-top: 8px;
+      min-height: 16px;
+      display: none;
+    }
+    .error-msg.visible { display: block; }
+
+    .confirmation {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 8px 0 4px;
+      animation: fadeUp 0.6s cubic-bezier(0.16,1,0.3,1) both;
+    }
+
+    .confirm-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      border: 1.5px solid var(--amber);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+
+    .confirm-icon svg {
+      width: 22px;
+      height: 22px;
+      stroke: var(--amber);
+      stroke-width: 2;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .confirm-title {
+      font-family: var(--font-display);
+      font-size: 32px;
+      letter-spacing: 0.04em;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+
+    .confirm-sub {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.6;
+      max-width: 300px;
+    }
+
+    .confirm-sub span {
+      color: var(--amber);
+      font-style: italic;
+    }
+
+    .footer {
+      margin-top: 24px;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      color: rgba(240,236,228,0.2);
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    @media (max-width: 420px) {
+      .input-row { flex-direction: column; }
+      .rsvp-btn { padding: 14px; font-size: 16px; }
+      .details-strip { flex-direction: column; }
+      .detail-item { border-right: none; border-bottom: 1px solid var(--border); }
+      .detail-item:last-child { border-bottom: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="glow-bg"></div>
+
+  <div class="page">
+    <div class="card">
+
+      <div class="hero">
+        <img src="../mus.png" alt="Mūs" />
+        <div class="hero-overlay"></div>
+        <div class="hero-tag">Inaugural Show</div>
+        <div class="hero-name">
+          <h1>Mūs</h1>
+        </div>
+      </div>
+
+      <div class="body">
+        <div class="details-strip">
+          <div class="detail-item">
+            <div class="detail-label">Date</div>
+            <div class="detail-value">May 8, 2026</div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-label">Doors</div>
+            <div class="detail-value">7:30 PM</div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-label">City</div>
+            <div class="detail-value">Denver, CO</div>
+          </div>
+        </div>
+
+        <div class="divider">
+          <div class="divider-line"></div>
+          <div class="divider-dot"></div>
+          <div class="divider-line"></div>
+        </div>
+
+        <div id="form-section">
+          <label class="form-label" for="email-input">Reserve your spot</label>
+          <div class="input-row">
+            <input
+              id="email-input"
+              class="email-input"
+              type="email"
+              placeholder="your@email.com"
+              autocomplete="email"
+            />
+            <button class="rsvp-btn" id="rsvp-btn" onclick="handleRSVP()">RSVP</button>
+          </div>
+          <div class="error-msg" id="error-msg"></div>
+        </div>
+
+        <div class="confirmation" id="confirmation">
+          <div class="confirm-icon">
+            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="confirm-title">You're In.</div>
+          <div class="confirm-sub">
+            See you at the <span>inaugural Mūs show</span> on May 8th.<br>
+            It's going to be a night to remember.
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer">
+      <img src="../logo.png" alt="feedback5280" />
+      <div>Mūs · Inaugural Show · Denver · May 8</div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script>
+    // ↓ Replace these with your actual Supabase project URL and anon key
+    const SUPABASE_URL = "https://chmfytasgjopdwjbgtek.supabase.co";
+    const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNobWZ5dGFzZ2pvcGR3amJndGVrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjczOTM3MTQsImV4cCI6MjA4Mjk2OTcxNH0.jckEX3bD661sVPgiNnZFk9undtgKXvWVTAxJdKRxDMw";
+
+    const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+    async function handleRSVP() {
+      const emailInput = document.getElementById('email-input');
+      const btn = document.getElementById('rsvp-btn');
+      const errorMsg = document.getElementById('error-msg');
+      const email = emailInput.value.trim();
+
+      errorMsg.classList.remove('visible');
+      errorMsg.textContent = '';
+
+      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        errorMsg.textContent = 'Please enter a valid email address.';
+        errorMsg.classList.add('visible');
+        return;
+      }
+
+      btn.disabled = true;
+      btn.textContent = '...';
+
+      try {
+        const { error } = await supabaseClient
+          .from('mus_rsvps')   // ← Supabase table for Mūs
+          .insert([{ email }]);
+
+        if (error) {
+          if (error.code === '23505') {
+            showConfirmation();
+          } else {
+            throw error;
+          }
+        } else {
+          showConfirmation();
+        }
+      } catch (err) {
+        console.error(err);
+        errorMsg.textContent = 'Something went wrong. Please try again.';
+        errorMsg.classList.add('visible');
+        btn.disabled = false;
+        btn.textContent = 'RSVP';
+      }
+    }
+
+    function showConfirmation() {
+      document.getElementById('form-section').style.display = 'none';
+      const conf = document.getElementById('confirmation');
+      conf.style.display = 'flex';
+    }
+
+    document.getElementById('email-input').addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') handleRSVP();
+    });
+  </script>
+</body>
+</html>

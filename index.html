@@ -398,23 +398,52 @@
       transform: translateY(0);
     }
 
-    @media (max-width: 600px) {
-      header { padding: 20px 20px; }
+    @media (max-width: 640px) {
+      header { padding: 20px; }
       main { padding: 40px 20px 80px; }
       footer { padding: 20px; }
 
+      /* Stack card layout vertically */
       .show-card {
-        grid-template-columns: 60px 1fr;
-        grid-template-rows: auto auto;
-        gap: 16px;
-        padding: 18px 20px;
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding: 20px;
+        max-width: 100%;
       }
 
-      .date-day { font-size: 32px; }
-      .show-artist { font-size: 22px; }
-      .rsvp-cta { display: none; }
+      /* Date becomes inline instead of side block */
+      .date-block {
+        display: flex;
+        align-items: baseline;
+        gap: 10px;
+        text-align: left;
+      }
 
-      .section-header h2 { font-size: 36px; }
+      .date-month {
+        font-size: 10px;
+      }
+
+      .date-day {
+        font-size: 28px;
+      }
+
+      /* Artist text slightly smaller */
+      .show-artist {
+        font-size: 22px;
+      }
+
+      /* Meta wraps naturally */
+      .show-meta {
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      /* RSVP stays visible and full width */
+      .rsvp-cta {
+        width: 100%;
+        justify-content: center;
+      }
+
     }
   </style>
 </head>

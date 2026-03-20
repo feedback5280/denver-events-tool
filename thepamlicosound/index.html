@@ -152,6 +152,17 @@
       padding: 28px 28px 32px;
     }
 
+    .hook {
+      font-size: 14px;
+      line-height: 1.5;
+      color: var(--white);
+      margin-bottom: 16px;
+      text-align: center;
+      font-style: italic;
+      letter-spacing: 0.02em;
+      opacity: 0.9;
+    }
+
     .details-strip {
       display: flex;
       gap: 0;
@@ -368,6 +379,9 @@
         </div>
 
         <div id="form-section">
+          <div class="hook">
+            $10. One night. The Pamlico Sound in Fort Collins — you in?
+          </div>
           <label class="form-label" for="email-input">Reserve your spot</label>
           <div class="input-row">
             <input
@@ -404,7 +418,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script>
-    // ↓ Replace these with your actual Supabase project URL and anon key
     const SUPABASE_URL = "https://chmfytasgjopdwjbgtek.supabase.co";
     const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNobWZ5dGFzZ2pvcGR3amJndGVrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjczOTM3MTQsImV4cCI6MjA4Mjk2OTcxNH0.jckEX3bD661sVPgiNnZFk9undtgKXvWVTAxJdKRxDMw";
 
@@ -430,7 +443,7 @@
 
       try {
         const { error } = await supabaseClient
-          .from('pamlico_rsvps')   // ← Supabase table for Mūs
+          .from('pamlico_rsvps')
           .insert([{ email }]);
 
         if (error) {

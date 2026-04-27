@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>feedback5280 — Live Music Denver</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black: #080808;
+      --charcoal: #111111;
+      --mid: #161616;
+      --border: rgba(255,255,255,0.07);
+      --border-hover: rgba(255,255,255,0.14);
+      --amber: #c8922a;
+      --amber-light: #e8b04a;
+      --white: #f0ece4;
+      --muted: rgba(240,236,228,0.4);
+      --font-display: 'Bebas Neue', sans-serif;
+      --font-body: 'DM Sans', sans-serif;
+    }
+
+    html, body {
+      min-height: 100vh;
+      background: var(--black);
+      color: var(--white);
+      font-family: var(--font-body);
+      overflow-x: hidden;
+    }
+
+    /* Grain */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+      opacity: 0.028;
+      pointer-events: none;
+      z-index: 999;
+    }
+
+    /* Ambient glow */
+    .glow-bg {
+      position: fixed;
+      top: -30%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 900px;
+      height: 500px;
+      background: radial-gradient(ellipse, rgba(200,146,42,0.07) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Header */
+    header {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 28px 40px;
+      border-bottom: 1px solid var(--border);
+      animation: fadeDown 0.6s ease both;
+    }
+
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .logo {
+      font-family: var(--font-display);
+      font-size: 22px;
+      letter-spacing: 0.1em;
+      color: var(--white);
+      text-decoration: none;
+    }
+
+    .logo span {
+      color: var(--amber);
+    }
+
+    .header-sub {
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* Main */
+    main {
+      position: relative;
+      z-index: 1;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 64px 40px 100px;
+    }
+
+    /* Section heading */
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+      margin-bottom: 40px;
+      animation: fadeUp 0.7s ease 0.1s both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .section-header h2 {
+      font-family: var(--font-display);
+      font-size: 48px;
+      letter-spacing: 0.04em;
+      color: var(--white);
+      line-height: 1;
+    }
+
+    .section-header .line {
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* Show list */
+    .show-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    /* Show card */
+    .show-card {
+      display: grid;
+      grid-template-columns: 80px 1fr auto;
+      align-items: center;
+      gap: 28px;
+      padding: 24px 28px;
+      background: var(--charcoal);
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      text-decoration: none;
+      color: var(--white);
+      transition: border-color 0.2s, background 0.2s, transform 0.2s;
+      animation: fadeUp 0.7s ease both;
+    }
+
+    .show-card:hover {
+      border-color: var(--border-hover);
+      background: var(--mid);
+      transform: translateX(4px);
+    }
+
+    .show-card:nth-child(1) { animation-delay: 0.15s; }
+    .show-card:nth-child(2) { animation-delay: 0.25s; }
+    .show-card:nth-child(3) { animation-delay: 0.35s; }
+    .show-card:nth-child(4) { animation-delay: 0.45s; }
+
+    /* Date block */
+    .date-block {
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    .date-month {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 2px;
+    }
+
+    .date-day {
+      font-family: var(--font-display);
+      font-size: 42px;
+      line-height: 1;
+      color: var(--white);
+    }
+
+    /* Show info */
+    .show-info {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .show-artist {
+      font-family: var(--font-display);
+      font-size: 28px;
+      letter-spacing: 0.04em;
+      color: var(--white);
+      line-height: 1;
+    }
+
+    .show-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .show-venue,
+    .show-city {
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+    }
+
+    .show-meta .dot {
+      width: 3px;
+      height: 3px;
+      background: rgba(240,236,228,0.2);
+      border-radius: 50%;
+    }
+
+    /* RSVP button */
+    .rsvp-cta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      border: 1px solid rgba(200,146,42,0.4);
+      border-radius: 2px;
+      color: var(--amber);
+      font-family: var(--font-display);
+      font-size: 14px;
+      letter-spacing: 0.1em;
+      padding: 10px 18px;
+      white-space: nowrap;
+      transition: background 0.2s, border-color 0.2s, color 0.2s;
+      flex-shrink: 0;
+    }
+
+    .show-card:hover .rsvp-cta {
+      background: var(--amber);
+      border-color: var(--amber);
+      color: var(--black);
+    }
+
+    .rsvp-cta-arrow {
+      font-size: 16px;
+      transition: transform 0.2s;
+    }
+
+    .show-card:hover .rsvp-cta-arrow {
+      transform: translateX(3px);
+    }
+
+    /* Past / sold out state */
+    .show-card.past {
+      opacity: 0.45;
+      pointer-events: none;
+    }
+
+    .show-card.past .rsvp-cta {
+      border-color: rgba(255,255,255,0.1);
+      color: var(--muted);
+    }
+
+    /* Empty state */
+    .empty-state {
+      text-align: center;
+      padding: 80px 0;
+      color: var(--muted);
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      animation: fadeUp 0.7s ease 0.3s both;
+    }
+
+    /* Footer */
+    footer {
+      position: relative;
+      z-index: 1;
+      border-top: 1px solid var(--border);
+      padding: 24px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .footer-logo {
+      font-family: var(--font-display);
+      font-size: 14px;
+      letter-spacing: 0.1em;
+      color: rgba(240,236,228,0.2);
+    }
+
+    .footer-logo span { color: rgba(200,146,42,0.4); }
+
+    .footer-city {
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(240,236,228,0.15);
+    }
+
+    /* RSVP cta */
+    .rsvp-cta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: transparent;
+      border: 1px solid rgba(200,146,42,0.4);
+      border-radius: 2px;
+      color: var(--amber);
+      font-family: var(--font-display);
+      font-size: 14px;
+      letter-spacing: 0.12em;
+      padding: 10px 16px;
+      white-space: nowrap;
+      transition: background 0.2s, border-color 0.2s, color 0.2s;
+      flex-shrink: 0;
+    }
+
+    .show-card:hover .rsvp-cta {
+      background: var(--amber);
+      border-color: var(--amber);
+      color: var(--black);
+    }
+
+    /* Arrow */
+    .rsvp-cta-arrow {
+      font-size: 16px;
+      transition: transform 0.2s;
+    }
+
+    .show-card:hover .rsvp-cta-arrow {
+      transform: translateX(3px);
+    }
+
+    /* Count pill */
+    .rsvp-count{
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      padding: 5px 8px;
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 2px;
+      min-width: 34px;
+      text-align: center;
+      color: rgba(240,236,228,0.7);
+    }
+
+    .show-card:hover .rsvp-count{
+      border-color: rgba(8,8,8,0.25);
+      color: rgba(8,8,8,0.85);
+    }
+
+    /* Info icon */
+    .info-wrap{
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.15);
+      font-family: var(--font-body);
+      font-size: 11px;
+      cursor: help;
+      color: rgba(240,236,228,0.6);
+    }
+
+    .show-card:hover .info-wrap{
+      border-color: rgba(8,8,8,0.25);
+      color: rgba(8,8,8,0.85);
+    }
+
+    .info-tip{
+      position: absolute;
+      right: 0;
+      top: calc(100% + 10px);
+      width: 260px;
+      background: rgba(8,8,8,0.95);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 3px;
+      padding: 10px 12px;
+      font-size: 11px;
+      letter-spacing: 0.02em;
+      text-transform: none;
+      color: rgba(240,236,228,0.75);
+
+      opacity: 0;
+      transform: translateY(-4px);
+      pointer-events: none;
+      transition: opacity 0.15s ease, transform 0.15s ease;
+      z-index: 50;
+    }
+
+    .info-wrap:hover .info-tip,
+    .info-wrap:focus .info-tip{
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 640px) {
+      header { padding: 20px; }
+      main { padding: 40px 20px 80px; }
+      footer { padding: 20px; }
+
+      /* Stack card layout vertically */
+      .show-card {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding: 20px;
+        max-width: 100%;
+      }
+
+      /* Date becomes inline instead of side block */
+      .date-block {
+        display: flex;
+        align-items: baseline;
+        gap: 10px;
+        text-align: left;
+      }
+
+      .date-month {
+        font-size: 10px;
+      }
+
+      .date-day {
+        font-size: 28px;
+      }
+
+      /* Artist text slightly smaller */
+      .show-artist {
+        font-size: 22px;
+      }
+
+      /* Meta wraps naturally */
+      .show-meta {
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      /* RSVP stays visible and full width */
+      .rsvp-cta {
+        width: 100%;
+        justify-content: center;
+      }
+
+    }
+  </style>
+</head>
+<body>
+  <div class="glow-bg"></div>
+
+  <header>
+    <a href="/" class="logo">feedback<span>5280</span></a>
+    <span class="header-sub">Denver · Live Music</span>
+  </header>
+
+  <main>
+    <div class="section-header">
+      <h2>Upcoming Shows</h2>
+      <div class="line"></div>
+    </div>
+
+    <div class="show-list">
+
+      <!-- SHOW 1: Luke Jensen -->
+      <a class="show-card" href="/luke/" data-table="luke_rsvps">
+        <div class="date-block">
+          <div class="date-month">April</div>
+          <div class="date-day">28</div>
+        </div>
+        <div class="show-info">
+          <div class="show-artist">LevTest</div>
+          <div class="show-meta">
+            <span class="show-venue">OpenHouse</span>
+            <span class="dot"></span>
+            <span class="show-city">Denver, CO</span>
+          </div>
+        </div>
+        <div class="rsvp-cta">
+          <span class="rsvp-label">RSVP</span>
+          <span class="rsvp-cta-arrow">→</span>
+
+          <span class="rsvp-count"></span>
+
+          <span class="info-wrap" tabindex="0">
+            <span class="info-icon">i</span>
+            <span class="info-tip">
+              Unique individuals who submitted their email indicating they would attend this event if booked
+            </span>
+          </span>
+        </div>
+      </a>
+
+      <!-- SHOW 2: Mūs — update href to /mus or whatever your folder is named -->
+      <a class="show-card" href="/mus/" data-table="mus_rsvps">
+        <div class="date-block">
+          <div class="date-month">May</div>
+          <div class="date-day">8</div>
+        </div>
+        <div class="show-info">
+          <div class="show-artist">Mūs</div>
+          <div class="show-meta">
+            <span class="show-city">Denver, CO</span>
+          </div>
+        </div>
+        <div class="rsvp-cta">
+          <span class="rsvp-label">RSVP</span>
+          <span class="rsvp-cta-arrow">→</span>
+
+          <span class="rsvp-count"></span>
+
+          <span class="info-wrap" tabindex="0">
+            <span class="info-icon">i</span>
+            <span class="info-tip">
+              Unique individuals who submitted their email indicating they would attend this event if booked
+            </span>
+          </span>
+        </div>
+      </a> 
+
+      <!-- SHOW 3: pamlico sound — update href to /mus or whatever your folder is named -->
+      <a class="show-card" href="/thepamlicosound/" data-table="pamlico_rsvps">
+        <div class="date-block">
+          <div class="date-month">May</div>
+          <div class="date-day">30</div>
+        </div> 
+        <div class="show-info">
+          <div class="show-artist">The Pamlico Sound</div>
+          <div class="show-meta">
+            <span class="show-city">Fort Collins, CO</span>
+          </div>
+        </div>
+        <div class="rsvp-cta">
+          <span class="rsvp-label">RSVP</span>
+          <span class="rsvp-cta-arrow">→</span>
+
+          <span class="rsvp-count"></span>
+
+          <span class="info-wrap" tabindex="0">
+            <span class="info-icon">i</span>
+            <span class="info-tip">
+              Unique individuals who submitted their email indicating they would attend this event if booked
+            </span>
+          </span>
+        </div>
+      </a> 
+
+      <!-- ADD MORE SHOWS BELOW — copy the block above -->
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-logo">feedback<span>5280</span></div>
+    <div class="footer-city">Denver, CO</div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script>
+    const SUPABASE_URL = "https://chmfytasgjopdwjbgtek.supabase.co";
+    const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNobWZ5dGFzZ2pvcGR3amJndGVrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjczOTM3MTQsImV4cCI6MjA4Mjk2OTcxNH0.jckEX3bD661sVPgiNnZFk9undtgKXvWVTAxJdKRxDMw";
+    const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+
+    
+    async function fetchRsvpCount(tableName) {
+      // head:true avoids returning rows; count:'exact' returns the count
+      const { count, error } = await supabaseClient
+        .from(tableName)
+        .select('*', { count: 'exact', head: true });
+
+      if (error) {
+        console.error(`Count error for ${tableName}:`, error);
+        return null;
+      }
+      return count ?? 0;
+    }
+
+    async function hydrateRsvpCounts() {
+      const cards = document.querySelectorAll('.show-card[data-table]');
+      await Promise.all([...cards].map(async (card) => {
+        const tableName = card.getAttribute('data-table');
+        const badge = card.querySelector('.rsvp-count');
+        if (!tableName || !badge) return;
+
+        badge.textContent = '…';
+
+        const count = await fetchRsvpCount(tableName);
+        if (count === null) {
+          badge.textContent = ''; // or '—'
+          return;
+        }
+        badge.textContent = `${count}`;
+      }));
+    }
+
+    document.addEventListener('DOMContentLoaded', hydrateRsvpCounts);
+
+    document.addEventListener('click', (e) => {
+      const info = e.target.closest('.info-wrap');
+      if (info) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+    });
+  </script>
+</body>
+</html>
